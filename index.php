@@ -11,6 +11,11 @@
  * @package mtportofolio
  */
 
+wp_enqueue_script(
+	'custom-script',
+	get_stylesheet_directory_uri() . '/js/masonry.pkgd.min.js',
+	array( 'jquery' )
+);
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -43,4 +48,16 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+<script type="text/javascript">
+(function($){
+return; // TODO ちゃんと動くようにする
+$(function(){
+		$('#content').masonry({
+		  itemSelector: 'article.post',
+		  isFitWidth: true,
+		  isAnimated: true,
+		});
+});
+})(jQuery);
+</script>
 <?php get_footer(); ?>

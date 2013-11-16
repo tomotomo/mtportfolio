@@ -24,15 +24,61 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<!--<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>-->
 		</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'mtportofolio' ); ?></h1>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'mtportofolio' ); ?></a>
+<!-- 		<div class="site-search">
+			<aside id="search-2" class="widget widget_search">
+			<form role="search" method="get" class="search-form" action="./index_files/index.html">
+			<label>
+				<span class="screen-reader-text">Search for:</span>
+				<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+			</label>
+			<input type="submit" class="search-submit" value="Search">
+			</form>
+			</aside>
+		</div> -->
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<div class="wbo-menu-bottom">
+        <nav class="wbo-menu-pages">
+			<ul class="menu">
+            <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-38"><a href="http://wo.mt8.biz/?page_id=12">About</a></li>
+			</ul>
+        </nav>
+        
+        <div class="site-search">
+			<aside id="search-2" class="widget widget_search">
+			<form role="search" method="get" class="search-form" action="./index_files/index.html">
+			<label>
+				<span class="screen-reader-text">Search for:</span>
+				<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+			</label>
+			<input type="submit" class="search-submit" value="Search">
+			</form>
+			</aside>
+		</div>
+
+		<div class="wbo-menu-right">
+        <nav class="wbo-menu-sns">
+			<ul>
+            <li><a href="#" class="sns1"></a></li>
+            <li><a href="#" class="sns2"></a></li>
+            <li><a href="#" class="sns3"></a></li>
+            <li><a href="#" class="sns4"></a></li>
+			</ul>
+        </nav>
+
+        
+        </div>
+	    	    
 	</header><!-- #masthead -->
+	
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<h1 class="menu-toggle"><?php _e( 'Menu', 'mtportofolio' ); ?></h1>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'mtportofolio' ); ?></a>
 
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<p class="button-login"><a href="http://wo.mt8.biz/wp-login.php">Login</a></p>
+	</nav><!-- #site-navigation -->
+	
 	<div id="content" class="site-content">
