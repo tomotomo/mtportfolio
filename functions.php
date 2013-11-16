@@ -110,3 +110,13 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+add_theme_support('post-thumbnails');
+
+function get_the_content_image() {
+     global $post, $posts;
+     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+     $first_img = empty($output)? '': $matches[0][0];
+     echo $first_img;
+}
