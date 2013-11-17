@@ -7,13 +7,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
 	<header class="entry-header">
-		<?php
-		    if ( has_post_thumbnail() ){
-			the_post_thumbnail();
-		    }else{
-			get_the_content_image();
-		    }
-		?>
+	    
+		<?php mtportofolio_the_thumbnail(); ?>
 	    
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 

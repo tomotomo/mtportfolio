@@ -114,9 +114,15 @@ require get_template_directory() . '/inc/jetpack.php';
 
 add_theme_support('post-thumbnails');
 
-function get_the_content_image() {
-     global $post, $posts;
-     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-     $first_img = empty($output)? '': $matches[0][0];
-     echo $first_img;
+function mtportofolio_the_thumbnail() {
+    if ( has_post_thumbnail() ){
+	the_post_thumbnail();
+    }else{
+	global $post;
+	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+	$first_img = empty($output)? '': $matches[0][0];
+	
+	//TODO NO IMAGE はいらない？
+	echo $first_img;
+    }
 }
