@@ -8,8 +8,8 @@
     
 	<header class="entry-header">
 	    
-		<?php mtportofolio_the_thumbnail(); ?>
-	    
+		<a href="<?php the_permalink(); ?>" rel="bookmark"><?php mtportofolio_the_thumbnail(); ?></a>
+		
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
