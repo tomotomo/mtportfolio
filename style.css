@@ -1,31 +1,4 @@
 @charset "UTF-8";
-/* line 8, css/_style_add.scss */
-body {
-  background: #f7f7f7;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-}
-
-/*header
--------------------------------------*/
-/*nav
--------------------------------------*/
-/* for responsive */
-/*content
--------------------------------------*/
-/*main
--------------------------------------*/
-/*article
--------------------------------------*/
-/*header
--------------------------------------*/
-/*footer
--------------------------------------*/
-/*pagenation
--------------------------------------*/
-/*footer-menu
--------------------------------------*/
-/*footer
--------------------------------------*/
 /*
 Theme Name: mtportofolio
 Theme URI: http://underscores.me/
@@ -782,164 +755,32 @@ object {
   display: block;
 }
 
-/*customテスト
------------------------------------------------ */
-/* line 6, css/_style_add_moto.scss */
-body {
-  background: #f7f7f7;
-  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-}
-
-/* line 11, css/_style_add_moto.scss */
-.site-header {
-  margin-bottom: 30px;
-}
-
-/* line 16, css/_style_add_moto.scss */
-.site-title {
-  padding-top: 10px;
-  font-size: 40px;
-  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
-}
-
-/* line 26, css/_style_add_moto.scss */
-.main-navigation {
-  float: right;
-  width: 23%;
-  box-sizing: border-box;
-}
-
-/* line 32, css/_style_add_moto.scss */
-.site {
-  width: 1024px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* line 38, css/_style_add_moto.scss */
-.site-content {
-  float: left;
-  width: 75%;
-  box-sizing: border-box;
-}
-
-/* line 44, css/_style_add_moto.scss */
-.post {
-  width: 30%;
-  box-sizing: border-box;
-  float: left;
-  margin-right: 2%;
-}
-
-/* line 54, css/_style_add_moto.scss */
-.site-footer {
-  clear: both;
-  margin-top: 30px;
-  border-top: 1px solid #1c1c1c;
-  padding: 10px 0 40px;
-  text-align: center;
-  font-size: 10px;
-}
-
-/* line 63, css/_style_add_moto.scss */
-.footer-widget-area {
-  clear: both;
-  border-top: 1px solid #1c1c1c;
-  padding: 30px 0 30px;
-}
-
-/* line 69, css/_style_add_moto.scss */
-.footer-widget-area .nav-dummy {
-  width: 250px;
-  float: left;
-}
-
-/* line 74, css/_style_add_moto.scss */
-.footer-widget-area .nav-dummy img {
-  margin-bottom: 30px;
-}
-
-/*kanagawa*/
-/* line 80, css/_style_add_moto.scss */
-.main-navigation {
-  /*width:180px;*/
-  /*padding: 30px;*/
-  padding: 2%;
-  background-color: #fff;
-}
-
-/* line 87, css/_style_add_moto.scss */
-.main-navigation ul.nav-menu {
-  /*margin-bottom:10px;
-  padding-bottom:10px;*/
-  margin-bottom: 5%;
-  padding-bottom: 5%;
-}
-
-/* line 94, css/_style_add_moto.scss */
-#main {
-  /*width:780px;
-  padding-right: -20px;*/
-}
-
-/* line 99, css/_style_add_moto.scss */
-.home .post {
-  /*padding: 10px;*/
-  padding: 2%;
-  background-color: #fff;
-  /*margin-right:20px;*/
-  /*width:220px;*/
-  box-sizing: border-box;
-}
-
-/* line 108, css/_style_add_moto.scss */
-.entry-meta .cat-links a {
-  color: #fff;
-  font-size: 10px;
-  padding: 2px 7px 1px 7px;
-  background-color: #aaa;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-}
-
-/* line 119, css/_style_add_moto.scss */
-.button-login {
-  padding: 5px;
-  text-align: center;
-  border: 1px solid #1c1c1c;
-  margin-bottom: 0;
-  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
-}
-
-/* line 127, css/_style_add_moto.scss */
-.entry-meta .tags-links a {
-  color: #fff;
-  font-size: 10px;
-  padding: 2px 7px 1px 7px;
-  background-color: #aaa;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-}
-
+/*for pc or general*/
+/*header*/
+/*main-nav*/
+/*contents*/
+/*footer*/
+/*for tablet*/
+/*main-nav*/
+/*contents*/
+/*for mobile*/
+/*contents*/
+/*img-path*/
 /*overwrited
 ----------------------------------------------- */
 /* Links */
-/* line 141, css/_style_add_moto.scss */
+/* line 116, css/_style_add.scss */
 a {
   color: #1c1c1c;
   text-decoration: none;
 }
 
-/* line 145, css/_style_add_moto.scss */
+/* line 120, css/_style_add.scss */
 a:visited {
   color: #1c1c1c;
 }
 
-/* line 150, css/_style_add_moto.scss */
+/* line 125, css/_style_add.scss */
 a:hover,
 a:focus,
 a:active {
@@ -947,170 +788,300 @@ a:active {
   text-decoration: underline;
 }
 
-/*add
------------------------------------------------ */
-/* line 157, css/_style_add_moto.scss */
+/*body
+-------------------------------------*/
+/* line 132, css/_style_add.scss */
+body {
+  background: #f7f7f7;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+/* line 137, css/_style_add.scss */
+.site {
+  width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*header
+-------------------------------------*/
+/* line 145, css/_style_add.scss */
+.site-header {
+  margin-bottom: 30px;
+}
+
+/* line 150, css/_style_add.scss */
+.site-title {
+  padding-top: 10px;
+  font-size: 40px;
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+/* line 156, css/_style_add.scss */
 .wbo-menu-bottom {
   margin-top: 20px;
 }
 
-/* line 162, css/_style_add_moto.scss */
+/* line 159, css/_style_add.scss */
 .wbo-menu-pages {
   float: left;
 }
-
-/* line 166, css/_style_add_moto.scss */
-.wbo-menu-pages ul, ul li {
+/* line 162, css/_style_add.scss */
+.wbo-menu-pages ul,
+.wbo-menu-pages ul li {
   margin: 0;
   padding: 0;
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
-
-/* line 171, css/_style_add_moto.scss */
+/* line 166, css/_style_add.scss */
 .wbo-menu-pages ul li {
   list-style-type: none;
 }
-
-/* line 175, css/_style_add_moto.scss */
+/* line 169, css/_style_add.scss */
 .wbo-menu-pages ul li a {
   display: block;
-  padding: 10px 10px 8px 40px;
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png);
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png");
   background-repeat: no-repeat;
   background-position: left center;
+  padding: 10px 10px 8px 40px;
 }
-
-/* line 183, css/_style_add_moto.scss */
+/* line 173, css/_style_add.scss */
 .wbo-menu-pages ul li a:hover {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_o.png);
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_o.png");
 }
 
-/* line 187, css/_style_add_moto.scss */
-.wbo-menu-sns {
-  float: right;
-}
-
-/* line 191, css/_style_add_moto.scss */
+/* line 179, css/_style_add.scss */
 .site-search {
   margin-left: 10px;
   margin-top: 2px;
   float: right;
 }
 
-/* line 197, css/_style_add_moto.scss */
+/* line 190, css/_style_add.scss */
+.wbo-menu-right {
+  float: right;
+}
+
+/* line 191, css/_style_add.scss */
+.wbo-menu-sns {
+  float: right;
+}
+/* line 193, css/_style_add.scss */
 .wbo-menu-sns ul li {
   list-style-type: none;
   float: left;
   padding-right: 10px;
 }
-
-/* line 203, css/_style_add_moto.scss */
-.wbo-menu-sns ul li a {
+/* line 198, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns1 {
   display: block;
-  width: 36px;
-  height: 36px;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-
-/* line 211, css/_style_add_moto.scss */
-.wbo-menu-sns ul li a.sns1 {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_f.png);
-}
-
-/* line 215, css/_style_add_moto.scss */
+/* line 199, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns1:hover {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_o.png);
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_o.png");
 }
-
-/* line 219, css/_style_add_moto.scss */
+/* line 200, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns2 {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_f.png);
+  display: block;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
-
-/* line 223, css/_style_add_moto.scss */
+/* line 201, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns2:hover {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_o.png);
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_o.png");
 }
-
-/* line 228, css/_style_add_moto.scss */
+/* line 202, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns3 {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_f.png);
+  display: block;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
-
-/* line 232, css/_style_add_moto.scss */
+/* line 203, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns3:hover {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_o.png);
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_o.png");
 }
-
-/* line 237, css/_style_add_moto.scss */
+/* line 204, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns4 {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_f.png);
+  display: block;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
-
-/* line 241, css/_style_add_moto.scss */
+/* line 205, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns4:hover {
-  background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_o.png);
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_o.png");
+}
+/* line 206, css/_style_add.scss */
+.wbo-menu-sns ul li a {
+  width: 36px;
+  height: 36px;
 }
 
-/* line 245, css/_style_add_moto.scss */
-.wbo-menu-right {
+/*nav
+-------------------------------------*/
+/* line 214, css/_style_add.scss */
+.main-navigation {
   float: right;
+  width: 23%;
+  padding: 2%;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  /*width:180px; kanagawa*/
+  /*padding: 30px; kanagawa*/
+}
+
+/* line 225, css/_style_add.scss */
+.main-navigation ul.nav-menu {
+  /*margin-bottom:10px; kanagawa*/
+  /*padding-bottom:10px; kanagawa*/
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+}
+
+/* line 237, css/_style_add.scss */
+.button-login {
+  padding: 5px;
+  margin-bottom: 0;
+  border: 1px solid #1c1c1c;
+  text-align: center;
+}
+
+/*content
+-------------------------------------*/
+/* line 247, css/_style_add.scss */
+.site-content {
+  float: left;
+  width: 75%;
+  box-sizing: border-box;
+}
+
+/*main
+-------------------------------------*/
+/*#main {
+	width:780px;
+	padding-right: -20px;
+} kanagawa */
+/*article
+-------------------------------------*/
+/* line 265, css/_style_add.scss */
+.home .post {
+  float: left;
+  width: 30%;
+  margin-right: 2%;
+  padding: 2%;
+  background-color: #fff;
+  box-sizing: border-box;
+  /*padding: 10px;		kanagawa */
+  /*margin-right:20px;kanagawa */
+  /*width:220px;			kanagawa */
+}
+
+/* line 278, css/_style_add.scss */
+.single .post {
+  width: 100%;
+}
+
+/*header
+-------------------------------------*/
+/*footer
+-------------------------------------*/
+/* line 303, css/_style_add.scss */
+.entry-meta .cat-links > a,
+.entry-meta .tags-links > a {
+  /* kanagawa-add */
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 7px 1px 7px;
+  background-color: #aaa;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
+/*pagenation
+-------------------------------------*/
+/*footer-menu
+-------------------------------------*/
+/* line 323, css/_style_add.scss */
+.footer-widget-area {
+  clear: both;
+  border-top: 1px solid #1c1c1c;
+  padding: 30px 0 30px;
+}
+
+/* line 329, css/_style_add.scss */
+.footer-widget-area .nav-dummy {
+  width: 250px;
+  float: left;
+}
+/* line 333, css/_style_add.scss */
+.footer-widget-area .nav-dummy > img {
+  margin-bottom: 30px;
+}
+
+/*footer
+-------------------------------------*/
+/* line 340, css/_style_add.scss */
+.site-footer {
+  clear: both;
+  margin-top: 30px;
+  padding: 10px 0 40px;
+  font-size: 10px;
+  text-align: center;
+  border-top: 1px solid #1c1c1c;
 }
 
 @media (max-width: 1023px) and (min-width: 481px) {
-  /* line 257, css/_style_add_moto.scss */
-  .main-navigation {
-    float: right;
-    width: 30%;
-  }
-
-  /* line 261, css/_style_add_moto.scss */
+  /* line 351, css/_style_add.scss */
   .site {
     width: 100%;
     margin: 0 10px;
   }
 
-  /* line 265, css/_style_add_moto.scss */
+  /* line 355, css/_style_add.scss */
+  .main-navigation {
+    width: 30%;
+  }
+
+  /* line 358, css/_style_add.scss */
   .site-content {
-    float: left;
     width: 66%;
   }
 
-  /* line 269, css/_style_add_moto.scss */
-  .post {
+  /* line 362, css/_style_add.scss */
+  .home .post {
     width: 47%;
-    float: left;
-    margin-right: 2%;
   }
 }
 @media (max-width: 480px) {
-  /* line 277, css/_style_add_moto.scss */
+  /* line 369, css/_style_add.scss */
+  .site {
+    width: 95%;
+  }
+
+  /* line 372, css/_style_add.scss */
   .main-navigation {
     float: none;
     display: none;
   }
 
-  /* line 281, css/_style_add_moto.scss */
-  .site {
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  /* line 285, css/_style_add_moto.scss */
+  /* line 376, css/_style_add.scss */
   .site-content {
     float: none;
     width: 100%;
   }
 
-  /* line 289, css/_style_add_moto.scss */
-  .post {
+  /* line 381, css/_style_add.scss */
+  .home .post {
     width: 100%;
     float: none;
     margin-right: 0;
   }
-}
-/* line 297, css/_style_add_moto.scss */
-.single .post {
-  width: 100%;
 }
