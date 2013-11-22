@@ -61,10 +61,10 @@
 		<div class="wbo-menu-right">
         <nav class="wbo-menu-sns">
 			<ul>
-            <li><a href="#" class="sns1"></a></li>
-            <li><a href="#" class="sns2"></a></li>
-            <li><a href="#" class="sns3"></a></li>
-            <li><a href="#" class="sns4"></a></li>
+            <li><a href="#" class="sns-twitter"></a></li>
+            <li><a href="#" class="sns-facebook"></a></li>
+            <li><a href="#" class="sns-pinterest"></a></li>
+            <li><a href="#" class="sns-tumblr"></a></li>
 			</ul>
         </nav>
 

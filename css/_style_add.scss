@@ -35,7 +35,7 @@ $pc-site-w                 :1024px;
 	$pc-content-area-w         :75%;
 	$pc-post-area-w-IN-home    :31%;
 	$pc-post-area-mr-IN-home   :2%;
-	$pc-post-p-IN-home         :15px;
+	$pc-post-p-IN-home         :10px;
 	$pc-post-w-IN-single       :100%;
 	$pc-site-title-pt          :10px;
 	$pc-site-title-fs          :40px;
@@ -47,6 +47,7 @@ $pc-site-w                 :1024px;
 	$pc-site-footer-fs         :10px;
 	$pc-footer-widget-area-pt  :30px;
 	$pc-footer-widget-area-pb  :30px;
+		$pc-widget-w-IN-footer-widget-area: 25%;
 	$pc-nav-dummy-w            :250px;
 	$pc-nav-dummy-img-mb       :30px;
 
@@ -201,59 +202,61 @@ body {
 					 float: left;
 					 padding-right: $pc-wbo-menu-sns-li-pr;
 					}
-					ul li a.sns1      {@include li-a-bg-img ($img-wbo-menu-sns-twitter);}
-					ul li a.sns1:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-twitter-o);}
-					ul li a.sns2      {@include li-a-bg-img ($img-wbo-menu-sns-facebook);}
-					ul li a.sns2:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-facebook-o);}
-					ul li a.sns3      {@include li-a-bg-img ($img-wbo-menu-sns-pinterest);}
-					ul li a.sns3:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-pinterest-o);}
-					ul li a.sns4      {@include li-a-bg-img ($img-wbo-menu-sns-tumblr);}
-					ul li a.sns4:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-tumblr-o);}
+					ul li a.sns-twitter        {@include li-a-bg-img ($img-wbo-menu-sns-twitter);}
+					ul li a.sns-twitter:hover  {@include li-a-bg-img-hover ($img-wbo-menu-sns-twitter-o);}
+					ul li a.sns-facebook       {@include li-a-bg-img ($img-wbo-menu-sns-facebook);}
+					ul li a.sns-facebook:hover {@include li-a-bg-img-hover ($img-wbo-menu-sns-facebook-o);}
+					ul li a.sns-pinterest      {@include li-a-bg-img ($img-wbo-menu-sns-pinterest);}
+					ul li a.sns-pinterest:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-pinterest-o);}
+					ul li a.sns-tumblr         {@include li-a-bg-img ($img-wbo-menu-sns-tumblr);}
+					ul li a.sns-tumblr:hover   {@include li-a-bg-img-hover ($img-wbo-menu-sns-tumblr-o);}
 					ul li a{
 					 width: $pc-wbo-menu-sns-li-a-w;
 					 height: $pc-wbo-menu-sns-li-a-h;
 					}
 				}
 
-	/*nav
-	-------------------------------------*/
-	.main-navigation-area{
-			float: right;
-			width: $pc-main-navigation-area-w;
-	}
-		.main-navigation {
-			padding: $pc-main-navigation-p;
-			@include bg-clr-wh;
-			@include tomo-add-1;
-			font-family: $font-sub;
-			/*width:180px; kanagawa*/
-			/*padding: 30px; kanagawa*/
-		}
-		.main-navigation {
-			ul.nav-menu{
-				/*margin-bottom:10px; kanagawa*/
-				/*padding-bottom:10px; kanagawa*/
-				margin-bottom:$pc-nav-menu-mb-IN-main-navigation;
-				padding-bottom:$pc-nav-menu-pb-IN-main-navigation;
-			}
-		}
-			.menu-toggle {} 				
-			.skip-link {}
-
-			.menu {} //※
-			.menu > ul {} //※
-			.button-login {
-				padding:$pc-button-login-p;
-				margin-bottom: $pc-button-login-mb;
-				@include b-bk-1;
-				text-align: center;
-			}
-			.button-login > a {}
-
 	/*content
 	-------------------------------------*/
 	.site-content {
 	}
+		/*nav in content
+		-------------------------------------*/
+		.main-navigation-area{
+				float: right;
+				width: $pc-main-navigation-area-w;
+		}
+			.main-navigation {
+				padding: $pc-main-navigation-p;
+				@include bg-clr-wh;
+				@include tomo-add-1;
+				font-family: $font-sub;
+				/*width:180px; kanagawa*/
+				/*padding: 30px; kanagawa*/
+			}
+			.main-navigation {
+				ul.nav-menu{
+					/*margin-bottom:10px; kanagawa*/
+					/*padding-bottom:10px; kanagawa*/
+					margin-bottom:$pc-nav-menu-mb-IN-main-navigation;
+					padding-bottom:$pc-nav-menu-pb-IN-main-navigation;
+				}
+			}
+				.menu-toggle {} 				
+				.skip-link {}
+
+				.menu {} //※
+				.menu > ul {} //※
+				.button-login {
+					padding:$pc-button-login-p;
+					margin-bottom: $pc-button-login-mb;
+					@include b-bk-1;
+					text-align: center;
+				}
+				.button-login > a {}
+
+		/*content in content
+		-------------------------------------*/
 		.content-area {
 			float: left;
 			width: $pc-content-area-w;
@@ -266,6 +269,7 @@ body {
 				width:780px;
 				padding-right: -20px;
 			} kanagawa */
+
 				/*article
 				-------------------------------------*/
 				.post {}
@@ -328,20 +332,16 @@ body {
 
 		.widget-area {} //*secondary 多分いらないと思う
 
-	/*footer-menu
+	/*footer-widget-area
 	-------------------------------------*/
 	.footer-widget-area {
-			@include tomo-add-2;
-			@include bt-bk-1;
-			padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
-	}
-	.footer-widget-area {
-		.nav-dummy {
-			width: $pc-nav-dummy-w;
+		@include tomo-add-2;
+		@include bt-bk-1;
+		padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+		.widget{
+			width: $pc-widget-w-IN-footer-widget-area;
 			float: left;
-		}
-		.nav-dummy > img {
-			margin-bottom: $pc-nav-dummy-img-mb;
+			font-family: $font-sub;
 		}
 	}
 
