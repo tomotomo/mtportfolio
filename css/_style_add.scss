@@ -28,11 +28,11 @@ $pc-site-w                 :1024px;
 		$pc-button-login-mb      :0;
 
 	/*contents*/
-	$pc-content-area-w         :75%;
+	$pc-content-area-w         :73%;
+	$pc-content-area-w-Index   :75%;
 	$pc-post-area-w-IN-home    :31%;
 	$pc-post-area-mr-IN-home   :2%;
 	$pc-post-p-IN-home         :10px;
-	$pc-post-w-IN-single       :100%;
 	$pc-site-title-pt          :10px;
 	$pc-site-title-fs          :40px;
 
@@ -58,7 +58,8 @@ $tb-site-w                   :95%;
 	$tb-main-navigation-area-w:33%;
 
 	/*contents*/
-	$tb-content-area-w  :66%;
+	$tb-content-area-w       :64%;
+	$tb-content-area-w-Index :66%;
 	$tb-post-area-w-IN-home  :48%;
 
 /*for mobile*/
@@ -274,8 +275,15 @@ body {
 
 				/*article
 				-------------------------------------*/
-				.post {}
-				.home{
+				.content-area {
+					width: $pc-content-area-w
+					;
+				}
+				.home,
+				.archive {
+					.content-area {
+						width: $pc-content-area-w-Index;
+					}
 					.post-area{
 						float: left;
 						width: $pc-post-area-w-IN-home;
@@ -290,11 +298,11 @@ body {
 							/*width:220px;			kanagawa */
 						}
 				}
-				.single{
-					.post {
-						width: $pc-post-w-IN-single;
-					}
-				}
+				// .single{
+				// 	.post {
+				// 		width:100%;
+				// 	}
+				// }
 				.format-standard{} //*
 				.format-image {} //*
 				.post-password-required {} //*
@@ -333,6 +341,21 @@ body {
 						.meta-nav {}
 
 		.widget-area {} //*secondary 多分いらないと思う
+
+	/*page-top
+	-------------------------------------*/
+	.page-top{
+		clear:both;
+		float: right;
+		margin: 10px 0;
+		a {
+			@include li-a-bg-img ($img-wbo-arrow_up);
+			display:block;
+			width: 36px;
+			height: 36px;
+		}
+		a:hover  {@include li-a-bg-img-hover ($img-wbo-arrow_up-o);}
+	}
 
 	/*footer-widget-area
 	-------------------------------------*/
@@ -449,7 +472,11 @@ body {
 	.content-area {
 		width: $tb-content-area-w;
 	}
-	.home {
+	.home,
+	.archive {
+		.content-area {
+			width: $tb-content-area-w-Index;
+		}
 		.post-area {
 			width: $tb-post-area-w-IN-home;	
 		}
@@ -468,7 +495,11 @@ body {
 		float: none;
 		width: $mb-content-area-w;
 	}
-	.home {
+	.home,
+	.archive {
+		.content-area {
+			width: $mb-content-area-w;
+		}
 		.post-area {
 			width: $mb-post-area-w-IN-home;	
 			float: none;

@@ -9,6 +9,7 @@
 ?>
 	</div><!-- #content -->
 
+	<nav class="page-top"><a href="#"></a></nav>
 	<div class="footer-widget-area">
 		<aside class="widget footer-widget-category">
 			<h1><a href="#">Categories</a></h1>
