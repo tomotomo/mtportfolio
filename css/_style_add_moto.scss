@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/*customテスト
+----------------------------------------------- */
+
+body {
+	background: #f7f7f7;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+.site-header {
+	margin-bottom: 30px;
+}
+
+.site-title {
+	padding-top:10px;
+	font-size: 40px;
+	font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+.site-search {
+}
+
+
+.main-navigation {
+	float: right;
+	width: 23%;
+	box-sizing: border-box;
+}
+
+.site{
+	width: 1024px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.site-content {
+	float: left;
+	width: 75%;
+	box-sizing: border-box;
+}
+
+.post {
+	width: 30%;
+	box-sizing: border-box;
+	float: left;
+	margin-right: 2%;
+}
+
+.site-branding {
+}
+
+.site-footer{
+	clear:both;
+	margin-top: 30px;
+	border-top: 1px solid #1c1c1c;
+	padding: 10px 0 40px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.footer-widget-area {
+	clear:both;
+	border-top: 1px solid #1c1c1c;
+	padding: 30px 0 30px;
+}
+
+.footer-widget-area .nav-dummy{
+	width: 250px;
+	float: left;
+}
+
+.footer-widget-area .nav-dummy img{
+	margin-bottom: 30px;
+}
+
+/*kanagawa*/
+
+.main-navigation {
+	/*width:180px;*/
+	/*padding: 30px;*/
+	padding:2%;
+	background-color:#fff;
+}
+
+.main-navigation ul.nav-menu{
+	/*margin-bottom:10px;
+	padding-bottom:10px;*/
+	margin-bottom:5%;
+	padding-bottom:5%;
+}
+
+#main {
+	/*width:780px;
+	padding-right: -20px;*/
+}
+
+.home .post{
+	/*padding: 10px;*/
+	padding: 2%;
+	background-color: #fff;
+	/*margin-right:20px;*/
+	/*width:220px;*/
+	box-sizing: border-box;
+}
+
+.entry-meta .cat-links a {
+	color:#fff;
+	font-size:10px;
+	padding:2px 7px 1px 7px;
+	background-color: #aaa;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
+.button-login{
+	padding:5px;
+	text-align: center;
+	border:1px solid #1c1c1c;
+	margin-bottom: 0;
+	font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+.entry-meta .tags-links a {
+	color:#fff;
+	font-size:10px;
+	padding:2px 7px 1px 7px;
+	background-color: #aaa;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
+/*overwrited
+----------------------------------------------- */
+/* Links */
+a {
+	color: #1c1c1c;
+	text-decoration: none;
+}
+a:visited {
+	color: #1c1c1c;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #1c1c1c;
+	text-decoration: underline;
+}
+
+/*add
+----------------------------------------------- */
+.wbo-menu-bottom {
+	margin-top: 20px;
+}
+
+.wbo-menu-pages{
+	float:left;
+}
+
+.wbo-menu-pages ul, ul li {
+	margin: 0; padding: 0;
+	font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+.wbo-menu-pages ul li {
+ list-style-type: none;
+}
+
+.wbo-menu-pages ul li a{
+ display: block;
+ padding: 10px 10px 8px 40px;
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png);
+ background-repeat: no-repeat;
+ background-position: left center;
+}
+
+.wbo-menu-pages ul li a:hover{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_o.png);
+}
+
+.wbo-menu-sns{
+	float: right;
+}
+
+.site-search{
+	margin-left: 10px;
+	margin-top: 2px;
+	float: right;
+}
+
+.wbo-menu-sns ul li {
+ list-style-type: none;
+ float: left;
+ padding-right: 10px;
+}
+
+.wbo-menu-sns ul li a{
+ display: block;
+ width: 36px;
+ height: 36px;
+ background-repeat: no-repeat;
+ background-position: left center;
+}
+
+.wbo-menu-sns ul li a.sns1{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_f.png);
+}
+
+.wbo-menu-sns ul li a.sns1:hover{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_o.png);
+}
+
+.wbo-menu-sns ul li a.sns2{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_f.png);
+}
+
+.wbo-menu-sns ul li a.sns2:hover{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_o.png);
+}
+
+
+.wbo-menu-sns ul li a.sns3{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_f.png);
+}
+
+.wbo-menu-sns ul li a.sns3:hover{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_o.png);
+}
+
+
+.wbo-menu-sns ul li a.sns4{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_f.png);
+}
+
+.wbo-menu-sns ul li a.sns4:hover{
+ background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_o.png);
+}
+
+.wbo-menu-right {
+	float: right;
+}
+
+
+
+
+@media (min-width: 1024px) {
+
+}
+
+@media (max-width: 1023px) and (min-width: 481px)  {
+	.main-navigation {
+	float: right;
+	width: 30%;
+	}
+	.site{
+	width: 100%;
+	margin: 0 10px;
+	}
+	.site-content {
+	float: left;
+	width: 66%;
+	}
+	.post {
+		width: 47%;	
+		float: left;
+		margin-right: 2%;
+	}
+}
+
+@media (max-width: 480px) {
+	.main-navigation {
+	float: none;
+	display: none;
+	}
+	.site{
+	width: 95%;
+	margin: 0 auto;
+	}
+	.site-content {
+	float: none;
+	width: 100%;
+	}
+	.post {
+		width: 100%;	
+		float: none;
+		margin-right: 0;
+	}
+	
+	
+}
+.single .post {
+width: 100%;
+}

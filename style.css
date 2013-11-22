@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: mtportofolio
 Theme URI: http://underscores.me/
@@ -21,11 +22,9 @@ Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and Blueprint http://www.blueprintcss.org/
 */
-
-
 /* =Reset
 -------------------------------------------------------------- */
-
+/* line 36, css/_style_moto.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -34,25 +33,35 @@ small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-	border: 0;
-	font-family: inherit;
-	font-size: 100%;
-	font-style: inherit;
-	font-weight: inherit;
-	margin: 0;
-	outline: 0;
-	padding: 0;
-	vertical-align: baseline;
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
+
+/* line 47, css/_style_moto.scss */
 html {
-	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
-	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centred in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
+
+/* line 53, css/_style_moto.scss */
 body {
-	background: #fff;
+  background: #fff;
 }
+
+/* line 65, css/_style_moto.scss */
 article,
 aside,
 details,
@@ -63,194 +72,280 @@ header,
 main,
 nav,
 section {
-	display: block;
-}
-ol, ul {
-	list-style: none;
-}
-table { /* tables still need 'cellspacing="0"' in the markup */
-	border-collapse: separate;
-	border-spacing: 0;
-}
-caption, th, td {
-	font-weight: normal;
-	text-align: left;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
-}
-blockquote, q {
-	quotes: "" "";
-}
-a:focus {
-	outline: thin dotted;
-}
-a:hover,
-a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
-	outline: 0;
-}
-a img {
-	border: 0;
+  display: block;
 }
 
+/* line 68, css/_style_moto.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 71, css/_style_moto.scss */
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 75, css/_style_moto.scss */
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+/* line 80, css/_style_moto.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+/* line 83, css/_style_moto.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 86, css/_style_moto.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 90, css/_style_moto.scss */
+a:hover,
+a:active {
+  /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+  outline: 0;
+}
+
+/* line 93, css/_style_moto.scss */
+a img {
+  border: 0;
+}
 
 /* =Global
 ----------------------------------------------- */
-
+/* line 105, css/_style_moto.scss */
 body,
 button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1.5;
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 /* Headings */
+/* line 114, css/_style_moto.scss */
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
+  clear: both;
 }
+
+/* line 117, css/_style_moto.scss */
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
 }
 
 /* Text elements */
+/* line 125, css/_style_moto.scss */
 p {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
+
+/* line 128, css/_style_moto.scss */
 ul, ol {
-	margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 3em;
 }
+
+/* line 131, css/_style_moto.scss */
 ul {
-	list-style: disc;
+  list-style: disc;
 }
+
+/* line 134, css/_style_moto.scss */
 ol {
-	list-style: decimal;
+  list-style: decimal;
 }
+
+/* line 138, css/_style_moto.scss */
 li > ul,
 li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+  margin-bottom: 0;
+  margin-left: 1.5em;
 }
+
+/* line 142, css/_style_moto.scss */
 dt {
-	font-weight: bold;
+  font-weight: bold;
 }
+
+/* line 145, css/_style_moto.scss */
 dd {
-	margin: 0 1.5em 1.5em;
+  margin: 0 1.5em 1.5em;
 }
+
+/* line 148, css/_style_moto.scss */
 b, strong {
-	font-weight: bold;
+  font-weight: bold;
 }
+
+/* line 151, css/_style_moto.scss */
 dfn, cite, em, i {
-	font-style: italic;
+  font-style: italic;
 }
+
+/* line 154, css/_style_moto.scss */
 blockquote {
-	margin: 0 1.5em;
+  margin: 0 1.5em;
 }
+
+/* line 157, css/_style_moto.scss */
 address {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
+
+/* line 160, css/_style_moto.scss */
 pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.5rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
 }
+
+/* line 171, css/_style_moto.scss */
 code, kbd, tt, var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+
+/* line 174, css/_style_moto.scss */
 abbr, acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
+  border-bottom: 1px dotted #666;
+  cursor: help;
 }
+
+/* line 178, css/_style_moto.scss */
 mark, ins {
-	background: #fff9c0;
-	text-decoration: none;
+  background: #fff9c0;
+  text-decoration: none;
 }
+
+/* line 183, css/_style_moto.scss */
 sup,
 sub {
-	font-size: 75%;
-	height: 0;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
+
+/* line 190, css/_style_moto.scss */
 sup {
-	bottom: 1ex;
+  bottom: 1ex;
 }
+
+/* line 193, css/_style_moto.scss */
 sub {
-	top: .5ex;
+  top: .5ex;
 }
+
+/* line 196, css/_style_moto.scss */
 small {
-	font-size: 75%;
+  font-size: 75%;
 }
+
+/* line 199, css/_style_moto.scss */
 big {
-	font-size: 125%;
+  font-size: 125%;
 }
+
+/* line 202, css/_style_moto.scss */
 figure {
-	margin: 0;
+  margin: 0;
 }
+
+/* line 205, css/_style_moto.scss */
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
+  margin: 0 0 1.5em;
+  width: 100%;
 }
+
+/* line 209, css/_style_moto.scss */
 th {
-	font-weight: bold;
+  font-weight: bold;
 }
+
+/* line 212, css/_style_moto.scss */
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
 }
+
+/* line 219, css/_style_moto.scss */
 button,
 input,
 select,
 textarea {
-	font-size: 100%; /* Corrects font size not being inherited in all browsers */
-	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+  *vertical-align: middle;
+  /* Improves appearance and consistency in all browsers */
 }
+
+/* line 226, css/_style_moto.scss */
 button,
 input {
-	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+  line-height: normal;
+  /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
 }
+
+/* line 232, css/_style_moto.scss */
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid #ccc;
-	border-color: #ccc #ccc #bbb #ccc;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
-	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	font-size: 12px;
-	font-size: 1.2rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-color: #ccc #ccc #bbb #ccc;
+  border-radius: 3px;
+  background: #e6e6e6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
+
+/* line 250, css/_style_moto.scss */
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa #bbb;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  border-color: #ccc #bbb #aaa #bbb;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
+
+/* line 261, css/_style_moto.scss */
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -259,118 +354,156 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-color: #aaa #bbb #bbb #bbb;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
+
+/* line 266, css/_style_moto.scss */
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
-	padding: 0; /* Addresses excess padding in IE8/9 */
+  box-sizing: border-box;
+  /* Addresses box sizing set to content-box in IE8/9 */
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
 }
+
+/* line 270, css/_style_moto.scss */
 input[type="search"] {
-	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-	-moz-box-sizing:    content-box;
-	box-sizing:         content-box;
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+  -webkit-box-sizing: content-box;
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-	-webkit-appearance: none;
+
+/* line 276, css/_style_moto.scss */
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none;
 }
+
+/* line 280, css/_style_moto.scss */
 button::-moz-focus-inner,
-input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
-	border: 0;
-	padding: 0;
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0;
 }
+
+/* line 289, css/_style_moto.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
+/* line 299, css/_style_moto.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	color: #111;
+  color: #111;
 }
+
+/* line 306, css/_style_moto.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+  padding: 3px;
 }
+
+/* line 309, css/_style_moto.scss */
 textarea {
-	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
-	padding-left: 3px;
-	vertical-align: top; /* Improves readability and alignment in all browsers */
-	width: 98%;
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding-left: 3px;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  width: 98%;
 }
 
 /* Links */
+/* line 317, css/_style_moto.scss */
 a {
-	color: royalblue;
+  color: royalblue;
 }
+
+/* line 320, css/_style_moto.scss */
 a:visited {
-	color: purple;
+  color: purple;
 }
+
+/* line 325, css/_style_moto.scss */
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+  color: midnightblue;
 }
 
 /* Alignment */
+/* line 330, css/_style_moto.scss */
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
 }
+
+/* line 335, css/_style_moto.scss */
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
 }
+
+/* line 340, css/_style_moto.scss */
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
+  clear: both;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Text meant only for screen readers */
+/* line 347, css/_style_moto.scss */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
 }
 
+/* line 354, css/_style_moto.scss */
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
 }
 
 /* Clearing */
+/* line 385, css/_style_moto.scss */
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -383,523 +516,572 @@ a:active {
 .site-content:after,
 .site-footer:before,
 .site-footer:after {
-	content: '';
-	display: table;
+  content: '';
+  display: table;
 }
 
+/* line 395, css/_style_moto.scss */
 .clear:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-	clear: both;
+  clear: both;
 }
-
 
 /* =Menu
 ----------------------------------------------- */
-
+/* line 403, css/_style_moto.scss */
 .main-navigation {
-	clear: both;
-	display: block;
+  /* clear: both; kozaru*/
+  display: block;
 }
+
+/* line 407, css/_style_moto.scss */
 .main-navigation ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
+
+/* line 412, css/_style_moto.scss */
 .main-navigation li {
-	/*float: left;
-	position: relative;*/
+  /*float: left;
+  position: relative;*/
 }
+
+/* line 416, css/_style_moto.scss */
 .main-navigation a {
-	display: block;
-	text-decoration: none;
+  display: block;
+  text-decoration: none;
 }
+
+/* line 420, css/_style_moto.scss */
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	display: none;
-	float: left;
-	left: 0;
-	position: absolute;
-	top: 1.5em;
-	z-index: 99999;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  display: none;
+  float: left;
+  left: 0;
+  position: absolute;
+  top: 1.5em;
+  z-index: 99999;
 }
+
+/* line 429, css/_style_moto.scss */
 .main-navigation ul ul ul {
-	left: 100%;
-	top: 0;
+  left: 100%;
+  top: 0;
 }
+
+/* line 433, css/_style_moto.scss */
 .main-navigation ul ul a {
-	width: 200px;
+  width: 200px;
 }
-.main-navigation ul ul li {
-}
-.main-navigation li:hover > a {
-}
-.main-navigation ul ul :hover > a {
-}
-.main-navigation ul ul a:hover {
-}
+
+/* line 444, css/_style_moto.scss */
 .main-navigation ul li:hover > ul {
-	display: block;
-}
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
+  display: block;
 }
 
 /* Small menu */
+/* line 452, css/_style_moto.scss */
 .menu-toggle {
-	cursor: pointer;
-	display: none;
+  cursor: pointer;
+  display: none;
 }
 
 /* =Content
 ----------------------------------------------- */
-
-.sticky {
-}
+/* line 462, css/_style_moto.scss */
 .hentry {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
+
+/* line 466, css/_style_moto.scss */
 .byline,
 .updated {
-	display: none;
+  display: none;
 }
+
+/* line 470, css/_style_moto.scss */
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
 }
+
+/* line 475, css/_style_moto.scss */
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
-}
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+  margin: 1.5em 0 0;
 }
 
+/* line 478, css/_style_moto.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
 
 /* =Asides
 ----------------------------------------------- */
-
+/* line 488, css/_style_moto.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+  display: none;
 }
-
 
 /* =Media
 ----------------------------------------------- */
-
+/* line 498, css/_style_moto.scss */
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
+
+/* line 504, css/_style_moto.scss */
 .wp-caption {
-	border: 1px solid #ccc;
-	margin-bottom: 1.5em;
-	max-width: 100%;
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  max-width: 100%;
 }
+
+/* line 509, css/_style_moto.scss */
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 1.2% auto 0;
-	max-width: 98%;
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
 }
+
+/* line 514, css/_style_moto.scss */
 .wp-caption-text {
-	text-align: center;
+  text-align: center;
 }
+
+/* line 517, css/_style_moto.scss */
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+  margin: 0.8075em 0;
 }
+
+/* line 520, css/_style_moto.scss */
 .site-main .gallery {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
-.gallery-caption {
-}
+
+/* line 525, css/_style_moto.scss */
 .site-main .gallery a img {
-	border: none;
-	height: auto;
-	max-width: 90%;
+  border: none;
+  height: auto;
+  max-width: 90%;
 }
+
+/* line 530, css/_style_moto.scss */
 .site-main .gallery dd {
-	margin: 0;
-}
-.site-main .gallery-columns-4 .gallery-item {
-}
-.site-main .gallery-columns-4 .gallery-item img {
+  margin: 0;
 }
 
 /* Make sure embeds and iframes fit their containers */
+/* line 541, css/_style_moto.scss */
 embed,
 iframe,
 object {
-	max-width: 100%;
+  max-width: 100%;
 }
-
 
 /* =Navigation
 ----------------------------------------------- */
-
+/* line 549, css/_style_moto.scss */
 .site-main [class*="navigation"] {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-[class*="navigation"] .nav-previous {
-	float: left;
-	width: 50%;
-}
-[class*="navigation"] .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+  margin: 0 0 1.5em;
+  overflow: hidden;
 }
 
+/* line 553, css/_style_moto.scss */
+[class*="navigation"] .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+/* line 557, css/_style_moto.scss */
+[class*="navigation"] .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
 
 /* =Comments
 ----------------------------------------------- */
-
+/* line 567, css/_style_moto.scss */
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
-.bypostauthor {
-}
-
 
 /* =Widgets
 ----------------------------------------------- */
-
+/* line 577, css/_style_moto.scss */
 .widget {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets */
+/* line 582, css/_style_moto.scss */
 .widget select {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /* Search widget */
+/* line 587, css/_style_moto.scss */
 .widget_search .search-submit {
-	display: none;
+  display: none;
 }
-
 
 /* =Infinite Scroll
 ----------------------------------------------- */
-
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
+/* line 597, css/_style_moto.scss */
+.infinite-scroll .paging-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+/* line 602, css/_style_moto.scss */
 .infinity-end.neverending .site-footer {
-	display: block;
+  display: block;
 }
 
-/*custom
------------------------------------------------ */
-
-body {
-	background: #f7f7f7;
-	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-}
-
-.site-header {
-	margin-bottom: 30px;
-}
-
-
-.site-title {
-	padding-top:10px;
-	font-size: 40px;
-	font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
-}
-
-.wbo-menu-bottom{
-}
-
-.site-search {
-}
-
-
-.main-navigation {
-	float: right;
-	width: 23%;
-	box-sizing: border-box;
-}
-
-.site{
-	width: 1024px;
-	margin: 0 auto;
-	box-sizing: border-box;
-}
-
-.site-content {
-	float: left;
-	width: 75%;
-	box-sizing: border-box;
-}
-
-.post {
-	width: 30%;
-	box-sizing: border-box;
-	float: left;
-	margin-right: 2%;
-}
-
-.site-branding {
-}
-
-.site-footer{
-	clear:both;
-	margin-top: 30px;
-	border-top: 1px solid #1c1c1c;
-	padding: 10px 0 40px;
-	text-align: center;
-	font-size: 10px;
-}
-
-.footer-widget-area {
-	clear:both;
-	border-top: 1px solid #1c1c1c;
-	padding: 30px 0 30px;
-}
-
-.footer-widget-area .nav-dummy{
-	width: 250px;
-	float: left;
-}
-
-.footer-widget-area .nav-dummy img{
-	margin-bottom: 30px;
-}
-
-/*kanagawa*/
-
-.main-navigation {
-	/*width:180px;*/
-	/*padding: 30px;*/
-	padding:2%;
-	background-color:#fff;
-}
-
-.main-navigation ul.nav-menu{
-	/*margin-bottom:10px;
-	padding-bottom:10px;*/
-	margin-bottom:5%;
-	padding-bottom:5%;
-}
-
-#main {
-	/*width:780px;
-	padding-right: -20px;*/
-}
-
-.home .post{
-	/*padding: 10px;*/
-	padding: 2%;
-	background-color: #fff;
-	/*margin-right:20px;*/
-	/*width:220px;*/
-	box-sizing: border-box;
-}
-
-.entry-meta .cat-links a {
-	color:#fff;
-	font-size:10px;
-	padding:2px 7px 1px 7px;
-	background-color: #aaa;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-}
-
-.button-login{
-	padding:5px;
-	text-align: center;
-	border:1px solid #1c1c1c;
-	margin-bottom: 0;
-	font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
-}
-
-.entry-meta .tags-links a {
-	color:#fff;
-	font-size:10px;
-	padding:2px 7px 1px 7px;
-	background-color: #aaa;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-}
-
+/*for pc or general*/
+/*header*/
+/*main-nav*/
+/*contents*/
+/*footer*/
+/*for tablet*/
+/*main-nav*/
+/*contents*/
+/*for mobile*/
+/*contents*/
+/*img-path*/
 /*overwrited
 ----------------------------------------------- */
 /* Links */
+/* line 116, css/_style_add.scss */
 a {
-	color: #1c1c1c;
-	text-decoration: none;
+  color: #1c1c1c;
+  text-decoration: none;
 }
+
+/* line 120, css/_style_add.scss */
 a:visited {
-	color: #1c1c1c;
+  color: #1c1c1c;
 }
+
+/* line 125, css/_style_add.scss */
 a:hover,
 a:focus,
 a:active {
-	color: #1c1c1c;
-	text-decoration: underline;
+  color: #1c1c1c;
+  text-decoration: underline;
 }
 
-/*add
------------------------------------------------ */
+/*body
+-------------------------------------*/
+/* line 132, css/_style_add.scss */
+body {
+  background: #f7f7f7;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+/* line 137, css/_style_add.scss */
+.site {
+  width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*header
+-------------------------------------*/
+/* line 145, css/_style_add.scss */
+.site-header {
+  margin-bottom: 30px;
+}
+
+/* line 150, css/_style_add.scss */
+.site-title {
+  padding-top: 10px;
+  font-size: 40px;
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+/* line 156, css/_style_add.scss */
 .wbo-menu-bottom {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
-
-.wbo-menu-pages{
-	float:left;
+/* line 159, css/_style_add.scss */
+.wbo-menu-pages {
+  float: left;
 }
-
-.wbo-menu-pages ul, ul li {
-	margin: 0; padding: 0;
-	font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
-}
-
+/* line 162, css/_style_add.scss */
+.wbo-menu-pages ul,
 .wbo-menu-pages ul li {
- list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+/* line 166, css/_style_add.scss */
+.wbo-menu-pages ul li {
+  list-style-type: none;
+}
+/* line 169, css/_style_add.scss */
+.wbo-menu-pages ul li a {
+  display: block;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 10px 10px 8px 40px;
+}
+/* line 173, css/_style_add.scss */
+.wbo-menu-pages ul li a:hover {
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_o.png");
 }
 
-.wbo-menu-pages ul li a{
- display: block;
- padding: 10px 10px 8px 40px;
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png);
- background-repeat: no-repeat;
- background-position: left center;
+/* line 179, css/_style_add.scss */
+.site-search {
+  margin-left: 10px;
+  margin-top: 2px;
+  float: right;
 }
 
-.wbo-menu-pages ul li a:hover{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_o.png);
-}
-
-.wbo-menu-sns{
-	float: right;
-}
-
-.site-search{
-	margin-left: 10px;
-	margin-top: 2px;
-	float: right;
-}
-
-.wbo-menu-sns ul li {
- list-style-type: none;
- float: left;
- padding-right: 10px;
-}
-
-.wbo-menu-sns ul li a{
- display: block;
- width: 36px;
- height: 36px;
- background-repeat: no-repeat;
- background-position: left center;
-}
-
-.wbo-menu-sns ul li a.sns1{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_f.png);
-}
-
-.wbo-menu-sns ul li a.sns1:hover{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_o.png);
-}
-
-.wbo-menu-sns ul li a.sns2{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_f.png);
-}
-
-.wbo-menu-sns ul li a.sns2:hover{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_o.png);
-}
-
-
-.wbo-menu-sns ul li a.sns3{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_f.png);
-}
-
-.wbo-menu-sns ul li a.sns3:hover{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_o.png);
-}
-
-
-.wbo-menu-sns ul li a.sns4{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_f.png);
-}
-
-.wbo-menu-sns ul li a.sns4:hover{
- background-image: url(http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_o.png);
-}
-
+/* line 190, css/_style_add.scss */
 .wbo-menu-right {
-	float: right;
+  float: right;
 }
 
-
-
-
-@media (min-width: 1024px) {
-
+/* line 191, css/_style_add.scss */
+.wbo-menu-sns {
+  float: right;
+}
+/* line 193, css/_style_add.scss */
+.wbo-menu-sns ul li {
+  list-style-type: none;
+  float: left;
+  padding-right: 10px;
+}
+/* line 198, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns1 {
+  display: block;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+/* line 199, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns1:hover {
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_o.png");
+}
+/* line 200, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns2 {
+  display: block;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+/* line 201, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns2:hover {
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_o.png");
+}
+/* line 202, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns3 {
+  display: block;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+/* line 203, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns3:hover {
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_o.png");
+}
+/* line 204, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns4 {
+  display: block;
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+/* line 205, css/_style_add.scss */
+.wbo-menu-sns ul li a.sns4:hover {
+  background-image: url("http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_o.png");
+}
+/* line 206, css/_style_add.scss */
+.wbo-menu-sns ul li a {
+  width: 36px;
+  height: 36px;
 }
 
-@media (max-width: 1023px) and (min-width: 481px)  {
-	.main-navigation {
-	float: right;
-	width: 30%;
-	}
-	.site{
-	width: 100%;
-	margin: 0 10px;
-	}
-	.site-content {
-	float: left;
-	width: 66%;
-	}
-	.post {
-		width: 47%;	
-		float: left;
-		margin-right: 2%;
-	}
+/*nav
+-------------------------------------*/
+/* line 214, css/_style_add.scss */
+.main-navigation {
+  float: right;
+  width: 23%;
+  padding: 2%;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  /*width:180px; kanagawa*/
+  /*padding: 30px; kanagawa*/
 }
 
-@media (max-width: 480px) {
-	.main-navigation {
-	float: none;
-	display: none;
-	}
-	.site{
-	width: 95%;
-	margin: 0 auto;
-	}
-	.site-content {
-	float: none;
-	width: 100%;
-	}
-	.post {
-		width: 100%;	
-		float: none;
-		margin-right: 0;
-	}
-	
-	
+/* line 225, css/_style_add.scss */
+.main-navigation ul.nav-menu {
+  /*margin-bottom:10px; kanagawa*/
+  /*padding-bottom:10px; kanagawa*/
+  margin-bottom: 5%;
+  padding-bottom: 5%;
 }
+
+/* line 237, css/_style_add.scss */
+.button-login {
+  padding: 5px;
+  margin-bottom: 0;
+  border: 1px solid #1c1c1c;
+  text-align: center;
+}
+
+/*content
+-------------------------------------*/
+/* line 247, css/_style_add.scss */
+.site-content {
+  float: left;
+  width: 75%;
+  box-sizing: border-box;
+}
+
+/*main
+-------------------------------------*/
+/*#main {
+	width:780px;
+	padding-right: -20px;
+} kanagawa */
+/*article
+-------------------------------------*/
+/* line 265, css/_style_add.scss */
+.home .post {
+  float: left;
+  width: 30%;
+  margin-right: 2%;
+  padding: 2%;
+  background-color: #fff;
+  box-sizing: border-box;
+  /*padding: 10px;		kanagawa */
+  /*margin-right:20px;kanagawa */
+  /*width:220px;			kanagawa */
+}
+
+/* line 278, css/_style_add.scss */
 .single .post {
-width: 100%;
+  width: 100%;
+}
+
+/*header
+-------------------------------------*/
+/*footer
+-------------------------------------*/
+/* line 303, css/_style_add.scss */
+.entry-meta .cat-links > a,
+.entry-meta .tags-links > a {
+  /* kanagawa-add */
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 7px 1px 7px;
+  background-color: #aaa;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
+/*pagenation
+-------------------------------------*/
+/*footer-menu
+-------------------------------------*/
+/* line 323, css/_style_add.scss */
+.footer-widget-area {
+  clear: both;
+  border-top: 1px solid #1c1c1c;
+  padding: 30px 0 30px;
+}
+
+/* line 329, css/_style_add.scss */
+.footer-widget-area .nav-dummy {
+  width: 250px;
+  float: left;
+}
+/* line 333, css/_style_add.scss */
+.footer-widget-area .nav-dummy > img {
+  margin-bottom: 30px;
+}
+
+/*footer
+-------------------------------------*/
+/* line 340, css/_style_add.scss */
+.site-footer {
+  clear: both;
+  margin-top: 30px;
+  padding: 10px 0 40px;
+  font-size: 10px;
+  text-align: center;
+  border-top: 1px solid #1c1c1c;
+}
+
+@media (max-width: 1023px) and (min-width: 481px) {
+  /* line 351, css/_style_add.scss */
+  .site {
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  /* line 355, css/_style_add.scss */
+  .main-navigation {
+    width: 30%;
+  }
+
+  /* line 358, css/_style_add.scss */
+  .site-content {
+    width: 66%;
+  }
+
+  /* line 362, css/_style_add.scss */
+  .home .post {
+    width: 47%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 369, css/_style_add.scss */
+  .site {
+    width: 95%;
+  }
+
+  /* line 372, css/_style_add.scss */
+  .main-navigation {
+    float: none;
+    display: none;
+  }
+
+  /* line 376, css/_style_add.scss */
+  .site-content {
+    float: none;
+    width: 100%;
+  }
+
+  /* line 381, css/_style_add.scss */
+  .home .post {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
 }

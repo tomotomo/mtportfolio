@@ -1,0 +1,388 @@
+@charset "UTF-8";
+@import "compass";
+
+$font-main  :'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+$font-sub   :'ヒラギノ明朝 Pro W6','Hiragino Mincho Pro','HGS明朝E','ＭＳ Ｐ明朝',serif;
+$body-bg    :#f7f7f7;
+$link-txt-clr :#1c1c1c;
+
+/*for pc or general*/
+$pc-site-w                 :1024px;
+
+	/*header*/
+	$pc-site-header-mb         :30px;
+	$pc-wbo-menu-bottom-mt     :20px;
+		$pc-wbo-menu-pages-pt    :10px;
+		$pc-wbo-menu-pages-pr    :10px;
+		$pc-wbo-menu-pages-pb    :8px;
+		$pc-wbo-menu-pages-pl    :40px;
+		$pc-site-search-ml       :10px;
+		$pc-site-search-mt       :2px;
+	  $pc-wbo-menu-sns-li-pr   :10px;
+	  $pc-wbo-menu-sns-li-a-w  :36px;
+	  $pc-wbo-menu-sns-li-a-h  :36px;
+
+	/*main-nav*/
+	$pc-main-navigation-w      :23%;
+
+	$pc-main-navigation-p      :2%;
+		$pc-nav-menu-mb-IN-main-navigation      :5%;
+		$pc-nav-menu-pb-IN-main-navigation      :5%;
+		$pc-button-login-p       :5px;
+		$pc-button-login-mb      :0;
+
+	/*contents*/
+	$pc-site-content-w         :75%;
+	$pc-post-w-IN-home         :30%;
+	$pc-post-mr-IN-home        :2%;
+	$pc-post-p-IN-home         :2%;
+	$pc-post-w-IN-single       :100%;
+	$pc-site-title-pt          :10px;
+	$pc-site-title-fs          :40px;
+
+	/*footer*/
+	$pc-site-footer-mt         :30px;
+	$pc-site-footer-pt         :10px;
+	$pc-site-footer-pb         :40px;
+	$pc-site-footer-fs         :10px;
+	$pc-footer-widget-area-pt  :30px;
+	$pc-footer-widget-area-pb  :30px;
+	$pc-nav-dummy-w            :250px;
+	$pc-nav-dummy-img-mb       :30px;
+
+/*for tablet*/
+$tb-max-w                    :1023px;
+$tb-min-w                    :481px;
+$tb-site-w                   :100%;
+$tb-site-mrl                 :10px;
+
+	/*main-nav*/
+	$tb-main-navigation-w      :30%;
+
+	/*contents*/
+	$tb-site-content-w         :66%;
+	$tb-post-w-IN-home         :47%;
+
+/*for mobile*/
+$mb-max-w                    :480px;
+$mb-site-w                   :95%;
+
+	/*contents*/
+	$mb-site-content-w         :100%;
+	$mb-post-w-IN-home         :100%;
+	$mb-post-mr-IN-home        :0;
+
+/*img-path*/
+$img-wbo-menu-pages              :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png';
+$img-wbo-menu-pages-o            :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_o.png';
+$img-wbo-menu-sns-twitter        :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_f.png';
+$img-wbo-menu-sns-twitter-o      :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_o.png';
+$img-wbo-menu-sns-facebook       :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_f.png';
+$img-wbo-menu-sns-facebook-o     :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_o.png';
+$img-wbo-menu-sns-pinterest      :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_f.png';
+$img-wbo-menu-sns-pinterest-o    :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_o.png';
+$img-wbo-menu-sns-tumblr         :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_f.png';
+$img-wbo-menu-sns-tumblr-o       :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_o.png';
+
+@mixin b-bk-1{border: 1px solid #1c1c1c;}
+@mixin bt-bk-1{border-top: 1px solid #1c1c1c;}
+@mixin bg-clr-wh {background-color:#fff;}
+
+@mixin tomo-add-1{box-sizing: border-box;}
+@mixin tomo-add-2{clear:both;}
+
+@mixin tag-cate-btn-1 { /* kanagawa-add */
+	color:#fff;
+	font-size:10px;
+	padding:2px 7px 1px 7px;
+	background-color: #aaa;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
+@mixin li-a-bg-img ($img,$pos1:left,$pos2:center) {
+ 	display: block;
+	background-image: url($img);
+	background-repeat: no-repeat;
+ 	background-position: $pos1 $pos2;
+}
+@mixin li-a-bg-img-hover ($img) {background-image: url($img);}
+
+/*overwrited
+----------------------------------------------- */
+/* Links */
+a {
+	color: $link-txt-clr;
+	text-decoration: none;
+}
+a:visited {
+	color: $link-txt-clr
+}
+a:hover,
+a:focus,
+a:active {
+	color: $link-txt-clr;
+	text-decoration: underline;
+}
+
+/*body
+-------------------------------------*/
+body {
+	background: $body-bg;
+	font-family:$font-main;
+}
+
+.site {
+	width: $pc-site-w;
+	margin: 0 auto;
+	@include tomo-add-1;
+}
+
+	/*header
+	-------------------------------------*/
+	.site-header {
+		margin-bottom: $pc-site-header-mb;
+	}
+
+		.site-branding {}
+			.site-title {
+					padding-top: $pc-site-title-pt;
+					font-size: $pc-site-title-fs;
+					font-family: $font-sub;
+			}
+			.site-title > a {}
+		.wbo-menu-bottom {
+			margin-top: $pc-wbo-menu-bottom-mt;
+		}
+			.wbo-menu-pages {
+				float:left;
+				ul,
+				ul li {
+					margin: 0; padding: 0;
+					font-family: $font-sub;
+				}
+				ul li {
+					list-style-type: none;
+				}
+				ul li a{
+					@include li-a-bg-img ($img-wbo-menu-pages);
+					padding: $pc-wbo-menu-pages-pt $pc-wbo-menu-pages-pr $pc-wbo-menu-pages-pb $pc-wbo-menu-pages-pl;
+				}
+				ul li a:hover{
+					@include li-a-bg-img-hover ($img-wbo-menu-pages-o);
+				}
+			}
+				.menu {} //※
+					.menu-item {}
+			.site-search {
+				margin-left: $pc-site-search-ml;
+				margin-top: $pc-site-search-mt;
+				float: right;
+			}
+				.widget_search {}
+					.search-form {}
+						.search-form > label {}
+						.screen-reader-text {}
+							.search-field {}
+							.search-submit {}
+			.wbo-menu-right { float: right; }
+				.wbo-menu-sns {
+					float: right;
+					ul li {
+					 list-style-type: none;
+					 float: left;
+					 padding-right: $pc-wbo-menu-sns-li-pr;
+					}
+					ul li a.sns1      {@include li-a-bg-img ($img-wbo-menu-sns-twitter);}
+					ul li a.sns1:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-twitter-o);}
+					ul li a.sns2      {@include li-a-bg-img ($img-wbo-menu-sns-facebook);}
+					ul li a.sns2:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-facebook-o);}
+					ul li a.sns3      {@include li-a-bg-img ($img-wbo-menu-sns-pinterest);}
+					ul li a.sns3:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-pinterest-o);}
+					ul li a.sns4      {@include li-a-bg-img ($img-wbo-menu-sns-tumblr);}
+					ul li a.sns4:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-tumblr-o);}
+					ul li a{
+					 width: $pc-wbo-menu-sns-li-a-w;
+					 height: $pc-wbo-menu-sns-li-a-h;
+					}
+				}
+
+	/*nav
+	-------------------------------------*/
+		.main-navigation {
+			float: right;
+			width: $pc-main-navigation-w;
+			padding: $pc-main-navigation-p;
+			@include bg-clr-wh;
+			@include tomo-add-1;
+			font-family: $font-sub;
+			/*width:180px; kanagawa*/
+			/*padding: 30px; kanagawa*/
+		}
+		.main-navigation {
+			ul.nav-menu{
+				/*margin-bottom:10px; kanagawa*/
+				/*padding-bottom:10px; kanagawa*/
+				margin-bottom:$pc-nav-menu-mb-IN-main-navigation;
+				padding-bottom:$pc-nav-menu-pb-IN-main-navigation;
+			}
+		}
+			.menu-toggle {} 				
+			.skip-link {}
+
+			.menu {} //※
+			.menu > ul {} //※
+			.button-login {
+				padding:$pc-button-login-p;
+				margin-bottom: $pc-button-login-mb;
+				@include b-bk-1;
+				text-align: center;
+			}
+			.button-login > a {}
+
+	/*content
+	-------------------------------------*/
+	.site-content {
+		float: left;
+		width: $pc-site-content-w;
+		@include tomo-add-1;
+	}
+		.content-area {}
+
+			/*main
+			-------------------------------------*/
+			.site-main {}
+			/*#main {
+				width:780px;
+				padding-right: -20px;
+			} kanagawa */
+				/*article
+				-------------------------------------*/
+				.post {}
+				.home{
+					.post {
+						float: left;
+						width: $pc-post-w-IN-home;
+						margin-right: $pc-post-mr-IN-home;
+						padding: $pc-post-p-IN-home;
+						@include bg-clr-wh;
+						@include tomo-add-1;
+						/*padding: 10px;		kanagawa */
+						/*margin-right:20px;kanagawa */
+						/*width:220px;			kanagawa */
+					}
+				}
+				.single{
+					.post {
+						width: $pc-post-w-IN-single;
+					}
+				}
+				.format-standard{} //*
+				.format-image {} //*
+				.post-password-required {} //*
+				.category-photo {} //*
+
+
+					/*header
+					-------------------------------------*/
+					.entry-header {}
+					.entry-header > a {}
+						.attachment-post-thumbnail {}
+						.wp-post-image {}
+						.entry-title {}
+						.entry-title > a {}
+					.entry-content {}
+
+					/*footer
+					-------------------------------------*/
+					.entry-meta {}
+					.entry-meta {
+						.cat-links > a,
+						.tags-links > a {
+							@include tag-cate-btn-1;
+						}
+					}
+						.cat-links {}
+						.cat-links > a {}
+						.tags-links {}
+						.tags-links > a {}
+
+				/*pagenation
+				-------------------------------------*/
+				.paging-navigation {}
+					.nav-previous {}
+					.nav-previous > a {}
+						.meta-nav {}
+
+		.widget-area {} //*secondary 多分いらないと思う
+
+	/*footer-menu
+	-------------------------------------*/
+	.footer-widget-area {
+			@include tomo-add-2;
+			@include bt-bk-1;
+			padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+	}
+	.footer-widget-area {
+		.nav-dummy {
+			width: $pc-nav-dummy-w;
+			float: left;
+		}
+		.nav-dummy > img {
+			margin-bottom: $pc-nav-dummy-img-mb;
+		}
+	}
+
+	/*footer
+	-------------------------------------*/
+	.site-footer {
+		@include tomo-add-2;
+		margin-top: $pc-site-footer-mt;
+		padding: $pc-site-footer-pt 0 $pc-site-footer-pb;
+		font-size: $pc-site-footer-fs;
+		text-align: center;
+		@include bt-bk-1;
+	}
+		.site-info {}
+
+@media (max-width:$tb-max-w) and (min-width:$tb-min-w) {
+	.site{
+		width: $tb-site-w;
+		margin: 0 $tb-site-mrl;
+	}
+	.main-navigation {
+		width: $tb-main-navigation-w;
+	}
+	.site-content {
+		width: $tb-site-content-w;
+	}
+	.home {
+		.post {
+			width: $tb-post-w-IN-home;	
+		}
+	}
+}
+
+@media (max-width:$mb-max-w) {
+	.site{
+		width: $mb-site-w;
+	}
+	.main-navigation {
+		float: none;
+		display: none;
+	}
+	.site-content {
+		float: none;
+		width: $mb-site-content-w;
+	}
+	.home {
+		.post {
+			width: $mb-post-w-IN-home;	
+			float: none;
+			margin-right: $mb-post-mr-IN-home;
+		}
+	}
+}
+
