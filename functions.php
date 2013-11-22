@@ -126,3 +126,16 @@ function mtportofolio_the_thumbnail() {
 	echo $first_img;
     }
 }
+
+function mtportofolio_settings() {
+	?>
+	<div id="wrap">
+	
+	</div>
+	<?php
+}
+
+function mtportofolio_admin_menu() {
+	add_submenu_page( 'themes.php', 'mtportofolio', 'mtportofolio', 'edit_theme_options', 'mtportofolio', 'mtportofolio_settings' );
+}
+add_action( 'admin_menu', 'mtportofolio_admin_menu' );
