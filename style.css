@@ -534,7 +534,7 @@ a:active {
 ----------------------------------------------- */
 /* line 403, css/_style_moto.scss */
 .main-navigation {
-  clear: both;
+  /* clear: both; kozaru*/
   display: block;
 }
 

@@ -8,9 +8,37 @@
  */
 ?>
 
-	</div><!-- #content -->
+	</div><!-- .nav_content -->
 
-	<div id="secondary" class="footer-widget-area" role="complementary">
+	<div class="footer-widget-area" role="complementary">
+
+
+<!-- 	<div id="secondary" class="widget-area" role="complementary">
+		<?php //do_action( 'before_sidebar' ); ?>
+		<?php //if ( false && !dynamic_sidebar( 'sidebar-1' ) ) : ?>
+
+			<aside id="search" class="widget widget_search">
+				<?php get_search_form(); ?>
+			</aside>
+
+			<aside id="archives" class="widget">
+				<h1 class="widget-title"><?php //_e( 'Archives', 'mtportofolio' ); ?></h1>
+				<ul>
+					<?php //wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+				</ul>
+			</aside>
+
+			<aside id="meta" class="widget">
+				<h1 class="widget-title"><?php _//e( 'Meta', 'mtportofolio' ); ?></h1>
+				<ul>
+					<?php //wp_register(); ?>
+					<li><?php //wp_loginout(); ?></li>
+					<?php wp_meta(); ?>
+				</ul>
+			</aside>
+
+		<?php //endif; // end sidebar widget area ?>
+	</div> --><!-- #secondary -->
     
     <div class="nav-dummy"><img src="http://wo.mt8.biz/wp-content/uploads/2013/11//wbo_footer01.png" /></div>
     <div class="nav-dummy"><img src="http://wo.mt8.biz/wp-content/uploads/2013/11//wbo_footer02.png" /></div>
