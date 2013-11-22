@@ -10,7 +10,7 @@ $link-txt-clr :#1c1c1c;
 $pc-site-w                 :1024px;
 
 	/*header*/
-	$pc-site-header-mb         :30px;
+	$pc-site-header-mb         :15px;
 	$pc-wbo-menu-bottom-mt     :20px;
 		$pc-wbo-menu-pages-pt  :10px;
 		$pc-wbo-menu-pages-pr  :10px;
@@ -25,7 +25,7 @@ $pc-site-w                 :1024px;
 	/*main-nav*/
 	$pc-main-navigation-area-w :25%;
 
-	$pc-main-navigation-p      :15px;
+	$pc-main-navigation-p      :25px;
 		$pc-nav-menu-mb-IN-main-navigation      :5%;
 		$pc-nav-menu-pb-IN-main-navigation      :5%;
 		$pc-button-login-p       :5px;
@@ -72,16 +72,17 @@ $mb-site-w                   :95%;
 	$mb-post-area-mr-IN-home   :0;
 
 /*img-path*/
-$img-wbo-menu-pages              :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png';
-$img-wbo-menu-pages-o            :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_o.png';
-$img-wbo-menu-sns-twitter        :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_f.png';
-$img-wbo-menu-sns-twitter-o      :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_o.png';
-$img-wbo-menu-sns-facebook       :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_f.png';
-$img-wbo-menu-sns-facebook-o     :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_o.png';
-$img-wbo-menu-sns-pinterest      :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_f.png';
-$img-wbo-menu-sns-pinterest-o    :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_o.png';
-$img-wbo-menu-sns-tumblr         :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_f.png';
-$img-wbo-menu-sns-tumblr-o       :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_o.png';
+$img-path                        :'img/';
+$img-wbo-menu-pages              :'#{$img-path}wbo_arrow_down_f.png';
+$img-wbo-menu-pages-o            :'img/wbo_arrow_down_o.png';
+$img-wbo-menu-sns-twitter        :'#{$img-path}wbo_twitter_f.png';
+$img-wbo-menu-sns-twitter-o      :'#{$img-path}wbo_twitter_o.png';
+$img-wbo-menu-sns-facebook       :'#{$img-path}wbo_facebook_f.png';
+$img-wbo-menu-sns-facebook-o     :'#{$img-path}wbo_facebook_o.png';
+$img-wbo-menu-sns-pinterest      :'#{$img-path}wbo_pinterest_f.png';
+$img-wbo-menu-sns-pinterest-o    :'#{$img-path}wbo_pinterest_o.png';
+$img-wbo-menu-sns-tumblr         :'#{$img-path}wbo_tumblr_f.png';
+$img-wbo-menu-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 
 @mixin b-bk-1{border: 1px solid #1c1c1c;}
 @mixin bt-bk-1{border-top: 1px solid #1c1c1c;}
@@ -109,8 +110,13 @@ $img-wbo-menu-sns-tumblr-o       :'http://wo.mt8.biz/wp-content/uploads/2013/11/
 }
 @mixin li-a-bg-img-hover ($img) {background-image: url($img);}
 
-/*overwrited
+/*moto
 ----------------------------------------------- */
+/* =Widgets
+------------- */
+/* widget to add*/
+.widget {margin: 0;}
+
 /* Links */
 a {
 	color: $link-txt-clr;
