@@ -73,4 +73,4 @@
 	    	    
 	</header><!-- #masthead -->
 
-	<div class="nav_content">
+	<div id="content" class="site-content">

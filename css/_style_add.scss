@@ -12,30 +12,30 @@ $pc-site-w                 :1024px;
 	/*header*/
 	$pc-site-header-mb         :30px;
 	$pc-wbo-menu-bottom-mt     :20px;
-		$pc-wbo-menu-pages-pt    :10px;
-		$pc-wbo-menu-pages-pr    :10px;
-		$pc-wbo-menu-pages-pb    :8px;
-		$pc-wbo-menu-pages-pl    :40px;
-		$pc-site-search-ml       :10px;
-		$pc-site-search-mt       :2px;
+		$pc-wbo-menu-pages-pt  :10px;
+		$pc-wbo-menu-pages-pr  :10px;
+		$pc-wbo-menu-pages-pb  :8px;
+		$pc-wbo-menu-pages-pl  :40px;
+		$pc-site-search-ml     :10px;
+		$pc-site-search-mt     :2px;
 	  $pc-wbo-menu-sns-li-pr   :10px;
 	  $pc-wbo-menu-sns-li-a-w  :36px;
 	  $pc-wbo-menu-sns-li-a-h  :36px;
 
 	/*main-nav*/
-	$pc-main-navigation-w      :23%;
+	$pc-main-navigation-area-w :25%;
 
-	$pc-main-navigation-p      :2%;
+	$pc-main-navigation-p      :15px;
 		$pc-nav-menu-mb-IN-main-navigation      :5%;
 		$pc-nav-menu-pb-IN-main-navigation      :5%;
 		$pc-button-login-p       :5px;
 		$pc-button-login-mb      :0;
 
 	/*contents*/
-	$pc-site-content-w         :75%;
-	$pc-post-w-IN-home         :30%;
-	$pc-post-mr-IN-home        :2%;
-	$pc-post-p-IN-home         :2%;
+	$pc-content-area-w         :75%;
+	$pc-post-area-w-IN-home    :31%;
+	$pc-post-area-mr-IN-home   :2%;
+	$pc-post-p-IN-home         :15px;
 	$pc-post-w-IN-single       :100%;
 	$pc-site-title-pt          :10px;
 	$pc-site-title-fs          :40px;
@@ -53,24 +53,23 @@ $pc-site-w                 :1024px;
 /*for tablet*/
 $tb-max-w                    :1023px;
 $tb-min-w                    :481px;
-$tb-site-w                   :100%;
-$tb-site-mrl                 :10px;
+$tb-site-w                   :95%;
 
 	/*main-nav*/
-	$tb-main-navigation-w      :30%;
+	$tb-main-navigation-area-w:33%;
 
 	/*contents*/
-	$tb-site-content-w         :66%;
-	$tb-post-w-IN-home         :47%;
+	$tb-content-area-w  :66%;
+	$tb-post-area-w-IN-home  :48%;
 
 /*for mobile*/
 $mb-max-w                    :480px;
 $mb-site-w                   :95%;
 
 	/*contents*/
-	$mb-site-content-w         :100%;
-	$mb-post-w-IN-home         :100%;
-	$mb-post-mr-IN-home        :0;
+	$mb-content-area-w         :100%;
+	$mb-post-area-w-IN-home    :100%;
+	$mb-post-area-mr-IN-home   :0;
 
 /*img-path*/
 $img-wbo-menu-pages              :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png';
@@ -153,6 +152,7 @@ body {
 					font-family: $font-sub;
 			}
 			.site-title > a {}
+
 		.wbo-menu-bottom {
 			margin-top: $pc-wbo-menu-bottom-mt;
 		}
@@ -211,9 +211,11 @@ body {
 
 	/*nav
 	-------------------------------------*/
-		.main-navigation {
+	.main-navigation-area{
 			float: right;
-			width: $pc-main-navigation-w;
+			width: $pc-main-navigation-area-w;
+	}
+		.main-navigation {
 			padding: $pc-main-navigation-p;
 			@include bg-clr-wh;
 			@include tomo-add-1;
@@ -245,12 +247,12 @@ body {
 	/*content
 	-------------------------------------*/
 	.site-content {
-		float: left;
-		width: $pc-site-content-w;
-		@include tomo-add-1;
 	}
-		.content-area {}
-
+		.content-area {
+			float: left;
+			width: $pc-content-area-w;
+			@include tomo-add-1;
+		}
 			/*main
 			-------------------------------------*/
 			.site-main {}
@@ -262,17 +264,19 @@ body {
 				-------------------------------------*/
 				.post {}
 				.home{
-					.post {
+					.post-area{
 						float: left;
-						width: $pc-post-w-IN-home;
-						margin-right: $pc-post-mr-IN-home;
-						padding: $pc-post-p-IN-home;
-						@include bg-clr-wh;
-						@include tomo-add-1;
-						/*padding: 10px;		kanagawa */
-						/*margin-right:20px;kanagawa */
-						/*width:220px;			kanagawa */
+						width: $pc-post-area-w-IN-home;
+						margin-right: $pc-post-area-mr-IN-home;
 					}
+						.post {
+							padding: $pc-post-p-IN-home;
+							@include bg-clr-wh;
+							@include tomo-add-1;
+							/*padding: 10px;		kanagawa */
+							/*margin-right:20px;kanagawa */
+							/*width:220px;			kanagawa */
+						}
 				}
 				.single{
 					.post {
@@ -350,17 +354,16 @@ body {
 @media (max-width:$tb-max-w) and (min-width:$tb-min-w) {
 	.site{
 		width: $tb-site-w;
-		margin: 0 $tb-site-mrl;
 	}
-	.main-navigation {
-		width: $tb-main-navigation-w;
+	.main-navigation-area {
+		width: $tb-main-navigation-area-w;
 	}
-	.site-content {
-		width: $tb-site-content-w;
+	.content-area {
+		width: $tb-content-area-w;
 	}
 	.home {
-		.post {
-			width: $tb-post-w-IN-home;	
+		.post-area {
+			width: $tb-post-area-w-IN-home;	
 		}
 	}
 }
@@ -369,19 +372,19 @@ body {
 	.site{
 		width: $mb-site-w;
 	}
-	.main-navigation {
+	.main-navigation-area {
 		float: none;
 		display: none;
 	}
-	.site-content {
+	.content-area {
 		float: none;
-		width: $mb-site-content-w;
+		width: $mb-content-area-w;
 	}
 	.home {
-		.post {
-			width: $mb-post-w-IN-home;	
+		.post-area {
+			width: $mb-post-area-w-IN-home;	
 			float: none;
-			margin-right: $mb-post-mr-IN-home;
+			margin-right: $mb-post-area-mr-IN-home;
 		}
 	}
 }

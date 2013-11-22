@@ -7,11 +7,9 @@
  * @package mtportofolio
  */
 ?>
-
-	</div><!-- .nav_content -->
+	</div><!-- #content -->
 
 	<div class="footer-widget-area" role="complementary">
-
 
 <!-- 	<div id="secondary" class="widget-area" role="complementary">
 		<?php //do_action( 'before_sidebar' ); ?>

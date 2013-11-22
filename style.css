@@ -769,18 +769,18 @@ object {
 /*overwrited
 ----------------------------------------------- */
 /* Links */
-/* line 116, css/_style_add.scss */
+/* line 115, css/_style_add.scss */
 a {
   color: #1c1c1c;
   text-decoration: none;
 }
 
-/* line 120, css/_style_add.scss */
+/* line 119, css/_style_add.scss */
 a:visited {
   color: #1c1c1c;
 }
 
-/* line 125, css/_style_add.scss */
+/* line 124, css/_style_add.scss */
 a:hover,
 a:focus,
 a:active {
@@ -790,13 +790,13 @@ a:active {
 
 /*body
 -------------------------------------*/
-/* line 132, css/_style_add.scss */
+/* line 131, css/_style_add.scss */
 body {
   background: #f7f7f7;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 
-/* line 137, css/_style_add.scss */
+/* line 136, css/_style_add.scss */
 .site {
   width: 1024px;
   margin: 0 auto;
@@ -805,12 +805,12 @@ body {
 
 /*header
 -------------------------------------*/
-/* line 145, css/_style_add.scss */
+/* line 144, css/_style_add.scss */
 .site-header {
   margin-bottom: 30px;
 }
 
-/* line 150, css/_style_add.scss */
+/* line 149, css/_style_add.scss */
 .site-title {
   padding-top: 10px;
   font-size: 40px;
@@ -925,10 +925,14 @@ body {
 /*nav
 -------------------------------------*/
 /* line 214, css/_style_add.scss */
-.main-navigation {
+.main-navigation-area {
   float: right;
-  width: 23%;
-  padding: 2%;
+  width: 25%;
+}
+
+/* line 218, css/_style_add.scss */
+.main-navigation {
+  padding: 15px;
   background-color: #fff;
   box-sizing: border-box;
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
@@ -936,7 +940,7 @@ body {
   /*padding: 30px; kanagawa*/
 }
 
-/* line 225, css/_style_add.scss */
+/* line 227, css/_style_add.scss */
 .main-navigation ul.nav-menu {
   /*margin-bottom:10px; kanagawa*/
   /*padding-bottom:10px; kanagawa*/
@@ -944,7 +948,7 @@ body {
   padding-bottom: 5%;
 }
 
-/* line 237, css/_style_add.scss */
+/* line 239, css/_style_add.scss */
 .button-login {
   padding: 5px;
   margin-bottom: 0;
@@ -954,8 +958,8 @@ body {
 
 /*content
 -------------------------------------*/
-/* line 247, css/_style_add.scss */
-.site-content {
+/* line 251, css/_style_add.scss */
+.content-area {
   float: left;
   width: 75%;
   box-sizing: border-box;
@@ -969,12 +973,15 @@ body {
 } kanagawa */
 /*article
 -------------------------------------*/
-/* line 265, css/_style_add.scss */
-.home .post {
+/* line 267, css/_style_add.scss */
+.home .post-area {
   float: left;
-  width: 30%;
+  width: 31%;
   margin-right: 2%;
-  padding: 2%;
+}
+/* line 272, css/_style_add.scss */
+.home .post {
+  padding: 15px;
   background-color: #fff;
   box-sizing: border-box;
   /*padding: 10px;		kanagawa */
@@ -982,7 +989,7 @@ body {
   /*width:220px;			kanagawa */
 }
 
-/* line 278, css/_style_add.scss */
+/* line 282, css/_style_add.scss */
 .single .post {
   width: 100%;
 }
@@ -991,7 +998,7 @@ body {
 -------------------------------------*/
 /*footer
 -------------------------------------*/
-/* line 303, css/_style_add.scss */
+/* line 307, css/_style_add.scss */
 .entry-meta .cat-links > a,
 .entry-meta .tags-links > a {
   /* kanagawa-add */
@@ -1009,26 +1016,26 @@ body {
 -------------------------------------*/
 /*footer-menu
 -------------------------------------*/
-/* line 323, css/_style_add.scss */
+/* line 327, css/_style_add.scss */
 .footer-widget-area {
   clear: both;
   border-top: 1px solid #1c1c1c;
   padding: 30px 0 30px;
 }
 
-/* line 329, css/_style_add.scss */
+/* line 333, css/_style_add.scss */
 .footer-widget-area .nav-dummy {
   width: 250px;
   float: left;
 }
-/* line 333, css/_style_add.scss */
+/* line 337, css/_style_add.scss */
 .footer-widget-area .nav-dummy > img {
   margin-bottom: 30px;
 }
 
 /*footer
 -------------------------------------*/
-/* line 340, css/_style_add.scss */
+/* line 344, css/_style_add.scss */
 .site-footer {
   clear: both;
   margin-top: 30px;
@@ -1039,47 +1046,46 @@ body {
 }
 
 @media (max-width: 1023px) and (min-width: 481px) {
-  /* line 351, css/_style_add.scss */
-  .site {
-    width: 100%;
-    margin: 0 10px;
-  }
-
   /* line 355, css/_style_add.scss */
-  .main-navigation {
-    width: 30%;
-  }
-
-  /* line 358, css/_style_add.scss */
-  .site-content {
-    width: 66%;
-  }
-
-  /* line 362, css/_style_add.scss */
-  .home .post {
-    width: 47%;
-  }
-}
-@media (max-width: 480px) {
-  /* line 369, css/_style_add.scss */
   .site {
     width: 95%;
   }
 
+  /* line 358, css/_style_add.scss */
+  .main-navigation-area {
+    width: 33%;
+  }
+
+  /* line 361, css/_style_add.scss */
+  .content-area {
+    width: 66%;
+  }
+
+  /* line 365, css/_style_add.scss */
+  .home .post-area {
+    width: 48%;
+  }
+}
+@media (max-width: 480px) {
   /* line 372, css/_style_add.scss */
-  .main-navigation {
+  .site {
+    width: 95%;
+  }
+
+  /* line 375, css/_style_add.scss */
+  .main-navigation-area {
     float: none;
     display: none;
   }
 
-  /* line 376, css/_style_add.scss */
-  .site-content {
+  /* line 379, css/_style_add.scss */
+  .content-area {
     float: none;
     width: 100%;
   }
 
-  /* line 381, css/_style_add.scss */
-  .home .post {
+  /* line 384, css/_style_add.scss */
+  .home .post-area {
     width: 100%;
     float: none;
     margin-right: 0;
