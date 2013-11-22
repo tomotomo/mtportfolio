@@ -12,10 +12,6 @@ $pc-site-w                 :1024px;
 	/*header*/
 	$pc-site-header-mb         :15px;
 	$pc-wbo-menu-bottom-mt     :20px;
-		$pc-wbo-menu-pages-pt  :10px;
-		$pc-wbo-menu-pages-pr  :10px;
-		$pc-wbo-menu-pages-pb  :8px;
-		$pc-wbo-menu-pages-pl  :40px;
 		$pc-site-search-ml     :10px;
 		$pc-site-search-mt     :2px;
 	  $pc-wbo-menu-sns-li-pr   :10px;
@@ -47,7 +43,9 @@ $pc-site-w                 :1024px;
 	$pc-site-footer-fs         :10px;
 	$pc-footer-widget-area-pt  :30px;
 	$pc-footer-widget-area-pb  :30px;
-		$pc-widget-w-IN-footer-widget-area: 25%;
+		$pc-widget-w-IN-footer-widget-area       :25%;
+		$pc-footer-widget-category-ul-ml         :40px;  
+		$pc-tags-links-w       :40px;
 	$pc-nav-dummy-w            :250px;
 	$pc-nav-dummy-img-mb       :30px;
 
@@ -71,19 +69,22 @@ $mb-site-w                   :95%;
 	$mb-content-area-w         :100%;
 	$mb-post-area-w-IN-home    :100%;
 	$mb-post-area-mr-IN-home   :0;
+	$mb-widget-w-IN-footer-widget-area :100%;
 
 /*img-path*/
 $img-path                        :'img/';
-$img-wbo-menu-pages              :'#{$img-path}wbo_arrow_down_f.png';
-$img-wbo-menu-pages-o            :'img/wbo_arrow_down_o.png';
-$img-wbo-menu-sns-twitter        :'#{$img-path}wbo_twitter_f.png';
-$img-wbo-menu-sns-twitter-o      :'#{$img-path}wbo_twitter_o.png';
-$img-wbo-menu-sns-facebook       :'#{$img-path}wbo_facebook_f.png';
-$img-wbo-menu-sns-facebook-o     :'#{$img-path}wbo_facebook_o.png';
-$img-wbo-menu-sns-pinterest      :'#{$img-path}wbo_pinterest_f.png';
-$img-wbo-menu-sns-pinterest-o    :'#{$img-path}wbo_pinterest_o.png';
-$img-wbo-menu-sns-tumblr         :'#{$img-path}wbo_tumblr_f.png';
-$img-wbo-menu-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
+$img-wbo-arrow_up           :'#{$img-path}wbo_arrow_up_f.png';
+$img-wbo-arrow_up-o         :'#{$img-path}wbo_arrow_up_o.png';
+$img-wbo-arrow_down         :'#{$img-path}wbo_arrow_down_f.png';
+$img-wbo-arrow_down-o       :'#{$img-path}wbo_arrow_down_o.png';
+$img-wbo-sns-twitter        :'#{$img-path}wbo_twitter_f.png';
+$img-wbo-sns-twitter-o      :'#{$img-path}wbo_twitter_o.png';
+$img-wbo-sns-facebook       :'#{$img-path}wbo_facebook_f.png';
+$img-wbo-sns-facebook-o     :'#{$img-path}wbo_facebook_o.png';
+$img-wbo-sns-pinterest      :'#{$img-path}wbo_pinterest_f.png';
+$img-wbo-sns-pinterest-o    :'#{$img-path}wbo_pinterest_o.png';
+$img-wbo-sns-tumblr         :'#{$img-path}wbo_tumblr_f.png';
+$img-wbo-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 
 @mixin b-bk-1{border: 1px solid #1c1c1c;}
 @mixin bt-bk-1{border-top: 1px solid #1c1c1c;}
@@ -110,6 +111,8 @@ $img-wbo-menu-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
  	background-position: $pos1 $pos2;
 }
 @mixin li-a-bg-img-hover ($img) {background-image: url($img);}
+
+@mixin li-a-bg-img-pd ($pt:10px,$pr:10px,$pb:8px,$pl:40px) {padding:$pt $pr $pb $pl;}
 
 /*moto
 ----------------------------------------------- */
@@ -154,9 +157,9 @@ body {
 
 		.site-branding {}
 			.site-title {
-					padding-top: $pc-site-title-pt;
-					font-size: $pc-site-title-fs;
-					font-family: $font-sub;
+				padding-top: $pc-site-title-pt;
+				font-size: $pc-site-title-fs;
+				font-family: $font-sub;
 			}
 			.site-title > a {}
 
@@ -174,11 +177,11 @@ body {
 					list-style-type: none;
 				}
 				ul li a{
-					@include li-a-bg-img ($img-wbo-menu-pages);
-					padding: $pc-wbo-menu-pages-pt $pc-wbo-menu-pages-pr $pc-wbo-menu-pages-pb $pc-wbo-menu-pages-pl;
+					@include li-a-bg-img ($img-wbo-arrow_down);
+					@include li-a-bg-img-pd;
 				}
 				ul li a:hover{
-					@include li-a-bg-img-hover ($img-wbo-menu-pages-o);
+					@include li-a-bg-img-hover ($img-wbo-arrow_down-o);
 				}
 			}
 				.menu {} //※
@@ -202,14 +205,14 @@ body {
 					 float: left;
 					 padding-right: $pc-wbo-menu-sns-li-pr;
 					}
-					ul li a.sns-twitter        {@include li-a-bg-img ($img-wbo-menu-sns-twitter);}
-					ul li a.sns-twitter:hover  {@include li-a-bg-img-hover ($img-wbo-menu-sns-twitter-o);}
-					ul li a.sns-facebook       {@include li-a-bg-img ($img-wbo-menu-sns-facebook);}
-					ul li a.sns-facebook:hover {@include li-a-bg-img-hover ($img-wbo-menu-sns-facebook-o);}
-					ul li a.sns-pinterest      {@include li-a-bg-img ($img-wbo-menu-sns-pinterest);}
-					ul li a.sns-pinterest:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-pinterest-o);}
-					ul li a.sns-tumblr         {@include li-a-bg-img ($img-wbo-menu-sns-tumblr);}
-					ul li a.sns-tumblr:hover   {@include li-a-bg-img-hover ($img-wbo-menu-sns-tumblr-o);}
+					ul li a.sns-twitter        {@include li-a-bg-img ($img-wbo-sns-twitter);}
+					ul li a.sns-twitter:hover  {@include li-a-bg-img-hover ($img-wbo-sns-twitter-o);}
+					ul li a.sns-facebook       {@include li-a-bg-img ($img-wbo-sns-facebook);}
+					ul li a.sns-facebook:hover {@include li-a-bg-img-hover ($img-wbo-sns-facebook-o);}
+					ul li a.sns-pinterest      {@include li-a-bg-img ($img-wbo-sns-pinterest);}
+					ul li a.sns-pinterest:hover{@include li-a-bg-img-hover ($img-wbo-sns-pinterest-o);}
+					ul li a.sns-tumblr         {@include li-a-bg-img ($img-wbo-sns-tumblr);}
+					ul li a.sns-tumblr:hover   {@include li-a-bg-img-hover ($img-wbo-sns-tumblr-o);}
 					ul li a{
 					 width: $pc-wbo-menu-sns-li-a-w;
 					 height: $pc-wbo-menu-sns-li-a-h;
@@ -253,7 +256,6 @@ body {
 					@include b-bk-1;
 					text-align: center;
 				}
-				.button-login > a {}
 
 		/*content in content
 		-------------------------------------*/
@@ -337,11 +339,91 @@ body {
 	.footer-widget-area {
 		@include tomo-add-2;
 		@include bt-bk-1;
-		padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
 		.widget{
 			width: $pc-widget-w-IN-footer-widget-area;
 			float: left;
 			font-family: $font-sub;
+		}
+		.footer-widget-category{
+			padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+			h1 a{
+				@include li-a-bg-img ($img-wbo-arrow_up);
+				@include li-a-bg-img-pd;
+			}
+			h1 a:hover{
+				@include li-a-bg-img-hover ($img-wbo-arrow_up-o);
+			}
+			ul{
+				margin: 0 0 0 $pc-footer-widget-category-ul-ml; padding: 0;
+			}
+			ul li {
+				margin: 0; padding: 0;
+				list-style-type: none;
+			}
+			ul li a{
+				@include li-a-bg-img-pd($pt:5px,$pb:10px,$pl:5px);
+			}
+			ul li:before { content:"-"; }
+		}
+
+		.footer-widget-tag{
+			padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+			h1 a{
+				@include li-a-bg-img ($img-wbo-arrow_down);
+				@include li-a-bg-img-pd;
+			}
+			h1 a:hover{
+				@include li-a-bg-img-hover ($img-wbo-arrow_down-o);
+			}
+			.tags-links {
+				padding-left: $pc-tags-links-w;
+				font-family:$font-main;
+			}
+			.tags-links > a {
+				@include tag-cate-btn-1;
+			}	
+		}
+		.footer-widget-page{
+			padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+			ul,
+			ul li {
+				margin: 0; padding: 0;
+			}
+			ul li {
+				list-style-type: none;
+			}
+			ul li a{
+				@include li-a-bg-img-pd($pt:5px,$pb:10px);
+			}
+			ul li:first-child a{
+				@include li-a-bg-img ($img-wbo-arrow_down);
+				@include li-a-bg-img-pd;
+			}
+			ul li:first-child a:hover{
+				@include li-a-bg-img-hover ($img-wbo-arrow_down-o);
+			}	
+		}
+		.footer-widget-sns{
+			padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+			ul,
+			ul li {
+				margin: 0; padding: 0;
+			}
+			ul li {
+				list-style-type: none;
+			}
+			ul li a.sns-twitter        {@include li-a-bg-img ($img-wbo-sns-twitter);}
+			ul li a.sns-twitter:hover  {@include li-a-bg-img-hover ($img-wbo-sns-twitter-o);}
+			ul li a.sns-facebook       {@include li-a-bg-img ($img-wbo-sns-facebook);}
+			ul li a.sns-facebook:hover {@include li-a-bg-img-hover ($img-wbo-sns-facebook-o);}
+			ul li a.sns-pinterest      {@include li-a-bg-img ($img-wbo-sns-pinterest);}
+			ul li a.sns-pinterest:hover{@include li-a-bg-img-hover ($img-wbo-sns-pinterest-o);}
+			ul li a.sns-tumblr         {@include li-a-bg-img ($img-wbo-sns-tumblr);}
+			ul li a.sns-tumblr:hover   {@include li-a-bg-img-hover ($img-wbo-sns-tumblr-o);}
+			ul li a{
+				display:block;
+				@include li-a-bg-img-pd();
+			}
 		}
 	}
 
@@ -391,6 +473,12 @@ body {
 			width: $mb-post-area-w-IN-home;	
 			float: none;
 			margin-right: $mb-post-area-mr-IN-home;
+		}
+	}
+	.footer-widget-area {
+		.widget{
+			width: $mb-widget-w-IN-footer-widget-area;
+			float: none;
 		}
 	}
 }

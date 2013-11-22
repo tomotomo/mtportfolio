@@ -11,16 +11,16 @@
 
 	<div class="footer-widget-area">
 		<aside class="widget footer-widget-category">
-			<h1>Categories</h1>
+			<h1><a href="#">Categories</a></h1>
 			<ul><?php wp_list_categories('title_li=');?></ul>
 		</aside>
 		<aside class="widget footer-widget-tag">
-			<h1>Tags</h1>
-			<span class="tags-links">
+			<h1><a href="#">Tags</a></h1>
+			<div class="tags-links">
 				<a href="#">tag01</a>
 				<a href="#">tag02</a>
 				<a href="#">tag03</a>
-			</span>
+			</div>
 		</aside>
 		<aside class="widget footer-widget-page">
 			<ul><?php wp_list_pages('title_li='); ?></ul>
