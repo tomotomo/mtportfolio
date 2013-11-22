@@ -10,32 +10,32 @@ $link-txt-clr :#1c1c1c;
 $pc-site-w                 :1024px;
 
 	/*header*/
-	$pc-site-header-mb         :30px;
+	$pc-site-header-mb         :15px;
 	$pc-wbo-menu-bottom-mt     :20px;
-		$pc-wbo-menu-pages-pt    :10px;
-		$pc-wbo-menu-pages-pr    :10px;
-		$pc-wbo-menu-pages-pb    :8px;
-		$pc-wbo-menu-pages-pl    :40px;
-		$pc-site-search-ml       :10px;
-		$pc-site-search-mt       :2px;
+		$pc-wbo-menu-pages-pt  :10px;
+		$pc-wbo-menu-pages-pr  :10px;
+		$pc-wbo-menu-pages-pb  :8px;
+		$pc-wbo-menu-pages-pl  :40px;
+		$pc-site-search-ml     :10px;
+		$pc-site-search-mt     :2px;
 	  $pc-wbo-menu-sns-li-pr   :10px;
 	  $pc-wbo-menu-sns-li-a-w  :36px;
 	  $pc-wbo-menu-sns-li-a-h  :36px;
 
 	/*main-nav*/
-	$pc-main-navigation-w      :23%;
+	$pc-main-navigation-area-w :25%;
 
-	$pc-main-navigation-p      :2%;
+	$pc-main-navigation-p      :25px;
 		$pc-nav-menu-mb-IN-main-navigation      :5%;
 		$pc-nav-menu-pb-IN-main-navigation      :5%;
 		$pc-button-login-p       :5px;
 		$pc-button-login-mb      :0;
 
 	/*contents*/
-	$pc-site-content-w         :75%;
-	$pc-post-w-IN-home         :30%;
-	$pc-post-mr-IN-home        :2%;
-	$pc-post-p-IN-home         :2%;
+	$pc-content-area-w         :75%;
+	$pc-post-area-w-IN-home    :31%;
+	$pc-post-area-mr-IN-home   :2%;
+	$pc-post-p-IN-home         :10px;
 	$pc-post-w-IN-single       :100%;
 	$pc-site-title-pt          :10px;
 	$pc-site-title-fs          :40px;
@@ -47,42 +47,43 @@ $pc-site-w                 :1024px;
 	$pc-site-footer-fs         :10px;
 	$pc-footer-widget-area-pt  :30px;
 	$pc-footer-widget-area-pb  :30px;
+		$pc-widget-w-IN-footer-widget-area: 25%;
 	$pc-nav-dummy-w            :250px;
 	$pc-nav-dummy-img-mb       :30px;
 
 /*for tablet*/
 $tb-max-w                    :1023px;
 $tb-min-w                    :481px;
-$tb-site-w                   :100%;
-$tb-site-mrl                 :10px;
+$tb-site-w                   :95%;
 
 	/*main-nav*/
-	$tb-main-navigation-w      :30%;
+	$tb-main-navigation-area-w:33%;
 
 	/*contents*/
-	$tb-site-content-w         :66%;
-	$tb-post-w-IN-home         :47%;
+	$tb-content-area-w  :66%;
+	$tb-post-area-w-IN-home  :48%;
 
 /*for mobile*/
 $mb-max-w                    :480px;
 $mb-site-w                   :95%;
 
 	/*contents*/
-	$mb-site-content-w         :100%;
-	$mb-post-w-IN-home         :100%;
-	$mb-post-mr-IN-home        :0;
+	$mb-content-area-w         :100%;
+	$mb-post-area-w-IN-home    :100%;
+	$mb-post-area-mr-IN-home   :0;
 
 /*img-path*/
-$img-wbo-menu-pages              :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_f.png';
-$img-wbo-menu-pages-o            :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_arrow_down_o.png';
-$img-wbo-menu-sns-twitter        :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_f.png';
-$img-wbo-menu-sns-twitter-o      :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_twitter_o.png';
-$img-wbo-menu-sns-facebook       :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_f.png';
-$img-wbo-menu-sns-facebook-o     :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_facebook_o.png';
-$img-wbo-menu-sns-pinterest      :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_f.png';
-$img-wbo-menu-sns-pinterest-o    :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_pinterest_o.png';
-$img-wbo-menu-sns-tumblr         :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_f.png';
-$img-wbo-menu-sns-tumblr-o       :'http://wo.mt8.biz/wp-content/uploads/2013/11/wbo_tumblr_o.png';
+$img-path                        :'img/';
+$img-wbo-menu-pages              :'#{$img-path}wbo_arrow_down_f.png';
+$img-wbo-menu-pages-o            :'img/wbo_arrow_down_o.png';
+$img-wbo-menu-sns-twitter        :'#{$img-path}wbo_twitter_f.png';
+$img-wbo-menu-sns-twitter-o      :'#{$img-path}wbo_twitter_o.png';
+$img-wbo-menu-sns-facebook       :'#{$img-path}wbo_facebook_f.png';
+$img-wbo-menu-sns-facebook-o     :'#{$img-path}wbo_facebook_o.png';
+$img-wbo-menu-sns-pinterest      :'#{$img-path}wbo_pinterest_f.png';
+$img-wbo-menu-sns-pinterest-o    :'#{$img-path}wbo_pinterest_o.png';
+$img-wbo-menu-sns-tumblr         :'#{$img-path}wbo_tumblr_f.png';
+$img-wbo-menu-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 
 @mixin b-bk-1{border: 1px solid #1c1c1c;}
 @mixin bt-bk-1{border-top: 1px solid #1c1c1c;}
@@ -110,8 +111,13 @@ $img-wbo-menu-sns-tumblr-o       :'http://wo.mt8.biz/wp-content/uploads/2013/11/
 }
 @mixin li-a-bg-img-hover ($img) {background-image: url($img);}
 
-/*overwrited
+/*moto
 ----------------------------------------------- */
+/* =Widgets
+------------- */
+/* widget to add*/
+.widget {margin: 0;}
+
 /* Links */
 a {
 	color: $link-txt-clr;
@@ -153,6 +159,7 @@ body {
 					font-family: $font-sub;
 			}
 			.site-title > a {}
+
 		.wbo-menu-bottom {
 			margin-top: $pc-wbo-menu-bottom-mt;
 		}
@@ -195,62 +202,66 @@ body {
 					 float: left;
 					 padding-right: $pc-wbo-menu-sns-li-pr;
 					}
-					ul li a.sns1      {@include li-a-bg-img ($img-wbo-menu-sns-twitter);}
-					ul li a.sns1:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-twitter-o);}
-					ul li a.sns2      {@include li-a-bg-img ($img-wbo-menu-sns-facebook);}
-					ul li a.sns2:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-facebook-o);}
-					ul li a.sns3      {@include li-a-bg-img ($img-wbo-menu-sns-pinterest);}
-					ul li a.sns3:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-pinterest-o);}
-					ul li a.sns4      {@include li-a-bg-img ($img-wbo-menu-sns-tumblr);}
-					ul li a.sns4:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-tumblr-o);}
+					ul li a.sns-twitter        {@include li-a-bg-img ($img-wbo-menu-sns-twitter);}
+					ul li a.sns-twitter:hover  {@include li-a-bg-img-hover ($img-wbo-menu-sns-twitter-o);}
+					ul li a.sns-facebook       {@include li-a-bg-img ($img-wbo-menu-sns-facebook);}
+					ul li a.sns-facebook:hover {@include li-a-bg-img-hover ($img-wbo-menu-sns-facebook-o);}
+					ul li a.sns-pinterest      {@include li-a-bg-img ($img-wbo-menu-sns-pinterest);}
+					ul li a.sns-pinterest:hover{@include li-a-bg-img-hover ($img-wbo-menu-sns-pinterest-o);}
+					ul li a.sns-tumblr         {@include li-a-bg-img ($img-wbo-menu-sns-tumblr);}
+					ul li a.sns-tumblr:hover   {@include li-a-bg-img-hover ($img-wbo-menu-sns-tumblr-o);}
 					ul li a{
 					 width: $pc-wbo-menu-sns-li-a-w;
 					 height: $pc-wbo-menu-sns-li-a-h;
 					}
 				}
 
-	/*nav
-	-------------------------------------*/
-		.main-navigation {
-			float: right;
-			width: $pc-main-navigation-w;
-			padding: $pc-main-navigation-p;
-			@include bg-clr-wh;
-			@include tomo-add-1;
-			font-family: $font-sub;
-			/*width:180px; kanagawa*/
-			/*padding: 30px; kanagawa*/
-		}
-		.main-navigation {
-			ul.nav-menu{
-				/*margin-bottom:10px; kanagawa*/
-				/*padding-bottom:10px; kanagawa*/
-				margin-bottom:$pc-nav-menu-mb-IN-main-navigation;
-				padding-bottom:$pc-nav-menu-pb-IN-main-navigation;
-			}
-		}
-			.menu-toggle {} 				
-			.skip-link {}
-
-			.menu {} //※
-			.menu > ul {} //※
-			.button-login {
-				padding:$pc-button-login-p;
-				margin-bottom: $pc-button-login-mb;
-				@include b-bk-1;
-				text-align: center;
-			}
-			.button-login > a {}
-
 	/*content
 	-------------------------------------*/
 	.site-content {
-		float: left;
-		width: $pc-site-content-w;
-		@include tomo-add-1;
 	}
-		.content-area {}
+		/*nav in content
+		-------------------------------------*/
+		.main-navigation-area{
+				float: right;
+				width: $pc-main-navigation-area-w;
+		}
+			.main-navigation {
+				padding: $pc-main-navigation-p;
+				@include bg-clr-wh;
+				@include tomo-add-1;
+				font-family: $font-sub;
+				/*width:180px; kanagawa*/
+				/*padding: 30px; kanagawa*/
+			}
+			.main-navigation {
+				ul.nav-menu{
+					/*margin-bottom:10px; kanagawa*/
+					/*padding-bottom:10px; kanagawa*/
+					margin-bottom:$pc-nav-menu-mb-IN-main-navigation;
+					padding-bottom:$pc-nav-menu-pb-IN-main-navigation;
+				}
+			}
+				.menu-toggle {} 				
+				.skip-link {}
 
+				.menu {} //※
+				.menu > ul {} //※
+				.button-login {
+					padding:$pc-button-login-p;
+					margin-bottom: $pc-button-login-mb;
+					@include b-bk-1;
+					text-align: center;
+				}
+				.button-login > a {}
+
+		/*content in content
+		-------------------------------------*/
+		.content-area {
+			float: left;
+			width: $pc-content-area-w;
+			@include tomo-add-1;
+		}
 			/*main
 			-------------------------------------*/
 			.site-main {}
@@ -258,21 +269,24 @@ body {
 				width:780px;
 				padding-right: -20px;
 			} kanagawa */
+
 				/*article
 				-------------------------------------*/
 				.post {}
 				.home{
-					.post {
+					.post-area{
 						float: left;
-						width: $pc-post-w-IN-home;
-						margin-right: $pc-post-mr-IN-home;
-						padding: $pc-post-p-IN-home;
-						@include bg-clr-wh;
-						@include tomo-add-1;
-						/*padding: 10px;		kanagawa */
-						/*margin-right:20px;kanagawa */
-						/*width:220px;			kanagawa */
+						width: $pc-post-area-w-IN-home;
+						margin-right: $pc-post-area-mr-IN-home;
 					}
+						.post {
+							padding: $pc-post-p-IN-home;
+							@include bg-clr-wh;
+							@include tomo-add-1;
+							/*padding: 10px;		kanagawa */
+							/*margin-right:20px;kanagawa */
+							/*width:220px;			kanagawa */
+						}
 				}
 				.single{
 					.post {
@@ -318,20 +332,16 @@ body {
 
 		.widget-area {} //*secondary 多分いらないと思う
 
-	/*footer-menu
+	/*footer-widget-area
 	-------------------------------------*/
 	.footer-widget-area {
-			@include tomo-add-2;
-			@include bt-bk-1;
-			padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
-	}
-	.footer-widget-area {
-		.nav-dummy {
-			width: $pc-nav-dummy-w;
+		@include tomo-add-2;
+		@include bt-bk-1;
+		padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+		.widget{
+			width: $pc-widget-w-IN-footer-widget-area;
 			float: left;
-		}
-		.nav-dummy > img {
-			margin-bottom: $pc-nav-dummy-img-mb;
+			font-family: $font-sub;
 		}
 	}
 
@@ -350,17 +360,16 @@ body {
 @media (max-width:$tb-max-w) and (min-width:$tb-min-w) {
 	.site{
 		width: $tb-site-w;
-		margin: 0 $tb-site-mrl;
 	}
-	.main-navigation {
-		width: $tb-main-navigation-w;
+	.main-navigation-area {
+		width: $tb-main-navigation-area-w;
 	}
-	.site-content {
-		width: $tb-site-content-w;
+	.content-area {
+		width: $tb-content-area-w;
 	}
 	.home {
-		.post {
-			width: $tb-post-w-IN-home;	
+		.post-area {
+			width: $tb-post-area-w-IN-home;	
 		}
 	}
 }
@@ -369,19 +378,19 @@ body {
 	.site{
 		width: $mb-site-w;
 	}
-	.main-navigation {
+	.main-navigation-area {
 		float: none;
 		display: none;
 	}
-	.site-content {
+	.content-area {
 		float: none;
-		width: $mb-site-content-w;
+		width: $mb-content-area-w;
 	}
 	.home {
-		.post {
-			width: $mb-post-w-IN-home;	
+		.post-area {
+			width: $mb-post-area-w-IN-home;	
 			float: none;
-			margin-right: $mb-post-mr-IN-home;
+			margin-right: $mb-post-area-mr-IN-home;
 		}
 	}
 }
