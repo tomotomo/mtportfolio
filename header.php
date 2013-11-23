@@ -6,6 +6,13 @@
  *
  * @package mtportofolio
  */
+
+wp_enqueue_script(
+	'frontend-script',
+	get_stylesheet_directory_uri() . '/js/frontend.js',
+	array( 'jquery' )
+);
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
