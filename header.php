@@ -67,12 +67,7 @@ wp_enqueue_script(
 
 		<div class="wbo-menu-right">
         <nav class="wbo-menu-sns">
-			<ul>
-            <li><a href="#" class="sns-twitter"></a></li>
-            <li><a href="#" class="sns-facebook"></a></li>
-            <li><a href="#" class="sns-pinterest"></a></li>
-            <li><a href="#" class="sns-tumblr"></a></li>
-			</ul>
+			<?php mtportofolio_list_sns(); ?>
         </nav>
 
         

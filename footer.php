@@ -28,12 +28,7 @@
 		</aside>
 		<aside class="widget footer-widget-sns">
 			<nav class="footer-sns">
-				<ul>
-	            <li><a href="#" class="sns-twitter">twitter</a></li>
-	            <li><a href="#" class="sns-facebook">facebook</a></li>
-	            <li><a href="#" class="sns-pinterest">pinterest</a></li>
-	            <li><a href="#" class="sns-tumblr">tumblr</a></li>
-				</ul>
+				<?php mtportofolio_list_sns( true ); ?>
         	</nav>
 		</aside>
 	</div><!-- .footer-widget-area -->

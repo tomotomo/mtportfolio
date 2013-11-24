@@ -64,17 +64,54 @@ function mtportofolio_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'mtportofolio_wp_title', 10, 2 );
 
 /**
- * Get SNS Option Label & Key
+ * Get SNS Option Array
  *
- * @return array SNS Option Label & Key.
+ * @return array SNS Option Array.
  */
 function mtportofolio_sns_options() {
 	return array(
-		'twitter'   => 'mtportofolio_sns_twitter',
-		'facebook'  => 'mtportofolio_sns_facebook',
-		'pinterest' => 'mtportofolio_sns_pinterest',
-		'tumblr'    => 'mtportofolio_sns_tumblr',
+		
+		'twitter' => array(
+			'key' => 'mtportofolio_sns_twitter',
+			'url' => 'http://twitter.com/',
+			'css' => 'sns-twitter',
+		),
+
+		'facebook' => array(
+			'key' => 'mtportofolio_sns_facebook',
+			'url' => 'https://www.facebook.com/',
+			'css' => 'sns-facebook',
+		),
+
+		'pinterest' => array(
+			'key' => 'mtportofolio_sns_pinterest',
+			'url' => 'http://www.pinterest.com/',
+			'css' => 'sns-pinterest',
+		),
+
+		'tumblr' => array(
+			'key' => 'mtportofolio_sns_tumblr',
+			'url' => 'http://www.tumblr.com/follow/',
+			'css' => 'sns-tumblr',
+		),
+		
 	);
+}
+
+/**
+ * Get SNS Option Keys
+ *
+ * @return array SNS Option Keys.
+ */
+function mtportofolio_sns_option_keys() {
+	$options = mtportofolio_sns_options();
+	if ( !$options )
+		return '';
+	$keys = array();
+	foreach ( $options as $option ){
+		$keys[] = $option['key'];
+	}
+	return $keys;
 }
 
 /**
@@ -96,20 +133,56 @@ function mtportofolio_settings() {
 <form method="post" action="options.php">
 	<?php
 		$sns_options = mtportofolio_sns_options();
-		foreach ( $sns_options as $option_label => $option_key ) : ?>
+		foreach ( $sns_options as $option_label => $option ) : ?>
 	<p>
-		<strong><label for="<?php echo $option_key; ?>"><?php echo $option_label; ?></label></strong>
-		<input type="text" name="<?php echo $option_key; ?>" value="<?php echo get_option( $option_key, '' ); ?>" />
+		<strong><label for="<?php echo $option['key']; ?>"><?php echo $option_label; ?></label></strong>
+		<input type="text" name="<?php echo $option['key']; ?>" value="<?php echo get_option( $option['key'], '' ); ?>" />
 	</p>
 	<?php endforeach; ?>
 		
 	<input type="hidden" name="action" value="update" />
-	<input type="hidden" name="page_options" value="<?php echo implode( ',', $sns_options ); ?>" />
+	<input type="hidden" name="page_options" value="<?php echo implode( ',', mtportofolio_sns_option_keys() ); ?>" />
 	<?php wp_nonce_field( 'update-options' ); ?>
 	<?php submit_button() ?>
 </form>	
+	<?php mtportofolio_list_sns(); ?>
 </div>
 	<?php
+}
+
+/**
+ * Get SNS List
+ *
+ * @param bool $output_service_name = false
+ * @param bool $echo = true
+ * @return none or string list tag.
+ */
+function mtportofolio_list_sns( $output_service_name = false, $echo = true ) {
+	$html = '';
+	$li = '';
+	$options = mtportofolio_sns_options();
+	if ( !$options )
+		return '';
+	foreach ( $options as $key => $val ) {
+		$option = get_option( $val['key'], '');
+		if ( ! $option )
+			continue;
+		
+		if ( $output_service_name ){
+			$li .= "<li><a href=\"{$val['url']}{$option}\" class=\"{$val['css']}\">{$key}</a></li>\n";			
+		}else{
+			$li .= "<li><a href=\"{$val['url']}{$option}\" class=\"{$val['css']}\"></a></li>\n";			
+		}
+		
+	}
+	if ( $li ){
+		$html = "<ul>{$li}</ul>";
+	}
+	if ( $echo ){
+		echo $html;
+	}else{
+		return $html;		
+	}
 }
 
 /**
@@ -130,9 +203,10 @@ add_action( 'admin_menu', 'mtportofolio_admin_menu' );
 function mtportofolio_switch_theme( $newname, $newtheme ) {
 	
 	//delete sns options
-	$sns_options = mtportofolio_sns_options();
-	foreach ($sns_options as $val){
-		delete_option($val);
+	$option_keys = mtportofolio_sns_option_keys();
+	foreach ( $option_keys as $key ){
+		delete_option( $key );
 	}
+	
 }
 add_action( 'switch_theme', 'mtportofolio_switch_theme' );
