@@ -63,40 +63,48 @@ function mtportofolio_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'mtportofolio_wp_title', 10, 2 );
 
+/**
+ * Get SNS Option Label & Key
+ *
+ * @return array SNS Option Label & Key.
+ */
+function mtportofolio_sns_options() {
+	return array(
+		'twitter'   => 'mtportofolio_sns_twitter',
+		'facebook'  => 'mtportofolio_sns_facebook',
+		'pinterest' => 'mtportofolio_sns_pinterest',
+		'tumblr'    => 'mtportofolio_sns_tumblr',
+	);
+}
+
+/**
+ * mtportofolio setting
+ *
+ * @return none
+ */
 function mtportofolio_settings() {
 	?>
 <div id="wrap">
 	<h2><?php echo __('mtportofolio Settings'); ?></h2>
 	
-	<?php if( isset($_GET['settings-updated']) ) { ?>
+	<?php if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) { ?>
 		<div id="message" class="updated">
 			<p><strong><?php _e('Settings saved.') ?></strong></p>
 		</div>
 	<?php } ?>
-<form method="post" action="options.php">
-	 
-	<p>
-		<strong><label for="mtportofolio_sns_twitter">twitter</label></strong>
-		<input type="text" name="mtportofolio_sns_twitter" value="<?php echo get_option( 'mtportofolio_sns_twitter', '' );  ?>" />
-	</p>
-
-	<p>
-		<strong><label for="mtportofolio_sns_facebook">facebook</label></strong>
-		<input type="text" name="mtportofolio_sns_facebook" value="<?php echo get_option( 'mtportofolio_sns_facebook', '' );  ?>" />
-	</p>
-
-	<p>
-		<strong><label for="mtportofolio_sns_pinterest">pinterest</label></strong>
-		<input type="text" name="mtportofolio_sns_pinterest" value="<?php echo get_option( 'mtportofolio_sns_pinterest', '' );  ?>" />
-	</p>
-
-	<p>
-		<strong><label for="mtportofolio_sns_tumblr">tumblr</label></strong>
-		<input type="text" name="mtportofolio_sns_tumblr" value="<?php echo get_option( 'mtportofolio_sns_tumblr', '' );  ?>" />
-	</p>
 	
+<form method="post" action="options.php">
+	<?php
+		$sns_options = mtportofolio_sns_options();
+		foreach ( $sns_options as $option_label => $option_key ) : ?>
+	<p>
+		<strong><label for="<?php echo $option_key; ?>"><?php echo $option_label; ?></label></strong>
+		<input type="text" name="<?php echo $option_key; ?>" value="<?php echo get_option( $option_key, '' ); ?>" />
+	</p>
+	<?php endforeach; ?>
+		
 	<input type="hidden" name="action" value="update" />
-	<input type="hidden" name="page_options" value="mtportofolio_sns_twitter,mtportofolio_sns_facebook,mtportofolio_sns_pinterest,mtportofolio_sns_tumblr" />
+	<input type="hidden" name="page_options" value="<?php echo implode( ',', $sns_options ); ?>" />
 	<?php wp_nonce_field( 'update-options' ); ?>
 	<?php submit_button() ?>
 </form>	
@@ -104,7 +112,27 @@ function mtportofolio_settings() {
 	<?php
 }
 
+/**
+ * Add submenu page
+ *
+ * @return none
+ */
 function mtportofolio_admin_menu() {
 	add_submenu_page( 'themes.php', 'mtportofolio', 'mtportofolio', 'edit_theme_options', 'mtportofolio', 'mtportofolio_settings' );
 }
 add_action( 'admin_menu', 'mtportofolio_admin_menu' );
+
+/**
+ * deactive theme
+ *
+ * @return none
+ */
+function mtportofolio_switch_theme( $newname, $newtheme ) {
+	
+	//delete sns options
+	$sns_options = mtportofolio_sns_options();
+	foreach ($sns_options as $val){
+		delete_option($val);
+	}
+}
+add_action( 'switch_theme', 'mtportofolio_switch_theme' );
