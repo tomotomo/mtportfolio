@@ -989,12 +989,17 @@ body {
   /*margin-right:20px;kanagawa */
   /*width:220px;			kanagawa */
 }
+/* line 300, css/_style_add.scss */
+.home .post:hover,
+.archive .post:hover {
+  box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
+}
 
 /*header
 -------------------------------------*/
 /*footer
 -------------------------------------*/
-/* line 327, css/_style_add.scss */
+/* line 330, css/_style_add.scss */
 .entry-meta .cat-links > a,
 .entry-meta .tags-links > a {
   /* kanagawa-add */
@@ -1012,13 +1017,13 @@ body {
 -------------------------------------*/
 /*page-top
 -------------------------------------*/
-/* line 347, css/_style_add.scss */
+/* line 350, css/_style_add.scss */
 .page-top {
   clear: both;
   float: right;
   margin: 10px 0;
 }
-/* line 351, css/_style_add.scss */
+/* line 354, css/_style_add.scss */
 .page-top a {
   display: block;
   background-image: url("img/wbo_arrow_up_f.png");
@@ -1028,29 +1033,29 @@ body {
   width: 36px;
   height: 36px;
 }
-/* line 357, css/_style_add.scss */
+/* line 360, css/_style_add.scss */
 .page-top a:hover {
   background-image: url("img/wbo_arrow_up_o.png");
 }
 
 /*footer-widget-area
 -------------------------------------*/
-/* line 362, css/_style_add.scss */
+/* line 365, css/_style_add.scss */
 .footer-widget-area {
   clear: both;
   border-top: 1px solid #1c1c1c;
 }
-/* line 365, css/_style_add.scss */
+/* line 368, css/_style_add.scss */
 .footer-widget-area .widget {
   width: 25%;
   float: left;
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
-/* line 370, css/_style_add.scss */
+/* line 373, css/_style_add.scss */
 .footer-widget-area .footer-widget-category {
   padding: 30px 0 30px;
 }
-/* line 372, css/_style_add.scss */
+/* line 375, css/_style_add.scss */
 .footer-widget-area .footer-widget-category h1 a {
   display: block;
   background-image: url("img/wbo_arrow_up_f.png");
@@ -1058,34 +1063,34 @@ body {
   background-position: left center;
   padding: 10px 10px 8px 40px;
 }
-/* line 376, css/_style_add.scss */
+/* line 379, css/_style_add.scss */
 .footer-widget-area .footer-widget-category h1 a:hover {
   background-image: url("img/wbo_arrow_up_o.png");
 }
-/* line 379, css/_style_add.scss */
+/* line 382, css/_style_add.scss */
 .footer-widget-area .footer-widget-category ul {
   margin: 0 0 0 40px;
   padding: 0;
 }
-/* line 382, css/_style_add.scss */
+/* line 385, css/_style_add.scss */
 .footer-widget-area .footer-widget-category ul li {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-/* line 386, css/_style_add.scss */
+/* line 389, css/_style_add.scss */
 .footer-widget-area .footer-widget-category ul li a {
   padding: 5px 10px 10px 5px;
 }
-/* line 389, css/_style_add.scss */
+/* line 392, css/_style_add.scss */
 .footer-widget-area .footer-widget-category ul li:before {
   content: "-";
 }
-/* line 392, css/_style_add.scss */
+/* line 395, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag {
   padding: 30px 0 30px;
 }
-/* line 394, css/_style_add.scss */
+/* line 397, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag h1 a {
   display: block;
   background-image: url("img/wbo_arrow_down_f.png");
@@ -1093,16 +1098,16 @@ body {
   background-position: left center;
   padding: 10px 10px 8px 40px;
 }
-/* line 398, css/_style_add.scss */
+/* line 401, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag h1 a:hover {
   background-image: url("img/wbo_arrow_down_o.png");
 }
-/* line 401, css/_style_add.scss */
+/* line 404, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag .tags-links {
   padding-left: 40px;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
-/* line 405, css/_style_add.scss */
+/* line 408, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag .tags-links > a {
   /* kanagawa-add */
   color: #fff;
@@ -1114,25 +1119,25 @@ body {
   border-radius: 4px;
   /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
 }
-/* line 409, css/_style_add.scss */
+/* line 412, css/_style_add.scss */
 .footer-widget-area .footer-widget-page {
   padding: 30px 0 30px;
 }
-/* line 412, css/_style_add.scss */
+/* line 415, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul,
 .footer-widget-area .footer-widget-page ul li {
   margin: 0;
   padding: 0;
 }
-/* line 415, css/_style_add.scss */
+/* line 418, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul li {
   list-style-type: none;
 }
-/* line 418, css/_style_add.scss */
+/* line 421, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul li a {
   padding: 5px 10px 10px 40px;
 }
-/* line 421, css/_style_add.scss */
+/* line 424, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul li:first-child a {
   display: block;
   background-image: url("img/wbo_arrow_down_f.png");
@@ -1140,69 +1145,69 @@ body {
   background-position: left center;
   padding: 10px 10px 8px 40px;
 }
-/* line 425, css/_style_add.scss */
+/* line 428, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul li:first-child a:hover {
   background-image: url("img/wbo_arrow_down_o.png");
 }
-/* line 429, css/_style_add.scss */
+/* line 432, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns {
   padding: 30px 0 30px;
 }
-/* line 432, css/_style_add.scss */
+/* line 435, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul,
 .footer-widget-area .footer-widget-sns ul li {
   margin: 0;
   padding: 0;
 }
-/* line 435, css/_style_add.scss */
+/* line 438, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li {
   list-style-type: none;
 }
-/* line 438, css/_style_add.scss */
+/* line 441, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-twitter {
   display: block;
   background-image: url("img/wbo_twitter_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 439, css/_style_add.scss */
+/* line 442, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-twitter:hover {
   background-image: url("img/wbo_twitter_o.png");
 }
-/* line 440, css/_style_add.scss */
+/* line 443, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-facebook {
   display: block;
   background-image: url("img/wbo_facebook_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 441, css/_style_add.scss */
+/* line 444, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-facebook:hover {
   background-image: url("img/wbo_facebook_o.png");
 }
-/* line 442, css/_style_add.scss */
+/* line 445, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-pinterest {
   display: block;
   background-image: url("img/wbo_pinterest_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 443, css/_style_add.scss */
+/* line 446, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-pinterest:hover {
   background-image: url("img/wbo_pinterest_o.png");
 }
-/* line 444, css/_style_add.scss */
+/* line 447, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-tumblr {
   display: block;
   background-image: url("img/wbo_tumblr_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 445, css/_style_add.scss */
+/* line 448, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-tumblr:hover {
   background-image: url("img/wbo_tumblr_o.png");
 }
-/* line 446, css/_style_add.scss */
+/* line 449, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a {
   display: block;
   padding: 10px 10px 8px 40px;
@@ -1210,7 +1215,7 @@ body {
 
 /*footer
 -------------------------------------*/
-/* line 455, css/_style_add.scss */
+/* line 458, css/_style_add.scss */
 .site-footer {
   clear: both;
   margin-top: 30px;
@@ -1221,56 +1226,56 @@ body {
 }
 
 @media (max-width: 1023px) and (min-width: 481px) {
-  /* line 466, css/_style_add.scss */
+  /* line 469, css/_style_add.scss */
   .site {
     width: 95%;
   }
 
-  /* line 469, css/_style_add.scss */
+  /* line 472, css/_style_add.scss */
   .main-navigation-area {
     width: 33%;
   }
 
-  /* line 472, css/_style_add.scss */
+  /* line 475, css/_style_add.scss */
   .content-area {
     width: 64%;
   }
 
-  /* line 477, css/_style_add.scss */
+  /* line 480, css/_style_add.scss */
   .home .content-area,
   .archive .content-area {
     width: 66%;
   }
-  /* line 480, css/_style_add.scss */
+  /* line 483, css/_style_add.scss */
   .home .post-area,
   .archive .post-area {
     width: 48%;
   }
 }
 @media (max-width: 480px) {
-  /* line 487, css/_style_add.scss */
+  /* line 490, css/_style_add.scss */
   .site {
     width: 95%;
   }
 
-  /* line 490, css/_style_add.scss */
+  /* line 493, css/_style_add.scss */
   .main-navigation-area {
     float: none;
     display: none;
   }
 
-  /* line 494, css/_style_add.scss */
+  /* line 497, css/_style_add.scss */
   .content-area {
     float: none;
     width: 100%;
   }
 
-  /* line 500, css/_style_add.scss */
+  /* line 503, css/_style_add.scss */
   .home .content-area,
   .archive .content-area {
     width: 100%;
   }
-  /* line 503, css/_style_add.scss */
+  /* line 506, css/_style_add.scss */
   .home .post-area,
   .archive .post-area {
     width: 100%;
@@ -1278,7 +1283,7 @@ body {
     margin-right: 0;
   }
 
-  /* line 510, css/_style_add.scss */
+  /* line 513, css/_style_add.scss */
   .footer-widget-area .widget {
     width: 100%;
     float: none;
