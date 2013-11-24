@@ -11,11 +11,19 @@
  * @package mtportofolio
  */
 
+// Use CDN
+// @link http://cdnjs.com/libraries/masonry/
 wp_enqueue_script(
 	'custom-script',
-	get_stylesheet_directory_uri() . '/js/masonry.pkgd.min.js',
+	'//cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js',
 	array( 'jquery' )
 );
+wp_enqueue_script(
+	'custom-script',
+	'//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js',
+	array( 'jquery' )
+);
+
 get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -50,13 +58,74 @@ get_header(); ?>
 
 <script type="text/javascript">
 (function($){
-return; // TODO ちゃんと動くようにする
+//return; // TODO ちゃんと動くようにする
 $(function(){
-		$('#content').masonry({
-		  itemSelector: 'article.post',
-		  isFitWidth: true,
-		  isAnimated: true,
+	var spW = 480;
+	var pcW = 1024;
+
+	// FIXME CSSの書き方を訂正してから着手
+	// 記事エリアのメイン幅が #main と #primary どちらを基準にするかが
+	// 画面幅によって異なる。これでは masonry の基点をどちらにするか選べない。
+	// 後から入ってくるデザイナーも混乱するんじゃないかな。
+	var masonry_run = 'none';
+	var container = $('#main');
+	container.css('with', '100%');
+
+	if (get_mode() !== 'sp') {
+		masonry_on();
+		masonry_run = get_mode();
+		console.log('init success:'+masonry_run);
+	}
+	container.imagesLoaded(function(){
+		if (get_mode() !== 'sp') {
+			masonry_on(true);
+		}
+	});
+
+	$(window).resize(function () {
+		var screen = get_mode();
+		if (screen !== 'sp') {
+			if (screen !== masonry_run) {
+				masonry_on(true);
+				masonry_run = screen;
+			}
+		} else {
+			masonry_off();
+			masonry_run = 'none';
+		}
+	});
+	
+	function get_mode () {
+		var mode;
+		var htmlWidth = $('html').width();
+		if (pcW < htmlWidth) {
+			mode = 'pc';
+		} else if (htmlWidth <= spW) {
+			mode = 'sp';
+		} else {
+			mode = 'tb';
+		}
+		return mode;
+	}
+	
+	function masonry_on (reload) {
+		if (reload) {
+			console.log('masonry reload:'+masonry_run+' to '+get_mode());
+			masonry_off();
+		}
+		container.masonry({
+			itemSelector: '.post-area',
+//			isFitWidth: true,
+			isAnimated: true
 		});
+		console.log('masonry on');
+	}
+	function masonry_off () {
+		if (masonry_run==='none') return;
+		container.masonry('destroy');
+		console.log('masonry off');
+	}
+
 });
 })(jQuery);
 </script>
