@@ -9,7 +9,7 @@
 	<label>
 		<span class="screen-reader-text">Search for:</span>
 		<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'mtportofolio' ); ?></span>
-		<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'mtportofolio' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s">
+		<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder', 'mtportofolio' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s">
 	</label>
 	<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'mtportofolio' ); ?>">
 </form>

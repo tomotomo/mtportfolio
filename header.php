@@ -34,22 +34,10 @@ wp_enqueue_script(
 			<!--<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>-->
 		</div>
 
-<!-- 		<div class="site-search">
-			<aside id="search-2" class="widget widget_search">
-			<form role="search" method="get" class="search-form" action="./index_files/index.html">
-			<label>
-				<span class="screen-reader-text">Search for:</span>
-				<input type="search" class="search-field" placeholder="Search …" value="" name="s">
-			</label>
-			<input type="submit" class="search-submit" value="Search">
-			</form>
-			</aside>
-		</div> -->
-
 		<div class="wbo-menu-bottom">
         <nav class="wbo-menu-pages">
 			<ul class="menu">
-            <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-38"><a href="http://wo.mt8.biz/?page_id=12">About</a></li>
+			<ul><?php wp_list_pages('title_li=&number=1'); ?></ul>
 			</ul>
         </nav>
         
