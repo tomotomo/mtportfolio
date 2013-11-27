@@ -98,8 +98,6 @@ $img-wbo-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 	font-size:10px;
 	padding:2px 7px 1px 7px;
 	background-color: #aaa;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	//IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS
 }
@@ -122,8 +120,6 @@ $img-wbo-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 
 }
 @mixin box-shadow-1 ($st:0px,$slr:3px,$sb:6px,$scr:99,$scg:99,$scb:111,$sca:0.6){
-	-webkit-box-shadow: $st $slr $sb rgba($scr, $scg, $scb, $sca);
-	-moz-box-shadow: $st $slr $sb rgba($scr, $scg, $scb, $sca);
 	box-shadow: $st $slr $sb rgba($scr, $scg, $scb, $sca);
 }
 @mixin transition-hover ($s:0.2s){
