@@ -6,28 +6,27 @@ $font-sub   :'ヒラギノ明朝 Pro W6','Hiragino Mincho Pro','HGS明朝E','Ｍ
 $body-bg    :#f7f7f7;
 $link-txt-clr :#1c1c1c;
 
-/*for pc or general*/
-$pc-site-w               :1024px;
+//for pc or general
+$pc-site-w                 :1024px;
 
-/*header*/
-$pc-site-header-mb       :15px;
-$pc-wbo-menu-bottom-mt   :20px;
-$pc-site-search-ml       :10px;
-$pc-site-search-mt       :2px;
-$pc-wbo-menu-sns-li-pr   :10px;
-$pc-wbo-menu-sns-li-a-w  :36px;
-$pc-wbo-menu-sns-li-a-h  :36px;
+//header
+$pc-site-header-mb         :15px;
+$pc-wbo-menu-bottom-mt     :20px;
+$pc-site-search-ml         :10px;
+$pc-site-search-mt         :2px;
+$pc-wbo-menu-sns-li-pr     :10px;
+$pc-wbo-menu-sns-li-a-w    :36px;
+$pc-wbo-menu-sns-li-a-h    :36px;
 
-/*main-nav*/
+//main-nav
 $pc-main-navigation-area-w :25%;
-
 $pc-main-navigation-p      :25px;
 $pc-nav-menu-mb-IN-main-navigation      :5%;
 $pc-nav-menu-pb-IN-main-navigation      :5%;
 $pc-button-login-p         :5px;
 $pc-button-login-mb        :0;
 
-/*contents*/
+//contents
 $pc-content-area-w         :73%;
 $pc-content-area-w-Index   :75%;
 $pc-post-area-w-IN-home    :31%;
@@ -36,7 +35,7 @@ $pc-post-p-IN-home         :10px;
 $pc-site-title-pt          :10px;
 $pc-site-title-fs          :40px;
 
-/*footer*/
+//footer
 $pc-site-footer-mt         :30px;
 $pc-site-footer-pt         :10px;
 $pc-site-footer-pb         :40px;
@@ -49,31 +48,31 @@ $pc-tags-links-w           :40px;
 $pc-nav-dummy-w            :250px;
 $pc-nav-dummy-img-mb       :30px;
 
-/*for tablet*/
-$tb-max-w                    :1023px;
-$tb-min-w                    :481px;
-$tb-site-w                   :95%;
+//for tablet
+$tb-max-w                  :1023px;
+$tb-min-w                  :481px;
+$tb-site-w                 :95%;
 
-/*main-nav*/
-$tb-main-navigation-area-w   :33%;
+//main-nav
+$tb-main-navigation-area-w :33%;
 
-/*contents*/
-$tb-content-area-w       :64%;
-$tb-content-area-w-Index :66%;
-$tb-post-area-w-IN-home  :48%;
+//contents
+$tb-content-area-w         :64%;
+$tb-content-area-w-Index   :66%;
+$tb-post-area-w-IN-home    :48%;
 
-/*for mobile*/
-$mb-max-w                 :480px;
-$mb-site-w                :95%;
+//for mobile
+$mb-max-w                  :480px;
+$mb-site-w                 :95%;
 
-/*contents*/
-$mb-content-area-w        :100%;
-$mb-post-area-w-IN-home   :100%;
-$mb-post-area-mr-IN-home  :0;
+//contents
+$mb-content-area-w         :100%;
+$mb-post-area-w-IN-home    :100%;
+$mb-post-area-mr-IN-home   :0;
 $mb-widget-w-IN-footer-widget-area :100%;
 
-/*img-path*/
-$img-path                        :'img/';
+//img-path
+$img-path                   :'img/';
 $img-wbo-arrow_up           :'#{$img-path}wbo_arrow_up_f.png';
 $img-wbo-arrow_up-o         :'#{$img-path}wbo_arrow_up_o.png';
 $img-wbo-arrow_down         :'#{$img-path}wbo_arrow_down_f.png';
@@ -94,7 +93,7 @@ $img-wbo-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 @mixin tomo-add-1{box-sizing: border-box;}
 @mixin tomo-add-2{clear:both;}
 
-@mixin tag-cate-btn-1 { /* kanagawa-add */
+@mixin tag-cate-btn-1 { // kanagawa-add
 	color:#fff;
 	font-size:10px;
 	padding:2px 7px 1px 7px;
@@ -102,7 +101,7 @@ $img-wbo-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
-	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	//IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS
 }
 
 @mixin li-a-bg-img ($img,$pos1:left,$pos2:center) {
