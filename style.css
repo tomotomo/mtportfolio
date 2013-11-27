@@ -1278,4 +1278,12 @@ body {
     width: 100%;
     float: none;
   }
+
+  /* line 509, css/_style_add.scss */
+  .page-top {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 999998;
+  }
 }

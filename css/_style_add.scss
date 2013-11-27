@@ -506,5 +506,6 @@ body {
 			float: none;
 		}
 	}
+	.page-top{@include page-top-fixed-posbr($posb:5px,$posr:5px);}
 }
 
