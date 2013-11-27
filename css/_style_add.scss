@@ -7,13 +7,13 @@ $body-bg    :#f7f7f7;
 $link-txt-clr :#1c1c1c;
 
 /*for pc or general*/
-$pc-site-w                 :1024px;
+$pc-site-w               :1024px;
 
 /*header*/
-$pc-site-header-mb         :15px;
-$pc-wbo-menu-bottom-mt     :20px;
-$pc-site-search-ml     :10px;
-$pc-site-search-mt     :2px;
+$pc-site-header-mb       :15px;
+$pc-wbo-menu-bottom-mt   :20px;
+$pc-site-search-ml       :10px;
+$pc-site-search-mt       :2px;
 $pc-wbo-menu-sns-li-pr   :10px;
 $pc-wbo-menu-sns-li-a-w  :36px;
 $pc-wbo-menu-sns-li-a-h  :36px;
@@ -24,8 +24,8 @@ $pc-main-navigation-area-w :25%;
 $pc-main-navigation-p      :25px;
 $pc-nav-menu-mb-IN-main-navigation      :5%;
 $pc-nav-menu-pb-IN-main-navigation      :5%;
-$pc-button-login-p       :5px;
-$pc-button-login-mb      :0;
+$pc-button-login-p         :5px;
+$pc-button-login-mb        :0;
 
 /*contents*/
 $pc-content-area-w         :73%;
@@ -45,7 +45,7 @@ $pc-footer-widget-area-pt  :30px;
 $pc-footer-widget-area-pb  :30px;
 $pc-widget-w-IN-footer-widget-area       :25%;
 $pc-footer-widget-category-ul-ml         :40px;  
-$pc-tags-links-w       :40px;
+$pc-tags-links-w           :40px;
 $pc-nav-dummy-w            :250px;
 $pc-nav-dummy-img-mb       :30px;
 
@@ -55,7 +55,7 @@ $tb-min-w                    :481px;
 $tb-site-w                   :95%;
 
 /*main-nav*/
-$tb-main-navigation-area-w:33%;
+$tb-main-navigation-area-w   :33%;
 
 /*contents*/
 $tb-content-area-w       :64%;
@@ -63,13 +63,13 @@ $tb-content-area-w-Index :66%;
 $tb-post-area-w-IN-home  :48%;
 
 /*for mobile*/
-$mb-max-w                    :480px;
-$mb-site-w                   :95%;
+$mb-max-w                 :480px;
+$mb-site-w                :95%;
 
 /*contents*/
-$mb-content-area-w         :100%;
-$mb-post-area-w-IN-home    :100%;
-$mb-post-area-mr-IN-home   :0;
+$mb-content-area-w        :100%;
+$mb-post-area-w-IN-home   :100%;
+$mb-post-area-mr-IN-home  :0;
 $mb-widget-w-IN-footer-widget-area :100%;
 
 /*img-path*/
@@ -114,6 +114,14 @@ $img-wbo-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 @mixin li-a-bg-img-hover ($img) {background-image: url($img);}
 
 @mixin li-a-bg-img-pd ($pt:10px,$pr:10px,$pb:8px,$pl:40px) {padding:$pt $pr $pb $pl;}
+
+@mixin page-top-fixed-posbr ($posb:10px,$posr:20px,$zindx:999998){
+	position: fixed;
+	bottom: $posb;
+	right: $posr;
+	z-index: $zindx;
+
+}
 
 /*moto
 ----------------------------------------------- */
@@ -235,13 +243,9 @@ body {
 	@include bg-clr-wh;
 	@include tomo-add-1;
 	font-family: $font-sub;
-	/*width:180px; kanagawa*/
-	/*padding: 30px; kanagawa*/
 }
 .main-navigation {
 	ul.nav-menu{
-		/*margin-bottom:10px; kanagawa*/
-		/*padding-bottom:10px; kanagawa*/
 		margin-bottom:$pc-nav-menu-mb-IN-main-navigation;
 		padding-bottom:$pc-nav-menu-pb-IN-main-navigation;
 	}
@@ -268,10 +272,6 @@ body {
 /*main
 -------------------------------------*/
 .site-main {}
-/*#main {
-	width:780px;
-	padding-right: -20px;
-} kanagawa */
 
 /*article
 -------------------------------------*/
@@ -293,19 +293,12 @@ body {
 		padding: $pc-post-p-IN-home;
 		@include bg-clr-wh;
 		@include tomo-add-1;
-		/*padding: 10px;		kanagawa */
-		/*margin-right:20px;kanagawa */
-		/*width:220px;			kanagawa */
 	}
 	.post:hover {
 		box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
 	}
 }
-// .single{
-// 	.post {
-// 		width:100%;
-// 	}
-// }
+
 .format-standard{} //*
 .format-image {} //*
 .post-password-required {} //*
@@ -348,9 +341,7 @@ body {
 /*page-top
 -------------------------------------*/
 .page-top{
-	clear:both;
-	float: right;
-	margin: 10px 0;
+	@include page-top-fixed-posbr;
 	a {
 		@include li-a-bg-img ($img-wbo-arrow_up);
 		display:block;
