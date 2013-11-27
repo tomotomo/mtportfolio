@@ -121,6 +121,19 @@ $img-wbo-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 	z-index: $zindx;
 
 }
+@mixin box-shadow-1 ($st:0px,$slr:3px,$sb:6px,$scr:99,$scg:99,$scb:111,$sca:0.6){
+	-webkit-box-shadow: $st $slr $sb rgba($scr, $scg, $scb, $sca);
+	-moz-box-shadow: $st $slr $sb rgba($scr, $scg, $scb, $sca);
+	box-shadow: $st $slr $sb rgba($scr, $scg, $scb, $sca);
+}
+@mixin transition-hover ($s:0.2s){
+	-webkit-transition: all $s linear;
+	-o-transition: all $s linear;
+	-moz-transition: all $s linear;
+	-ms-transition: all $s linear;
+	-kthtml-transition: all $s linear;
+	transition: all $s linear;
+}
 
 /*moto
 ----------------------------------------------- */
@@ -292,9 +305,11 @@ body {
 		padding: $pc-post-p-IN-home;
 		@include bg-clr-wh;
 		@include tomo-add-1;
+		@include transition-hover;
 	}
 	.post:hover {
-		box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
+		@include box-shadow-1;
+		@include transition-hover;
 	}
 }
 

@@ -739,24 +739,24 @@ object {
 /* =Widgets
 ------------- */
 /* widget to add*/
-/* line 130, css/_style_add.scss */
+/* line 143, css/_style_add.scss */
 .widget {
   margin: 0;
 }
 
 /* Links */
-/* line 133, css/_style_add.scss */
+/* line 146, css/_style_add.scss */
 a {
   color: #1c1c1c;
   text-decoration: none;
 }
 
-/* line 137, css/_style_add.scss */
+/* line 150, css/_style_add.scss */
 a:visited {
   color: #1c1c1c;
 }
 
-/* line 142, css/_style_add.scss */
+/* line 155, css/_style_add.scss */
 a:hover,
 a:focus,
 a:active {
@@ -766,13 +766,13 @@ a:active {
 
 /*body
 -------------------------------------*/
-/* line 149, css/_style_add.scss */
+/* line 162, css/_style_add.scss */
 body {
   background: #f7f7f7;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 
-/* line 154, css/_style_add.scss */
+/* line 167, css/_style_add.scss */
 .site {
   width: 1024px;
   margin: 0 auto;
@@ -781,39 +781,39 @@ body {
 
 /*header
 -------------------------------------*/
-/* line 162, css/_style_add.scss */
+/* line 175, css/_style_add.scss */
 .site-header {
   margin-bottom: 15px;
 }
 
-/* line 167, css/_style_add.scss */
+/* line 180, css/_style_add.scss */
 .site-title {
   padding-top: 10px;
   font-size: 40px;
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
 
-/* line 174, css/_style_add.scss */
+/* line 187, css/_style_add.scss */
 .wbo-menu-bottom {
   margin-top: 20px;
 }
 
-/* line 177, css/_style_add.scss */
+/* line 190, css/_style_add.scss */
 .wbo-menu-pages {
   float: left;
 }
-/* line 180, css/_style_add.scss */
+/* line 193, css/_style_add.scss */
 .wbo-menu-pages ul,
 .wbo-menu-pages ul li {
   margin: 0;
   padding: 0;
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
-/* line 184, css/_style_add.scss */
+/* line 197, css/_style_add.scss */
 .wbo-menu-pages ul li {
   list-style-type: none;
 }
-/* line 187, css/_style_add.scss */
+/* line 200, css/_style_add.scss */
 .wbo-menu-pages ul li a {
   display: block;
   background-image: url("img/wbo_arrow_down_f.png");
@@ -821,78 +821,78 @@ body {
   background-position: left center;
   padding: 10px 10px 8px 40px;
 }
-/* line 191, css/_style_add.scss */
+/* line 204, css/_style_add.scss */
 .wbo-menu-pages ul li a:hover {
   background-image: url("img/wbo_arrow_down_o.png");
 }
 
-/* line 197, css/_style_add.scss */
+/* line 210, css/_style_add.scss */
 .site-search {
   margin-left: 10px;
   margin-top: 2px;
   float: right;
 }
 
-/* line 208, css/_style_add.scss */
+/* line 221, css/_style_add.scss */
 .wbo-menu-right {
   float: right;
 }
 
-/* line 209, css/_style_add.scss */
+/* line 222, css/_style_add.scss */
 .wbo-menu-sns {
   float: right;
 }
-/* line 211, css/_style_add.scss */
+/* line 224, css/_style_add.scss */
 .wbo-menu-sns ul li {
   list-style-type: none;
   float: left;
   padding-right: 10px;
 }
-/* line 216, css/_style_add.scss */
+/* line 229, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns-twitter {
   display: block;
   background-image: url("img/wbo_twitter_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 217, css/_style_add.scss */
+/* line 230, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns-twitter:hover {
   background-image: url("img/wbo_twitter_o.png");
 }
-/* line 218, css/_style_add.scss */
+/* line 231, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns-facebook {
   display: block;
   background-image: url("img/wbo_facebook_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 219, css/_style_add.scss */
+/* line 232, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns-facebook:hover {
   background-image: url("img/wbo_facebook_o.png");
 }
-/* line 220, css/_style_add.scss */
+/* line 233, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns-pinterest {
   display: block;
   background-image: url("img/wbo_pinterest_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 221, css/_style_add.scss */
+/* line 234, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns-pinterest:hover {
   background-image: url("img/wbo_pinterest_o.png");
 }
-/* line 222, css/_style_add.scss */
+/* line 235, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns-tumblr {
   display: block;
   background-image: url("img/wbo_tumblr_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 223, css/_style_add.scss */
+/* line 236, css/_style_add.scss */
 .wbo-menu-sns ul li a.sns-tumblr:hover {
   background-image: url("img/wbo_tumblr_o.png");
 }
-/* line 224, css/_style_add.scss */
+/* line 237, css/_style_add.scss */
 .wbo-menu-sns ul li a {
   width: 36px;
   height: 36px;
@@ -902,13 +902,13 @@ body {
 -------------------------------------*/
 /*nav in content
 -------------------------------------*/
-/* line 236, css/_style_add.scss */
+/* line 249, css/_style_add.scss */
 .main-navigation-area {
   float: right;
   width: 25%;
 }
 
-/* line 240, css/_style_add.scss */
+/* line 253, css/_style_add.scss */
 .main-navigation {
   padding: 25px;
   background-color: #fff;
@@ -916,13 +916,13 @@ body {
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
 
-/* line 247, css/_style_add.scss */
+/* line 260, css/_style_add.scss */
 .main-navigation ul.nav-menu {
   margin-bottom: 5%;
   padding-bottom: 5%;
 }
 
-/* line 257, css/_style_add.scss */
+/* line 270, css/_style_add.scss */
 .button-login {
   padding: 5px;
   margin-bottom: 0;
@@ -932,7 +932,7 @@ body {
 
 /*content in content
 -------------------------------------*/
-/* line 266, css/_style_add.scss */
+/* line 279, css/_style_add.scss */
 .content-area {
   float: left;
   width: 73%;
@@ -943,41 +943,55 @@ body {
 -------------------------------------*/
 /*article
 -------------------------------------*/
-/* line 277, css/_style_add.scss */
+/* line 290, css/_style_add.scss */
 .content-area {
   width: 73%;
 }
 
-/* line 283, css/_style_add.scss */
+/* line 296, css/_style_add.scss */
 .home .content-area,
 .archive .content-area {
   width: 75%;
 }
-/* line 286, css/_style_add.scss */
+/* line 299, css/_style_add.scss */
 .home .post-area,
 .archive .post-area {
   float: left;
   width: 31%;
   margin-right: 2%;
 }
-/* line 291, css/_style_add.scss */
+/* line 304, css/_style_add.scss */
 .home .post,
 .archive .post {
   padding: 10px;
   background-color: #fff;
   box-sizing: border-box;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -kthtml-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
-/* line 296, css/_style_add.scss */
+/* line 310, css/_style_add.scss */
 .home .post:hover,
 .archive .post:hover {
+  -webkit-box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
+  -moz-box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
   box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -kthtml-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 /*header
 -------------------------------------*/
 /*footer
 -------------------------------------*/
-/* line 322, css/_style_add.scss */
+/* line 337, css/_style_add.scss */
 .entry-meta .cat-links > a,
 .entry-meta .tags-links > a {
   color: #fff;
@@ -993,14 +1007,14 @@ body {
 -------------------------------------*/
 /*page-top
 -------------------------------------*/
-/* line 342, css/_style_add.scss */
+/* line 357, css/_style_add.scss */
 .page-top {
   position: fixed;
   bottom: 10px;
   right: 20px;
   z-index: 999998;
 }
-/* line 344, css/_style_add.scss */
+/* line 359, css/_style_add.scss */
 .page-top a {
   display: block;
   background-image: url("img/wbo_arrow_up_f.png");
@@ -1010,29 +1024,29 @@ body {
   width: 36px;
   height: 36px;
 }
-/* line 350, css/_style_add.scss */
+/* line 365, css/_style_add.scss */
 .page-top a:hover {
   background-image: url("img/wbo_arrow_up_o.png");
 }
 
 /*footer-widget-area
 -------------------------------------*/
-/* line 355, css/_style_add.scss */
+/* line 370, css/_style_add.scss */
 .footer-widget-area {
   clear: both;
   border-top: 1px solid #1c1c1c;
 }
-/* line 358, css/_style_add.scss */
+/* line 373, css/_style_add.scss */
 .footer-widget-area .widget {
   width: 25%;
   float: left;
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
-/* line 363, css/_style_add.scss */
+/* line 378, css/_style_add.scss */
 .footer-widget-area .footer-widget-category {
   padding: 30px 0 30px;
 }
-/* line 365, css/_style_add.scss */
+/* line 380, css/_style_add.scss */
 .footer-widget-area .footer-widget-category h1 a {
   display: block;
   background-image: url("img/wbo_arrow_up_f.png");
@@ -1040,34 +1054,34 @@ body {
   background-position: left center;
   padding: 10px 10px 8px 40px;
 }
-/* line 369, css/_style_add.scss */
+/* line 384, css/_style_add.scss */
 .footer-widget-area .footer-widget-category h1 a:hover {
   background-image: url("img/wbo_arrow_up_o.png");
 }
-/* line 372, css/_style_add.scss */
+/* line 387, css/_style_add.scss */
 .footer-widget-area .footer-widget-category ul {
   margin: 0 0 0 40px;
   padding: 0;
 }
-/* line 375, css/_style_add.scss */
+/* line 390, css/_style_add.scss */
 .footer-widget-area .footer-widget-category ul li {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-/* line 379, css/_style_add.scss */
+/* line 394, css/_style_add.scss */
 .footer-widget-area .footer-widget-category ul li a {
   padding: 5px 10px 10px 5px;
 }
-/* line 382, css/_style_add.scss */
+/* line 397, css/_style_add.scss */
 .footer-widget-area .footer-widget-category ul li:before {
   content: "-";
 }
-/* line 385, css/_style_add.scss */
+/* line 400, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag {
   padding: 30px 0 30px;
 }
-/* line 387, css/_style_add.scss */
+/* line 402, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag h1 a {
   display: block;
   background-image: url("img/wbo_arrow_down_f.png");
@@ -1075,16 +1089,16 @@ body {
   background-position: left center;
   padding: 10px 10px 8px 40px;
 }
-/* line 391, css/_style_add.scss */
+/* line 406, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag h1 a:hover {
   background-image: url("img/wbo_arrow_down_o.png");
 }
-/* line 394, css/_style_add.scss */
+/* line 409, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag .tags-links {
   padding-left: 40px;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
-/* line 398, css/_style_add.scss */
+/* line 413, css/_style_add.scss */
 .footer-widget-area .footer-widget-tag .tags-links > a {
   color: #fff;
   font-size: 10px;
@@ -1094,25 +1108,25 @@ body {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 402, css/_style_add.scss */
+/* line 417, css/_style_add.scss */
 .footer-widget-area .footer-widget-page {
   padding: 30px 0 30px;
 }
-/* line 405, css/_style_add.scss */
+/* line 420, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul,
 .footer-widget-area .footer-widget-page ul li {
   margin: 0;
   padding: 0;
 }
-/* line 408, css/_style_add.scss */
+/* line 423, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul li {
   list-style-type: none;
 }
-/* line 411, css/_style_add.scss */
+/* line 426, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul li a {
   padding: 5px 10px 10px 40px;
 }
-/* line 414, css/_style_add.scss */
+/* line 429, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul li:first-child a {
   display: block;
   background-image: url("img/wbo_arrow_down_f.png");
@@ -1120,69 +1134,69 @@ body {
   background-position: left center;
   padding: 10px 10px 8px 40px;
 }
-/* line 418, css/_style_add.scss */
+/* line 433, css/_style_add.scss */
 .footer-widget-area .footer-widget-page ul li:first-child a:hover {
   background-image: url("img/wbo_arrow_down_o.png");
 }
-/* line 422, css/_style_add.scss */
+/* line 437, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns {
   padding: 30px 0 30px;
 }
-/* line 425, css/_style_add.scss */
+/* line 440, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul,
 .footer-widget-area .footer-widget-sns ul li {
   margin: 0;
   padding: 0;
 }
-/* line 428, css/_style_add.scss */
+/* line 443, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li {
   list-style-type: none;
 }
-/* line 431, css/_style_add.scss */
+/* line 446, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-twitter {
   display: block;
   background-image: url("img/wbo_twitter_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 432, css/_style_add.scss */
+/* line 447, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-twitter:hover {
   background-image: url("img/wbo_twitter_o.png");
 }
-/* line 433, css/_style_add.scss */
+/* line 448, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-facebook {
   display: block;
   background-image: url("img/wbo_facebook_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 434, css/_style_add.scss */
+/* line 449, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-facebook:hover {
   background-image: url("img/wbo_facebook_o.png");
 }
-/* line 435, css/_style_add.scss */
+/* line 450, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-pinterest {
   display: block;
   background-image: url("img/wbo_pinterest_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 436, css/_style_add.scss */
+/* line 451, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-pinterest:hover {
   background-image: url("img/wbo_pinterest_o.png");
 }
-/* line 437, css/_style_add.scss */
+/* line 452, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-tumblr {
   display: block;
   background-image: url("img/wbo_tumblr_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 438, css/_style_add.scss */
+/* line 453, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a.sns-tumblr:hover {
   background-image: url("img/wbo_tumblr_o.png");
 }
-/* line 439, css/_style_add.scss */
+/* line 454, css/_style_add.scss */
 .footer-widget-area .footer-widget-sns ul li a {
   display: block;
   padding: 10px 10px 8px 40px;
@@ -1190,7 +1204,7 @@ body {
 
 /*footer
 -------------------------------------*/
-/* line 448, css/_style_add.scss */
+/* line 463, css/_style_add.scss */
 .site-footer {
   clear: both;
   margin-top: 30px;
@@ -1201,56 +1215,56 @@ body {
 }
 
 @media (max-width: 1023px) and (min-width: 481px) {
-  /* line 459, css/_style_add.scss */
+  /* line 474, css/_style_add.scss */
   .site {
     width: 95%;
   }
 
-  /* line 462, css/_style_add.scss */
+  /* line 477, css/_style_add.scss */
   .main-navigation-area {
     width: 33%;
   }
 
-  /* line 465, css/_style_add.scss */
+  /* line 480, css/_style_add.scss */
   .content-area {
     width: 64%;
   }
 
-  /* line 470, css/_style_add.scss */
+  /* line 485, css/_style_add.scss */
   .home .content-area,
   .archive .content-area {
     width: 66%;
   }
-  /* line 473, css/_style_add.scss */
+  /* line 488, css/_style_add.scss */
   .home .post-area,
   .archive .post-area {
     width: 48%;
   }
 }
 @media (max-width: 480px) {
-  /* line 480, css/_style_add.scss */
+  /* line 495, css/_style_add.scss */
   .site {
     width: 95%;
   }
 
-  /* line 483, css/_style_add.scss */
+  /* line 498, css/_style_add.scss */
   .main-navigation-area {
     float: none;
     display: none;
   }
 
-  /* line 487, css/_style_add.scss */
+  /* line 502, css/_style_add.scss */
   .content-area {
     float: none;
     width: 100%;
   }
 
-  /* line 493, css/_style_add.scss */
+  /* line 508, css/_style_add.scss */
   .home .content-area,
   .archive .content-area {
     width: 100%;
   }
-  /* line 496, css/_style_add.scss */
+  /* line 511, css/_style_add.scss */
   .home .post-area,
   .archive .post-area {
     width: 100%;
@@ -1258,13 +1272,13 @@ body {
     margin-right: 0;
   }
 
-  /* line 503, css/_style_add.scss */
+  /* line 518, css/_style_add.scss */
   .footer-widget-area .widget {
     width: 100%;
     float: none;
   }
 
-  /* line 508, css/_style_add.scss */
+  /* line 523, css/_style_add.scss */
   .page-top {
     position: fixed;
     bottom: 5px;
