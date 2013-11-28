@@ -966,22 +966,12 @@ body {
   padding: 10px;
   background-color: #fff;
   box-sizing: border-box;
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -kthtml-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 /* line 306, css/_style_add.scss */
 .home .post:hover,
 .archive .post:hover {
   box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -kthtml-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -1279,4 +1269,30 @@ body {
     right: 5px;
     z-index: 999998;
   }
+}
+/* font-face */
+@font-face {
+  font-family: "GeneralFoundicons";
+  src: url("css/fonts/general_foundicons.eot");
+  src: url("css/fonts/general_foundicons.eot?#iefix") format("embedded-opentype"), url("css/fonts/general_foundicons.woff") format("woff"), url("css/fonts/general_foundicons.ttf") format("truetype"), url("css/fonts/general_foundicons.svg#GeneralFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 32, css/_style_font.scss */
+input.search-field:-moz-input-placeholder:before {
+  font-family: 'GeneralFoundicons', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  content: "\f02e";
+}
+
+/* line 37, css/_style_font.scss */
+input.search-field::-webkit-input-placeholder:before {
+  font-family: 'GeneralFoundicons', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  content: "\f02e";
 }

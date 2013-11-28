@@ -123,11 +123,11 @@ $img-wbo-sns-tumblr-o       :'#{$img-path}wbo_tumblr_o.png';
 	box-shadow: $st $slr $sb rgba($scr, $scg, $scb, $sca);
 }
 @mixin transition-hover ($s:0.2s){
-	-webkit-transition: all $s linear;
-	-o-transition: all $s linear;
-	-moz-transition: all $s linear;
-	-ms-transition: all $s linear;
-	-kthtml-transition: all $s linear;
+	// -webkit-transition: all $s linear;
+	// -o-transition: all $s linear;
+	// -moz-transition: all $s linear;
+	// -ms-transition: all $s linear;
+	// -kthtml-transition: all $s linear;
 	transition: all $s linear;
 }
 
