@@ -21,7 +21,7 @@ Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and Blueprint http://www.blueprintcss.org/
 */
-
+$input-padding:3px;
 
 /* =Reset
 -------------------------------------------------------------- */
@@ -304,7 +304,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	padding: $input-padding;
 }
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
