@@ -5,7 +5,7 @@
  * @package mtportofolio
  */
 ?>
-	<div class="main-navigation-area">
+	<div id="main-navigation" class="main-navigation-area">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'mtportofolio' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'mtportofolio' ); ?></a>

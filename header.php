@@ -32,18 +32,19 @@ wp_enqueue_script(
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<!--<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>-->
+			<button class="menu-for-toggle"></button>
 		</div>
 
 		<div class="wbo-menu-bottom">
 	        <nav class="wbo-menu-pages">
 				<ul class="menu">
-				<ul><?php wp_list_pages('title_li=&number=1'); ?></ul>
+					<?php wp_list_pages('title_li=&number=1'); ?>
 				</ul>
 	        </nav>
-			<aside id="search-2" class="site-search widget widget_search">
+			<aside id="search-header" class="site-search widget widget_search">
 				<?php get_search_form(); ?>
 			</aside>
-	        <nav class="wbo-menu-sns">
+	        <nav id="sns-header" class="wbo-menu-sns">
 				<?php mtportofolio_list_sns(); ?>
 	        </nav>
 	     </div>   	    
