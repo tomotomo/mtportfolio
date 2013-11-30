@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
 
 /**
@@ -13,11 +13,11 @@
  * @param array $args Configuration arguments.
  * @return array
  */
-function mtportofolio_page_menu_args( $args ) {
+function mtportfolio_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'mtportofolio_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'mtportfolio_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -25,14 +25,14 @@ add_filter( 'wp_page_menu_args', 'mtportofolio_page_menu_args' );
  * @param array $classes Classes for the body element.
  * @return array
  */
-function mtportofolio_body_classes( $classes ) {
+function mtportfolio_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() )
 		$classes[] = 'group-blog';
 
 	return $classes;
 }
-add_filter( 'body_class', 'mtportofolio_body_classes' );
+add_filter( 'body_class', 'mtportfolio_body_classes' );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
@@ -41,7 +41,7 @@ add_filter( 'body_class', 'mtportofolio_body_classes' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function mtportofolio_wp_title( $title, $sep ) {
+function mtportfolio_wp_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() )
@@ -57,40 +57,40 @@ function mtportofolio_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'mtportofolio' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'mtportfolio' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'mtportofolio_wp_title', 10, 2 );
+add_filter( 'wp_title', 'mtportfolio_wp_title', 10, 2 );
 
 /**
  * Get SNS Option Array
  *
  * @return array SNS Option Array.
  */
-function mtportofolio_sns_options() {
+function mtportfolio_sns_options() {
 	return array(
 		
 		'twitter' => array(
-			'key' => 'mtportofolio_sns_twitter',
+			'key' => 'mtportfolio_sns_twitter',
 			'url' => 'http://twitter.com/',
 			'css' => 'sns-twitter',
 		),
 
 		'facebook' => array(
-			'key' => 'mtportofolio_sns_facebook',
+			'key' => 'mtportfolio_sns_facebook',
 			'url' => 'https://www.facebook.com/',
 			'css' => 'sns-facebook',
 		),
 
 		'pinterest' => array(
-			'key' => 'mtportofolio_sns_pinterest',
+			'key' => 'mtportfolio_sns_pinterest',
 			'url' => 'http://www.pinterest.com/',
 			'css' => 'sns-pinterest',
 		),
 
 		'tumblr' => array(
-			'key' => 'mtportofolio_sns_tumblr',
+			'key' => 'mtportfolio_sns_tumblr',
 			'url' => 'http://www.tumblr.com/follow/',
 			'css' => 'sns-tumblr',
 		),
@@ -103,8 +103,8 @@ function mtportofolio_sns_options() {
  *
  * @return array SNS Option Keys.
  */
-function mtportofolio_sns_option_keys() {
-	$options = mtportofolio_sns_options();
+function mtportfolio_sns_option_keys() {
+	$options = mtportfolio_sns_options();
 	if ( !$options )
 		return '';
 	$keys = array();
@@ -115,15 +115,15 @@ function mtportofolio_sns_option_keys() {
 }
 
 /**
- * mtportofolio setting
+ * mtportfolio setting
  *
  * @return none
  */
-function mtportofolio_settings() {
+function mtportfolio_settings() {
 	?>
 <div class="wrap">
     <?php screen_icon( 'themes' ); ?>
-	<h2><?php _e( 'mtportofolio Settings' ); ?></h2>
+	<h2><?php _e( 'mtportfolio Settings' ); ?></h2>
 	
 	<?php if( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] == 'true' ) { ?>
 		<div id="message" class="updated">
@@ -135,7 +135,7 @@ function mtportofolio_settings() {
 <table class="form-table">
 <tbody>
 	<?php
-		$sns_options = mtportofolio_sns_options();
+		$sns_options = mtportfolio_sns_options();
 		foreach ( $sns_options as $option_label => $option ) : ?>
 	<tr valign="top">
 		<th scope="row"><label for="<?php echo $option['key']; ?>"><?php echo $option_label; ?></label></th>
@@ -145,7 +145,7 @@ function mtportofolio_settings() {
 </tbody>
 </table>
 	<input type="hidden" name="action" value="update" />
-	<input type="hidden" name="page_options" value="<?php echo implode( ',', mtportofolio_sns_option_keys() ); ?>" />
+	<input type="hidden" name="page_options" value="<?php echo implode( ',', mtportfolio_sns_option_keys() ); ?>" />
 	<?php wp_nonce_field( 'update-options' ); ?>
 	<?php submit_button() ?>    
 </form>	
@@ -160,10 +160,10 @@ function mtportofolio_settings() {
  * @param bool $echo = true
  * @return none or string list tag.
  */
-function mtportofolio_list_sns( $output_service_name = false, $echo = true ) {
+function mtportfolio_list_sns( $output_service_name = false, $echo = true ) {
 	$html = '';
 	$li = '';
-	$options = mtportofolio_sns_options();
+	$options = mtportfolio_sns_options();
 	if ( !$options )
 		return '';
 	foreach ( $options as $key => $val ) {
@@ -193,23 +193,23 @@ function mtportofolio_list_sns( $output_service_name = false, $echo = true ) {
  *
  * @return none
  */
-function mtportofolio_admin_menu() {
-	add_theme_page( 'mtportofolio', 'mtportofolio', 'edit_theme_options', 'mtportofolio', 'mtportofolio_settings' );
+function mtportfolio_admin_menu() {
+	add_theme_page( 'mtportfolio', 'mtportfolio', 'edit_theme_options', 'mtportfolio', 'mtportfolio_settings' );
 }
-add_action( 'admin_menu', 'mtportofolio_admin_menu' );
+add_action( 'admin_menu', 'mtportfolio_admin_menu' );
 
 /**
  * deactive theme
  *
  * @return none
  */
-function mtportofolio_switch_theme( $newname, $newtheme ) {
+function mtportfolio_switch_theme( $newname, $newtheme ) {
 	
 	//delete sns options
-	$option_keys = mtportofolio_sns_option_keys();
+	$option_keys = mtportfolio_sns_option_keys();
 	foreach ( $option_keys as $key ){
 		delete_option( $key );
 	}
 	
 }
-add_action( 'switch_theme', 'mtportofolio_switch_theme' );
+add_action( 'switch_theme', 'mtportfolio_switch_theme' );

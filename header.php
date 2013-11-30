@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
 
 wp_enqueue_script(
@@ -45,7 +45,7 @@ wp_enqueue_script(
 				<?php get_search_form(); ?>
 			</aside>
 	        <nav id="sns-header" class="wbo-menu-sns">
-				<?php mtportofolio_list_sns(); ?>
+				<?php mtportfolio_list_sns(); ?>
 	        </nav>
 	     </div>   	    
 	</header><!-- #masthead -->

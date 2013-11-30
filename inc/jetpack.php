@@ -3,17 +3,17 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: http://jetpack.me/support/infinite-scroll/
  */
-function mtportofolio_jetpack_setup() {
+function mtportfolio_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
 	) );
 }
-add_action( 'after_setup_theme', 'mtportofolio_jetpack_setup' );
+add_action( 'after_setup_theme', 'mtportfolio_jetpack_setup' );

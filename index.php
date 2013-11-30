@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
 
 // Use CDN
@@ -45,7 +45,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php mtportofolio_content_nav( 'nav-below' ); ?>
+			<?php mtportfolio_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

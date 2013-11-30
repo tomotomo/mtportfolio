@@ -12,39 +12,39 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses mtportofolio_header_style()
- * @uses mtportofolio_admin_header_style()
- * @uses mtportofolio_admin_header_image()
+ * @uses mtportfolio_header_style()
+ * @uses mtportfolio_admin_header_style()
+ * @uses mtportfolio_admin_header_image()
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
-function mtportofolio_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'mtportofolio_custom_header_args', array(
+function mtportfolio_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'mtportfolio_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'mtportofolio_header_style',
-		'admin-head-callback'    => 'mtportofolio_admin_header_style',
-		'admin-preview-callback' => 'mtportofolio_admin_header_image',
+		'wp-head-callback'       => 'mtportfolio_header_style',
+		'admin-head-callback'    => 'mtportfolio_admin_header_style',
+		'admin-preview-callback' => 'mtportfolio_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'mtportofolio_custom_header_setup' );
+add_action( 'after_setup_theme', 'mtportfolio_custom_header_setup' );
 
-if ( ! function_exists( 'mtportofolio_header_style' ) ) :
+if ( ! function_exists( 'mtportfolio_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see mtportofolio_custom_header_setup().
+ * @see mtportfolio_custom_header_setup().
  */
-function mtportofolio_header_style() {
+function mtportfolio_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -76,15 +76,15 @@ function mtportofolio_header_style() {
 	</style>
 	<?php
 }
-endif; // mtportofolio_header_style
+endif; // mtportfolio_header_style
 
-if ( ! function_exists( 'mtportofolio_admin_header_style' ) ) :
+if ( ! function_exists( 'mtportfolio_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see mtportofolio_custom_header_setup().
+ * @see mtportfolio_custom_header_setup().
  */
-function mtportofolio_admin_header_style() {
+function mtportfolio_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -104,15 +104,15 @@ function mtportofolio_admin_header_style() {
 	</style>
 <?php
 }
-endif; // mtportofolio_admin_header_style
+endif; // mtportfolio_admin_header_style
 
-if ( ! function_exists( 'mtportofolio_admin_header_image' ) ) :
+if ( ! function_exists( 'mtportfolio_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see mtportofolio_custom_header_setup().
+ * @see mtportfolio_custom_header_setup().
  */
-function mtportofolio_admin_header_image() {
+function mtportfolio_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -124,4 +124,4 @@ function mtportofolio_admin_header_image() {
 	</div>
 <?php
 }
-endif; // mtportofolio_admin_header_image
+endif; // mtportfolio_admin_header_image

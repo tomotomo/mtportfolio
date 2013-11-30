@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
 ?>
 	</div><!-- #content -->
@@ -28,7 +28,7 @@
 		</aside>
 		<aside class="widget footer-widget-sns">
 			<nav class="footer-sns">
-				<?php mtportofolio_list_sns( true ); ?>
+				<?php mtportfolio_list_sns( true ); ?>
         	</nav>
 		</aside>
 	</div><!-- .footer-widget-area -->
@@ -39,10 +39,10 @@
 
 	<!-- <footer id="colophon" class="site-footer" role="contentinfo"> -->
 		<!-- <div class="site-info">
-			<?php do_action( 'mtportofolio_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'mtportofolio' ), 'WordPress' ); ?></a>
+			<?php do_action( 'mtportfolio_credits' ); ?>
+			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'mtportfolio' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'mtportofolio' ), 'mtportofolio', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'mtportfolio' ), 'mtportfolio', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div> --><!-- .site-info -->
 	<!-- </footer> --><!-- #colophon -->
 </div><!-- #page -->

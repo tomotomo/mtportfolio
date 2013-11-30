@@ -1,8 +1,8 @@
 <?php
 /**
- * mtportofolio functions and definitions
+ * mtportfolio functions and definitions
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
 
 /**
@@ -11,7 +11,7 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
-if ( ! function_exists( 'mtportofolio_setup' ) ) :
+if ( ! function_exists( 'mtportfolio_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -19,15 +19,15 @@ if ( ! function_exists( 'mtportofolio_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function mtportofolio_setup() {
+function mtportfolio_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on mtportofolio, use a find and replace
-	 * to change 'mtportofolio' to the name of your theme in all the template files
+	 * If you're building a theme based on mtportfolio, use a find and replace
+	 * to change 'mtportfolio' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'mtportofolio', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'mtportfolio', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -41,27 +41,27 @@ function mtportofolio_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'mtportofolio' ),
+		'primary' => __( 'Primary Menu', 'mtportfolio' ),
 	) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'mtportofolio_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'mtportfolio_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // mtportofolio_setup
-add_action( 'after_setup_theme', 'mtportofolio_setup' );
+endif; // mtportfolio_setup
+add_action( 'after_setup_theme', 'mtportfolio_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function mtportofolio_widgets_init() {
+function mtportfolio_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'mtportofolio' ),
+		'name'          => __( 'Sidebar', 'mtportfolio' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -69,22 +69,22 @@ function mtportofolio_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'mtportofolio_widgets_init' );
+add_action( 'widgets_init', 'mtportfolio_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function mtportofolio_scripts() {
-	wp_enqueue_style( 'mtportofolio-style', get_stylesheet_uri() );
+function mtportfolio_scripts() {
+	wp_enqueue_style( 'mtportfolio-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'mtportofolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'mtportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'mtportofolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'mtportfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 }
-add_action( 'wp_enqueue_scripts', 'mtportofolio_scripts' );
+add_action( 'wp_enqueue_scripts', 'mtportfolio_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -114,7 +114,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 add_theme_support('post-thumbnails');
 
-function mtportofolio_the_thumbnail() {
+function mtportfolio_the_thumbnail() {
     if ( has_post_thumbnail() ){
 	the_post_thumbnail();
     }else{

@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package mtportofolio
+ * @package mtportfolio
  */
 
 get_header(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 							 * what author we're dealing with (if that is the case).
 							*/
 							the_post();
-							printf( __( 'Author: %s', 'mtportofolio' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'mtportfolio' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
 							 * we can run the loop properly, in full.
@@ -36,31 +36,31 @@ get_header(); ?>
 							rewind_posts();
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'mtportofolio' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day: %s', 'mtportfolio' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'mtportofolio' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( __( 'Month: %s', 'mtportfolio' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'mtportofolio' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( __( 'Year: %s', 'mtportfolio' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'mtportofolio' );
+							_e( 'Asides', 'mtportfolio' );
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'mtportofolio');
+							_e( 'Images', 'mtportfolio');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'mtportofolio' );
+							_e( 'Videos', 'mtportfolio' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'mtportofolio' );
+							_e( 'Quotes', 'mtportfolio' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'mtportofolio' );
+							_e( 'Links', 'mtportfolio' );
 
 						else :
-							_e( 'Archives', 'mtportofolio' );
+							_e( 'Archives', 'mtportfolio' );
 
 						endif;
 					?>
@@ -87,7 +87,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php mtportofolio_content_nav( 'nav-below' ); ?>
+			<?php mtportfolio_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 
