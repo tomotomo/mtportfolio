@@ -133,13 +133,13 @@ function mtportofolio_settings() {
 	
 <form method="post" action="options.php">
 <table class="form-table">
-<tbody>    
+<tbody>
 	<?php
 		$sns_options = mtportofolio_sns_options();
 		foreach ( $sns_options as $option_label => $option ) : ?>
 	<tr valign="top">
-        <th scope="row"><label for="<?php echo $option['key']; ?>"><?php echo $option_label; ?></label></th>
-        <td><input type="text" name="<?php echo $option['key']; ?>" value="<?php echo get_option( $option['key'], '' ); ?>" /></td>
+		<th scope="row"><label for="<?php echo $option['key']; ?>"><?php echo $option_label; ?></label></th>
+		<td><input type="text" name="<?php echo $option['key']; ?>" value="<?php echo get_option( $option['key'], '' ); ?>" /></td>
 	</tr>
 	<?php endforeach; ?>
 </tbody>
@@ -194,7 +194,7 @@ function mtportofolio_list_sns( $output_service_name = false, $echo = true ) {
  * @return none
  */
 function mtportofolio_admin_menu() {
-	add_submenu_page( 'themes.php', 'mtportofolio', 'mtportofolio', 'edit_theme_options', 'mtportofolio', 'mtportofolio_settings' );
+	add_theme_page( 'mtportofolio', 'mtportofolio', 'edit_theme_options', 'mtportofolio', 'mtportofolio_settings' );
 }
 add_action( 'admin_menu', 'mtportofolio_admin_menu' );
 
