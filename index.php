@@ -26,6 +26,7 @@ wp_enqueue_script(
 );
 
 get_header(); ?>
+<?php get_sidebar(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -54,8 +55,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 
 <script type="text/javascript">
 (function($){
