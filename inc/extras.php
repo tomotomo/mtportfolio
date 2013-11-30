@@ -121,31 +121,34 @@ function mtportofolio_sns_option_keys() {
  */
 function mtportofolio_settings() {
 	?>
-<div id="wrap">
-	<h2><?php echo __('mtportofolio Settings'); ?></h2>
+<div class="wrap">
+    <?php screen_icon( 'themes' ); ?>
+	<h2><?php _e( 'mtportofolio Settings' ); ?></h2>
 	
-	<?php if( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) { ?>
+	<?php if( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] == 'true' ) { ?>
 		<div id="message" class="updated">
-			<p><strong><?php _e('Settings saved.') ?></strong></p>
+			<p><strong><?php _e( 'Settings saved.' ) ?></strong></p>
 		</div>
 	<?php } ?>
 	
 <form method="post" action="options.php">
+<table class="form-table">
+<tbody>    
 	<?php
 		$sns_options = mtportofolio_sns_options();
 		foreach ( $sns_options as $option_label => $option ) : ?>
-	<p>
-		<strong><label for="<?php echo $option['key']; ?>"><?php echo $option_label; ?></label></strong>
-		<input type="text" name="<?php echo $option['key']; ?>" value="<?php echo get_option( $option['key'], '' ); ?>" />
-	</p>
+	<tr valign="top">
+        <th scope="row"><label for="<?php echo $option['key']; ?>"><?php echo $option_label; ?></label></th>
+        <td><input type="text" name="<?php echo $option['key']; ?>" value="<?php echo get_option( $option['key'], '' ); ?>" /></td>
+	</tr>
 	<?php endforeach; ?>
-		
+</tbody>
+</table>
 	<input type="hidden" name="action" value="update" />
 	<input type="hidden" name="page_options" value="<?php echo implode( ',', mtportofolio_sns_option_keys() ); ?>" />
 	<?php wp_nonce_field( 'update-options' ); ?>
-	<?php submit_button() ?>
+	<?php submit_button() ?>    
 </form>	
-	<?php mtportofolio_list_sns(); ?>
 </div>
 	<?php
 }
