@@ -123,11 +123,11 @@ function mtportfolio_settings() {
 	?>
 <div class="wrap">
     <?php screen_icon( 'themes' ); ?>
-	<h2><?php _e( 'mtportfolio Settings' ); ?></h2>
+	<h2><?php _e( 'mtportfolio Settings', 'mtportfolio' ); ?></h2>
 	
 	<?php if( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] == 'true' ) { ?>
 		<div id="message" class="updated">
-			<p><strong><?php _e( 'Settings saved.' ) ?></strong></p>
+			<p><strong><?php _e( 'Settings saved.', 'mtportfolio' ) ?></strong></p>
 		</div>
 	<?php } ?>
 	
