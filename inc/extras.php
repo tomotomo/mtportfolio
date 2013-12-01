@@ -213,3 +213,13 @@ function mtportfolio_switch_theme( $newname, $newtheme ) {
 	
 }
 add_action( 'switch_theme', 'mtportfolio_switch_theme' );
+
+function mtportfolio_list_tag_links() {
+	
+	$tags = get_tags( array('orderby' => 'count', 'order' => 'DESC') );
+	
+	foreach ( (array) $tags as $tag ) {
+		echo '<a href="'. get_tag_link ($tag->term_id). '">'. $tag->name. '</a>'. "\n";
+	}
+	
+}

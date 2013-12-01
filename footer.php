@@ -18,9 +18,7 @@
 		<aside class="widget footer-widget-tag">
 			<h1><a href="#">Tags</a></h1>
 			<div class="tags-links">
-				<a href="#">tag01</a>
-				<a href="#">tag02</a>
-				<a href="#">tag03</a>
+				<?php mtportfolio_list_tag_links(); ?>
 			</div>
 		</aside>
 		<aside class="widget footer-widget-page">
