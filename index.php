@@ -59,7 +59,8 @@ get_header(); ?>
 <script type="text/javascript">
 (function($){
 $(function(){
-	// TODO CSS media query の値を利用。条件が変わったら書きなおさなきゃいけない。不格好
+	
+	// ISSUE #8
 	var spW = 480;
 	var pcW = 1024;
 
