@@ -6,6 +6,9 @@
  */
 ?>
 	<div id="main-navigation" class="main-navigation-area">
+		
+		<?php if ( false) dynamic_sidebar(); ?>
+		
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'mtportfolio' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'mtportfolio' ); ?></a>
