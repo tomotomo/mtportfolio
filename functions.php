@@ -111,8 +111,8 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-
-add_theme_support('post-thumbnails');
+add_editor_style();
+add_theme_support( 'post-thumbnails' );
 
 function mtportfolio_the_thumbnail() {
     if ( has_post_thumbnail() ){
