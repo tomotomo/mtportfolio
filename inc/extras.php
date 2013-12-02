@@ -127,14 +127,14 @@ function mtportfolio_settings() {
 	
 	<?php
 		if ( isset( $_GET['updated'] ) && isset( $_GET['page'] ) )
-			add_settings_error( 'general', 'settings_updated', __( 'Settings saved.' ), 'updated' );
+			add_settings_error( 'general', 'settings_updated', __( 'Settings saved.','mtportfolio' ), 'updated' );
 		settings_errors();
 	?>
 
 	<form action="options.php" method="post">
 		<?php do_settings_sections( 'mtportfolio_sns' ); ?>
 		<?php settings_fields( 'mtportfolio_sns_group' ); ?>
-		<?php submit_button( __( 'Save Changes' ), 'primary', 'Update' ); ?>
+		<?php submit_button( __( 'Save Changes','mtportfolio' ), 'primary', 'Update' ); ?>
 	</form>
 
 </div>
@@ -224,7 +224,7 @@ add_action( 'admin_init', 'mtportfolio_admin_init' );
  * @return none
  */
 function mtportfolio_add_settings_section() {
-	_e( 'Please Input Your SNS Account.' );	
+	_e( 'Please Input Your SNS Account.','mtportfolio' );	
 }
 
 /**
