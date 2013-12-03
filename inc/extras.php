@@ -195,7 +195,7 @@ function mtportfolio_admin_init() {
 
 	add_settings_section(
 		'mtportfolio_sns_section',
-		_( 'SNS Account Settings', 'mtportfolio' ),
+		__( 'SNS Account Settings', 'mtportfolio' ),
 		'mtportfolio_add_settings_section',
 		'mtportfolio_sns'
 	);
