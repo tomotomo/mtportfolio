@@ -123,32 +123,20 @@ function mtportfolio_settings() {
 	?>
 <div class="wrap">
     <?php screen_icon( 'themes' ); ?>
-	<h2><?php _e( 'mtportfolio Settings' ); ?></h2>
+	<h2><?php _e( 'mtportfolio Settings', 'mtportfolio' ); ?></h2>
 	
-	<?php if( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] == 'true' ) { ?>
-		<div id="message" class="updated">
-			<p><strong><?php _e( 'Settings saved.' ) ?></strong></p>
-		</div>
-	<?php } ?>
-	
-<form method="post" action="options.php">
-<table class="form-table">
-<tbody>
 	<?php
-		$sns_options = mtportfolio_sns_options();
-		foreach ( $sns_options as $option_label => $option ) : ?>
-	<tr valign="top">
-		<th scope="row"><label for="<?php echo $option['key']; ?>"><?php echo $option_label; ?></label></th>
-		<td><input type="text" name="<?php echo $option['key']; ?>" value="<?php echo get_option( $option['key'], '' ); ?>" /></td>
-	</tr>
-	<?php endforeach; ?>
-</tbody>
-</table>
-	<input type="hidden" name="action" value="update" />
-	<input type="hidden" name="page_options" value="<?php echo implode( ',', mtportfolio_sns_option_keys() ); ?>" />
-	<?php wp_nonce_field( 'update-options' ); ?>
-	<?php submit_button() ?>    
-</form>	
+		if ( isset( $_GET['updated'] ) && isset( $_GET['page'] ) )
+			add_settings_error( 'general', 'settings_updated', __( 'Settings saved.','mtportfolio' ), 'updated' );
+		settings_errors();
+	?>
+
+	<form action="options.php" method="post">
+		<?php do_settings_sections( 'mtportfolio_sns' ); ?>
+		<?php settings_fields( 'mtportfolio_sns_group' ); ?>
+		<?php submit_button( __( 'Save Changes','mtportfolio' ), 'primary', 'Update' ); ?>
+	</form>
+
 </div>
 	<?php
 }
@@ -199,6 +187,57 @@ function mtportfolio_admin_menu() {
 add_action( 'admin_menu', 'mtportfolio_admin_menu' );
 
 /**
+ * Admin init
+ *
+ * @return none
+ */
+function mtportfolio_admin_init() {
+
+	add_settings_section(
+		'mtportfolio_sns_section',
+		__( 'SNS Account Settings', 'mtportfolio' ),
+		'mtportfolio_add_settings_section',
+		'mtportfolio_sns'
+	);
+	
+	$options = mtportfolio_sns_options();
+	foreach ( $options as $key => $val ){
+		
+		$key_name = $val['key'];
+		add_settings_field(
+			$key_name, 
+			$key,
+			'mtportfolio_add_settings_field_sns',
+			'mtportfolio_sns', 
+			'mtportfolio_sns_section',
+			array( 'name' => $key_name, 'label_for' => $key_name, )
+		);
+		register_setting( 'mtportfolio_sns_group', $key_name, 'wp_filter_nohtml_kses' );
+	}
+
+}
+add_action( 'admin_init', 'mtportfolio_admin_init' );
+
+/**
+ * echo setting section str
+ *
+ * @return none
+ */
+function mtportfolio_add_settings_section() {
+	_e( 'Please Input Your SNS Account.','mtportfolio' );	
+}
+
+/**
+ * echo setting field (sns)
+ *
+ * @return none
+ */
+function mtportfolio_add_settings_field_sns( $args ) {
+	$name = $args['name'];
+	echo '<input name="'.$name.'" id="'.$name.'" type="text" value="'. esc_attr(get_option($name)) .'" />';
+}
+
+/**
  * deactive theme
  *
  * @return none
@@ -213,3 +252,13 @@ function mtportfolio_switch_theme( $newname, $newtheme ) {
 	
 }
 add_action( 'switch_theme', 'mtportfolio_switch_theme' );
+
+function mtportfolio_list_tag_links() {
+	
+	$tags = get_tags( array('orderby' => 'count', 'order' => 'DESC') );
+	
+	foreach ( (array) $tags as $tag ) {
+		echo '<a href="'. get_tag_link ($tag->term_id). '">'. $tag->name. '</a>'. "\n";
+	}
+	
+}

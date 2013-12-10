@@ -309,3 +309,11 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://automattic.com/"
 msgstr ""
+
+#. Setting Header Title
+msgid "mtportfolio Settings"
+msgstr ""
+
+#. Setting Save Done
+msgid "Settings saved."
+msgstr ""

@@ -18,9 +18,7 @@
 		<aside class="widget footer-widget-tag">
 			<h1><a href="#">Tags</a></h1>
 			<div class="tags-links">
-				<a href="#">tag01</a>
-				<a href="#">tag02</a>
-				<a href="#">tag03</a>
+				<?php mtportfolio_list_tag_links(); ?>
 			</div>
 		</aside>
 		<aside class="widget footer-widget-page">
@@ -34,17 +32,12 @@
 	</div><!-- .footer-widget-area -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-    	<div class="site-info">Copyright(c)mtportfolio</div><!-- .site-info -->
+    	<div class="site-info">
+			<?php do_action( 'mtportfolio_credits' ); ?>
+			Copyright(c)mtportfolio
+		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
-	<!-- <footer id="colophon" class="site-footer" role="contentinfo"> -->
-		<!-- <div class="site-info">
-			<?php do_action( 'mtportfolio_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'mtportfolio' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'mtportfolio' ), 'mtportfolio', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div> --><!-- .site-info -->
-	<!-- </footer> --><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
