@@ -60,7 +60,7 @@ get_header(); ?>
 (function($){
 $(function(){
 <<<<<<< HEAD
-	// TODO CSS media query の値を利用。条件が変わったら書きなおさなきゃいけない。不格好
+	// TODO CSS media query の値を利用。条件が変わったので書き直しました
 	var spW = 504;
 	var tpW = 764;
 	var pcW = 1024;
