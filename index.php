@@ -60,7 +60,8 @@ get_header(); ?>
 (function($){
 $(function(){
 	// TODO CSS media query の値を利用。条件が変わったら書きなおさなきゃいけない。不格好
-	var spW = 480;
+	var spW = 504;
+	var tpW = 764;
 	var pcW = 1024;
 
 	var masonry_run = 'none';
@@ -98,6 +99,8 @@ $(function(){
 			mode = 'pc';
 		} else if (htmlWidth <= spW) {
 			mode = 'sp';
+		} else if (htmlWidth <= tpW) {
+			mode = 'tb2';
 		} else {
 			mode = 'tb';
 		}
