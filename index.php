@@ -59,7 +59,6 @@ get_header(); ?>
 <script type="text/javascript">
 (function($){
 $(function(){
-<<<<<<< HEAD
 	// TODO CSS media query の値を利用。条件が変わったので書き直しました
 	var spW = 504;
 	var tpW = 764;
