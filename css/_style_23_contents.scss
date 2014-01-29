@@ -1,0 +1,95 @@
+/*content
+-------------------------------------*/
+.site-content {
+}
+/*nav in content
+-------------------------------------*/
+.main-navigation-area{
+	float: right;
+	width: $pc-main-navigation-area-w;
+}
+.main-navigation {
+	padding: $pc-main-navigation-p;
+	@include bg-clr-wh;
+	@include tomo-add-1;
+	font-family: $font-sub;
+	ul.nav-menu{
+		margin-bottom:$pc-nav-menu-mb-IN-main-navigation;
+		padding-bottom:$pc-nav-menu-pb-IN-main-navigation;
+	}
+}
+.menu-toggle {} 				
+.skip-link {}
+.menu {}
+.menu > ul {}
+.button-login {
+	padding:$pc-button-login-p;
+	margin-bottom: $pc-button-login-mb;
+	@include b-bk-1;
+	text-align: center;
+}
+
+/*content in content
+-------------------------------------*/
+.content-area {
+	float: left;
+	width: $pc-content-area-w;
+	@include tomo-add-1;
+}
+/*article
+-------------------------------------*/
+.content-area {
+	width: $pc-content-area-w
+		;
+}
+.home,
+.archive {
+	.content-area {
+		width: $pc-content-area-w-Index;
+	}
+	.post-area {
+		float: left;
+		width: $pc-post-area-w-IN-home;
+		margin-right: $pc-post-area-mr-IN-home;
+	}
+	.post {
+		padding: $pc-post-p-IN-home;
+		@include bg-clr-wh;
+		@include tomo-add-1;
+		@include transition-hover;
+	}
+	.post:hover {
+		@include box-shadow-1;
+		@include transition-hover;
+	}
+}
+
+.format-standard{} //*
+.format-image {} //*
+.post-password-required {} //*
+.category-photo {} //*
+
+
+/*header
+-------------------------------------*/
+.entry-header {}
+.entry-header > a {}
+.attachment-post-thumbnail {}
+.wp-post-image {}
+.entry-title {}
+.entry-title > a {}
+.entry-content {}
+
+/*footer
+-------------------------------------*/
+.entry-meta {}
+.entry-meta {
+	.cat-links > a,
+	.tags-links > a {
+		@include tag-cate-btn-1;
+	}
+}
+.cat-links {}
+.cat-links > a {}
+.tags-links {}
+.tags-links > a {}

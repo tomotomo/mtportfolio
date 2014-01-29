@@ -1,0 +1,33 @@
+/*body
+-------------------------------------*/
+.site {
+	width: $pc-w;
+	margin: 0 auto;
+	@include tomo-add-1;
+}
+
+/*main
+-------------------------------------*/
+.site-main {}
+
+/*page-top
+-------------------------------------*/
+.page-top{
+	@include page-top-fixed-posbr;
+	a {
+		@include bg-img ($img-wbo-arrow_up);
+		display:block;
+		width: 36px;
+		height: 36px;
+	}
+	a:hover  {@include bg-img-hover ($img-wbo-arrow_up-o);}
+}
+
+/*pagenation
+-------------------------------------*/
+.paging-navigation {}
+.nav-previous {}
+.nav-previous > a {}
+.meta-nav {}
+
+.widget-area {} //*secondary

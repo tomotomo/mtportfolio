@@ -1,0 +1,104 @@
+/*footer-widget-area
+-------------------------------------*/
+.footer-widget-area {
+	@include tomo-add-2;
+	@include bt-bk-1;
+	.widget{
+		width: $pc-widget-w-IN-footer-widget-area;
+		float: left;
+		font-family: $font-sub;
+	}
+	.footer-widget-category{
+		padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+		h1 a{
+			@include bg-img ($img-wbo-arrow_up);
+			@include bg-img-pd;
+		}
+		h1 a:hover{
+			@include bg-img-hover ($img-wbo-arrow_up-o);
+		}
+		ul{
+			margin: 0 0 0 $pc-footer-widget-category-ul-ml; padding: 0;
+		}
+		ul li {
+			margin: 0; padding: 0;
+			list-style-type: none;
+		}
+		ul li a{
+			@include bg-img-pd($pt:5px,$pb:10px,$pl:5px);
+		}
+		ul li:before { content:"-"; }
+	}
+
+	.footer-widget-tag{
+		padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+		h1 a{
+			@include bg-img ($img-wbo-arrow_down);
+			@include bg-img-pd;
+		}
+		h1 a:hover{
+			@include bg-img-hover ($img-wbo-arrow_down-o);
+		}
+		.tags-links {
+			padding-left: $pc-tags-links-w;
+			font-family:$font-main;
+		}
+		.tags-links > a {
+			@include tag-cate-btn-1;
+		}	
+	}
+	.footer-widget-page{
+		padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+		ul,
+		ul li {
+			margin: 0; padding: 0;
+		}
+		ul li {
+			list-style-type: none;
+		}
+		ul li a{
+			@include bg-img-pd($pt:5px,$pb:10px);
+		}
+		ul li:first-child a{
+			@include bg-img ($img-wbo-arrow_down);
+			@include bg-img-pd;
+		}
+		ul li:first-child a:hover{
+			@include bg-img-hover ($img-wbo-arrow_down-o);
+		}	
+	}
+	.footer-widget-sns{
+		padding: $pc-footer-widget-area-pt 0 $pc-footer-widget-area-pb;
+		ul,
+		ul li {
+			margin: 0; padding: 0;
+		}
+		ul li {
+			list-style-type: none;
+		}
+		ul li a.sns-twitter        {@include bg-img ($img-wbo-sns-twitter);}
+		ul li a.sns-twitter:hover  {@include bg-img-hover ($img-wbo-sns-twitter-o);}
+		ul li a.sns-facebook       {@include bg-img ($img-wbo-sns-facebook);}
+		ul li a.sns-facebook:hover {@include bg-img-hover ($img-wbo-sns-facebook-o);}
+		ul li a.sns-pinterest      {@include bg-img ($img-wbo-sns-pinterest);}
+		ul li a.sns-pinterest:hover{@include bg-img-hover ($img-wbo-sns-pinterest-o);}
+		ul li a.sns-tumblr         {@include bg-img ($img-wbo-sns-tumblr);}
+		ul li a.sns-tumblr:hover   {@include bg-img-hover ($img-wbo-sns-tumblr-o);}
+		ul li a{
+			display:block;
+			@include bg-img-pd();
+		}
+	}
+}
+
+/*footer
+-------------------------------------*/
+.site-footer {
+	@include tomo-add-2;
+	margin-top: $pc-site-footer-mt;
+	padding: $pc-site-footer-pt 0 $pc-site-footer-pb;
+	font-size: $pc-site-footer-fs;
+	text-align: center;
+	@include bt-bk-1;
+}
+.site-info {}

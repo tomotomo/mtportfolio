@@ -1,0 +1,84 @@
+/*header
+-------------------------------------*/
+.site-header {
+	margin-bottom: $pc-site-header-mb;
+	position: relative;
+	.site-search {
+		margin-left: $pc-site-search-ml;
+		width: $pc-site-search-w;
+		float: right;
+		.search-field {
+			width:$pc-site-search-w -($pc-search-field-pl+ $input-padding*2 );
+			background-color: transparent;
+			background-image: url($img-wbo-sns-search-f);
+			background-position: $pc-search-field-bg-pl center;
+			background-repeat: no-repeat;
+			background-size: $pc-search-field-bg-w $pc-search-field-bg-h;
+			cursor: pointer;
+			height: $pc-search-field-h;
+			padding-left: $pc-search-field-pl;
+		}
+	}
+}
+
+.site-branding {}
+.site-title {
+	padding-top: $pc-site-title-pt;
+	font-size: $pc-site-title-fs;
+	font-family: $font-sub;
+}
+.site-title > a {}
+
+button.menu-for-toggle{
+	display:none;
+}
+
+.wbo-menu-bottom {
+	margin-top: $pc-wbo-menu-bottom-mt;
+}
+.wbo-menu-pages,
+.menu-toggle {
+	float:left;
+	ul,
+	ul li {
+		margin: 0; padding: 0;
+		font-family: $font-sub;
+	}
+	ul li {
+		list-style-type: none;
+	}
+	ul li a{
+		@include bg-img ($img-wbo-arrow_down);
+		@include bg-img-pd;
+	}
+	ul li a:hover{
+		@include bg-img-hover ($img-wbo-arrow_down-o);
+	}
+}
+
+.menu-toggle{
+	float: none;
+	display: none;
+}
+.menu {}
+.menu-item {}
+.wbo-menu-sns {
+	float: right;
+	ul li {
+		list-style-type: none;
+		float: left;
+		padding-right: $pc-wbo-menu-sns-li-pr;
+	}
+	ul li a.sns-twitter        {@include bg-img ($img-wbo-sns-twitter);}
+	ul li a.sns-twitter:hover  {@include bg-img-hover ($img-wbo-sns-twitter-o);}
+	ul li a.sns-facebook       {@include bg-img ($img-wbo-sns-facebook);}
+	ul li a.sns-facebook:hover {@include bg-img-hover ($img-wbo-sns-facebook-o);}
+	ul li a.sns-pinterest      {@include bg-img ($img-wbo-sns-pinterest);}
+	ul li a.sns-pinterest:hover{@include bg-img-hover ($img-wbo-sns-pinterest-o);}
+	ul li a.sns-tumblr         {@include bg-img ($img-wbo-sns-tumblr);}
+	ul li a.sns-tumblr:hover   {@include bg-img-hover ($img-wbo-sns-tumblr-o);}
+	ul li a{
+		width: $pc-wbo-menu-sns-li-a-w;
+		height: $pc-wbo-menu-sns-li-a-h;
+	}
+}
