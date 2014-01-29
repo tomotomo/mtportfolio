@@ -1,0 +1,61 @@
+
+@mixin b-bk-1{border: 1px solid #1c1c1c;}
+@mixin bt-bk-1{border-top: 1px solid #1c1c1c;}
+@mixin bb-gr-1{border-bottom: 1px solid #ccc;}
+@mixin bg-clr-wh {background-color:#fff;}
+
+@mixin tomo-add-1{box-sizing: border-box;}
+@mixin tomo-add-2{clear:both;}
+
+@mixin tag-cate-btn-1 { // kanagawa-add
+	color:#fff;
+	font-size:10px;
+	padding:2px 7px 1px 7px;
+	background-color: #aaa;
+	border-radius: 4px;
+	//IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS
+}
+
+@mixin bg-img ($img,$pos1:left,$pos2:center) {
+	display: block;
+	background-image: url($img);
+	background-repeat: no-repeat;
+	background-position: $pos1 $pos2;
+}
+
+@mixin bg-img-hover ($img) {background-image: url($img);}
+
+@mixin bg-img-pd ($pt:10px,$pr:10px,$pb:8px,$pl:40px) {padding:$pt $pr $pb $pl;}
+
+@mixin page-top-fixed-posbr ($posb:10px,$posr:20px,$zindx:999998){
+	position: fixed;
+	bottom: $posb;
+	right: $posr;
+	z-index: $zindx;
+
+}
+@mixin box-shadow-1 ($st:0px,$slr:3px,$sb:6px,$scr:99,$scg:99,$scb:111,$sca:0.6){
+	box-shadow: $st $slr $sb rgba($scr, $scg, $scb, $sca);
+}
+@mixin transition-hover ($s:0.2s){
+	-webkit-transition: all $s linear;
+	transition: all $s linear;
+}
+
+@mixin btn-toggle($t:20px,$r:0,$z:2,$h:33px,$w:33px){
+	box-shadow: none;
+	text-shadow: none;
+	border: none;
+	background-color: none;
+	position: absolute;
+	top:$t;
+	right:$r;
+	z-index:$z;
+	height:$h;
+	width:$w;
+}
+@mixin toggle-non{
+	float: none;
+	width:100%;
+	display:none;
+}
