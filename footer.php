@@ -12,22 +12,22 @@
 	<nav class="page-top"><a href="#"></a></nav>
 	<div class="footer-widget-area">
 		<aside class="widget footer-widget-category">
-			<h1><a href="#">Categories</a></h1>
+			<h1>Categories</h1>
 			<ul><?php wp_list_categories('title_li=');?></ul>
 		</aside>
 		<aside class="widget footer-widget-tag">
-			<h1><a href="#">Tags</a></h1>
-			<div class="tags-links">
-				<?php mtportfolio_list_tag_links(); ?>
-			</div>
+			<h1>Tags</h1>
+			<!-- <div class="tags-links"> -->
+			<?php mtportfolio_list_tag_links(); ?>
+			<!-- </div> -->
 		</aside>
 		<aside class="widget footer-widget-page">
+			<h1>Pages</h1>
 			<ul><?php wp_list_pages('title_li='); ?></ul>
 		</aside>
 		<aside class="widget footer-widget-sns">
-			<nav class="footer-sns">
-				<?php mtportfolio_list_sns( true ); ?>
-        	</nav>
+			<h1>SNS Links</h1>
+			<?php mtportfolio_list_sns( true ); ?>
 		</aside>
 	</div><!-- .footer-widget-area -->
 
