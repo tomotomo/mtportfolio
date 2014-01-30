@@ -5,6 +5,7 @@ $font-main  :'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリ�
 $font-sub   :'ヒラギノ明朝 Pro W6','Hiragino Mincho Pro','HGS明朝E','ＭＳ Ｐ明朝',serif;
 $body-bg    :#f7f7f7;
 $link-txt-clr :#1c1c1c;
+$link-txt-clr-hover-sitetitle :#666;
 
 //for browser-width
 $site-mlr                  :10px; // site left/right padding
@@ -74,6 +75,8 @@ $pc-post-area-mr-IN-home   :$pc-index-post-mr;
 $pc-post-p-IN-home         :10px;
 $pc-site-title-pt          :10px;
 $pc-site-title-fs          :40px;
+$pc-entry-title-fs         :24px;
+$pc-entry-meta-fs          :$pc-entry-title-fs/2;
 
 //footer
 $pc-site-footer-mt         :30px;

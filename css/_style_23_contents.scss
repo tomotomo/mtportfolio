@@ -36,12 +36,9 @@
 	width: $pc-content-area-w;
 	@include tomo-add-1;
 }
+
 /*article
 -------------------------------------*/
-.content-area {
-	width: $pc-content-area-w
-		;
-}
 .home,
 .archive {
 	.content-area {
@@ -64,6 +61,7 @@
 	}
 }
 
+
 .format-standard{} //*
 .format-image {} //*
 .post-password-required {} //*
@@ -72,11 +70,82 @@
 
 /*header
 -------------------------------------*/
-.entry-header {}
+.single,
+.page {
+	.entry-header {
+		position: relative;
+		background:#FFF;
+		margin:0 auto 20px; 
+		padding:10px;
+		&:after
+		{
+		    background: none repeat scroll 0 0 #777777;
+		    bottom: 18px;
+		    box-shadow: 0 15px 10px #777777;
+		    content: "";
+		    left: auto;
+		    max-width: 300px;
+		    position: absolute;
+		    right: 10px;
+		    transform: rotate(3deg);
+		    -webkit-transform: rotate(3deg);
+		    -moz-transform: rotate(3deg);
+		    -ms-transform: rotate(3deg);
+		    -o-transform: rotate(3deg);
+		    width: 50%;
+		    height: 20px;
+		    z-index: -1;
+		}
+		.entry-title {
+			font-family: $font-sub;
+			font-size: $pc-entry-title-fs ;
+		}
+		.entry-meta {
+			font-size: $pc-entry-meta-fs ;
+		}
+	}
+}
+
+.archive {
+	.page-header {
+		position: relative;
+		background:#FFF;
+		margin:0 $pc-content-area-w-Index - $pc-content-area-w 20px 0; 
+		padding:10px;
+		&:after
+		{
+		    background: none repeat scroll 0 0 #777777;
+		    bottom: 18px;
+		    box-shadow: 0 15px 10px #777777;
+		    content: "";
+		    left: auto;
+		    max-width: 300px;
+		    position: absolute;
+		    right: 10px;
+		    transform: rotate(3deg);
+		    -webkit-transform: rotate(3deg);
+		    -moz-transform: rotate(3deg);
+		    -ms-transform: rotate(3deg);
+		    -o-transform: rotate(3deg);
+		    width: 50%;
+		    height: 20px;
+		    z-index: -1;
+		}
+		.page-title {
+			font-family: $font-sub;
+			font-size: $pc-entry-title-fs ;
+		}
+	}
+}
+
+
 .entry-header > a {}
+
+
 .attachment-post-thumbnail {}
 .wp-post-image {}
-.entry-title {}
+.entry-title {	
+}
 .entry-title > a {}
 .entry-content {}
 
@@ -93,3 +162,5 @@
 .cat-links > a {}
 .tags-links {}
 .tags-links > a {}
+
+

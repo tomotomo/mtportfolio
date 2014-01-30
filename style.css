@@ -828,22 +828,28 @@ object {
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
 
-/* line 32, css/_style_22_header.scss */
+/* line 31, css/_style_22_header.scss */
+.site-title > a:hover {
+  text-decoration: none;
+  color: #666666;
+}
+
+/* line 37, css/_style_22_header.scss */
 button.menu-for-toggle {
   display: none;
 }
 
-/* line 36, css/_style_22_header.scss */
+/* line 41, css/_style_22_header.scss */
 .wbo-menu-bottom {
   margin-top: 20px;
 }
 
-/* line 40, css/_style_22_header.scss */
+/* line 45, css/_style_22_header.scss */
 .wbo-menu-pages,
 .menu-toggle {
   float: left;
 }
-/* line 43, css/_style_22_header.scss */
+/* line 48, css/_style_22_header.scss */
 .wbo-menu-pages ul,
 .wbo-menu-pages ul li,
 .menu-toggle ul,
@@ -852,12 +858,12 @@ button.menu-for-toggle {
   padding: 0;
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
-/* line 47, css/_style_22_header.scss */
+/* line 52, css/_style_22_header.scss */
 .wbo-menu-pages ul li,
 .menu-toggle ul li {
   list-style-type: none;
 }
-/* line 50, css/_style_22_header.scss */
+/* line 55, css/_style_22_header.scss */
 .wbo-menu-pages ul li a,
 .menu-toggle ul li a {
   display: block;
@@ -866,73 +872,73 @@ button.menu-for-toggle {
   background-position: left center;
   padding: 10px 10px 8px 40px;
 }
-/* line 54, css/_style_22_header.scss */
+/* line 59, css/_style_22_header.scss */
 .wbo-menu-pages ul li a:hover,
 .menu-toggle ul li a:hover {
   background-image: url("img/wbo_arrow_down_o.png");
 }
 
-/* line 59, css/_style_22_header.scss */
+/* line 64, css/_style_22_header.scss */
 .menu-toggle {
   float: none;
   display: none;
 }
 
-/* line 65, css/_style_22_header.scss */
+/* line 70, css/_style_22_header.scss */
 .wbo-menu-sns {
   float: right;
 }
-/* line 67, css/_style_22_header.scss */
+/* line 72, css/_style_22_header.scss */
 .wbo-menu-sns ul li {
   list-style-type: none;
   float: left;
   padding-right: 10px;
 }
-/* line 72, css/_style_22_header.scss */
+/* line 77, css/_style_22_header.scss */
 .wbo-menu-sns ul li a.sns-twitter {
   display: block;
   background-image: url("img/wbo_twitter_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 73, css/_style_22_header.scss */
+/* line 78, css/_style_22_header.scss */
 .wbo-menu-sns ul li a.sns-twitter:hover {
   background-image: url("img/wbo_twitter_o.png");
 }
-/* line 74, css/_style_22_header.scss */
+/* line 79, css/_style_22_header.scss */
 .wbo-menu-sns ul li a.sns-facebook {
   display: block;
   background-image: url("img/wbo_facebook_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 75, css/_style_22_header.scss */
+/* line 80, css/_style_22_header.scss */
 .wbo-menu-sns ul li a.sns-facebook:hover {
   background-image: url("img/wbo_facebook_o.png");
 }
-/* line 76, css/_style_22_header.scss */
+/* line 81, css/_style_22_header.scss */
 .wbo-menu-sns ul li a.sns-pinterest {
   display: block;
   background-image: url("img/wbo_pinterest_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 77, css/_style_22_header.scss */
+/* line 82, css/_style_22_header.scss */
 .wbo-menu-sns ul li a.sns-pinterest:hover {
   background-image: url("img/wbo_pinterest_o.png");
 }
-/* line 78, css/_style_22_header.scss */
+/* line 83, css/_style_22_header.scss */
 .wbo-menu-sns ul li a.sns-tumblr {
   display: block;
   background-image: url("img/wbo_tumblr_f.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 79, css/_style_22_header.scss */
+/* line 84, css/_style_22_header.scss */
 .wbo-menu-sns ul li a.sns-tumblr:hover {
   background-image: url("img/wbo_tumblr_o.png");
 }
-/* line 80, css/_style_22_header.scss */
+/* line 85, css/_style_22_header.scss */
 .wbo-menu-sns ul li a {
   width: 36px;
   height: 36px;
@@ -980,24 +986,19 @@ button.menu-for-toggle {
 
 /*article
 -------------------------------------*/
-/* line 41, css/_style_23_contents.scss */
-.content-area {
-  width: 764px;
-}
-
-/* line 47, css/_style_23_contents.scss */
+/* line 44, css/_style_23_contents.scss */
 .home .content-area,
 .archive .content-area {
   width: 780px;
 }
-/* line 50, css/_style_23_contents.scss */
+/* line 47, css/_style_23_contents.scss */
 .home .post-area,
 .archive .post-area {
   float: left;
   width: 244px;
   margin-right: 16px;
 }
-/* line 55, css/_style_23_contents.scss */
+/* line 52, css/_style_23_contents.scss */
 .home .post,
 .archive .post {
   padding: 10px;
@@ -1006,7 +1007,7 @@ button.menu-for-toggle {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-/* line 61, css/_style_23_contents.scss */
+/* line 58, css/_style_23_contents.scss */
 .home .post:hover,
 .archive .post:hover {
   box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
@@ -1016,9 +1017,81 @@ button.menu-for-toggle {
 
 /*header
 -------------------------------------*/
+/* line 75, css/_style_23_contents.scss */
+.single .entry-header,
+.page .entry-header {
+  position: relative;
+  background: #FFF;
+  margin: 0 auto 20px;
+  padding: 10px;
+}
+/* line 81, css/_style_23_contents.scss */
+.single .entry-header:after,
+.page .entry-header:after {
+  background: none repeat scroll 0 0 #777777;
+  bottom: 18px;
+  box-shadow: 0 15px 10px #777777;
+  content: "";
+  left: auto;
+  max-width: 300px;
+  position: absolute;
+  right: 10px;
+  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  width: 50%;
+  height: 20px;
+  z-index: -1;
+}
+/* line 99, css/_style_23_contents.scss */
+.single .entry-header .entry-title,
+.page .entry-header .entry-title {
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  font-size: 24px;
+}
+/* line 103, css/_style_23_contents.scss */
+.single .entry-header .entry-meta,
+.page .entry-header .entry-meta {
+  font-size: 12px;
+}
+
+/* line 110, css/_style_23_contents.scss */
+.archive .page-header {
+  position: relative;
+  background: #FFF;
+  margin: 0 16px 20px 0;
+  padding: 10px;
+}
+/* line 116, css/_style_23_contents.scss */
+.archive .page-header:after {
+  background: none repeat scroll 0 0 #777777;
+  bottom: 18px;
+  box-shadow: 0 15px 10px #777777;
+  content: "";
+  left: auto;
+  max-width: 300px;
+  position: absolute;
+  right: 10px;
+  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  width: 50%;
+  height: 20px;
+  z-index: -1;
+}
+/* line 134, css/_style_23_contents.scss */
+.archive .page-header .page-title {
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  font-size: 24px;
+}
+
 /*footer
 -------------------------------------*/
-/* line 88, css/_style_23_contents.scss */
+/* line 157, css/_style_23_contents.scss */
 .entry-meta .cat-links > a,
 .entry-meta .tags-links > a {
   color: #fff;

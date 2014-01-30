@@ -27,7 +27,12 @@
 	font-size: $pc-site-title-fs;
 	font-family: $font-sub;
 }
-.site-title > a {}
+.site-title > a {
+	&:hover{
+		text-decoration: none;
+		color: $link-txt-clr-hover-sitetitle;
+	}
+}
 
 button.menu-for-toggle{
 	display:none;
