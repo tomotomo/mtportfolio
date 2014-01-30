@@ -34,9 +34,8 @@ function mtportfolio_content_nav( $nav_id ) {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'mtportfolio' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
-
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'mtportfolio' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'mtportfolio' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '%title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 

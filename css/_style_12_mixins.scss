@@ -1,7 +1,7 @@
-
 @mixin b-bk-1{border: 1px solid #1c1c1c;}
 @mixin bt-bk-1{border-top: 1px solid #1c1c1c;}
 @mixin bb-gr-1{border-bottom: 1px solid #ccc;}
+@mixin bt-gr-1{border-top: 1px solid #ccc;}
 @mixin bg-clr-wh {background-color:#fff;}
 
 @mixin tomo-add-1{box-sizing: border-box;}
@@ -12,6 +12,14 @@
 	font-size:10px;
 	padding:2px 7px 1px 7px;
 	background-color: #aaa;
+	border-radius: 4px;
+	//IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS
+}
+
+@mixin comment-title { // kanagawa-add
+	margin-bottom: 20px;
+	padding:7px 7px 7px 7px;
+	background-color: #ccc;
 	border-radius: 4px;
 	//IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS
 }

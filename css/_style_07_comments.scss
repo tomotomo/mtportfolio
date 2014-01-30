@@ -6,3 +6,9 @@
 }
 .bypostauthor {
 }
+.comments-area{
+	margin: 40px 0;
+	.comment-reply-title{
+		@include comment-title;
+	}
+}

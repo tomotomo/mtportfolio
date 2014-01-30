@@ -716,11 +716,48 @@ object {
   width: 50%;
 }
 
+/* line 20, css/_style_06_navigation.scss */
+.post-navigation .nav-previous a {
+  display: block;
+  background-image: url("img/wbo_arrow_left_f.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 10px 10px 8px 40px;
+}
+/* line 23, css/_style_06_navigation.scss */
+.post-navigation .nav-previous a:hover {
+  background-image: url("img/wbo_arrow_left_o.png");
+}
+/* line 29, css/_style_06_navigation.scss */
+.post-navigation .nav-next a {
+  display: block;
+  background-image: url("img/wbo_arrow_right_f.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding: 10px 40px 8px 10px;
+}
+/* line 32, css/_style_06_navigation.scss */
+.post-navigation .nav-next a:hover {
+  background-image: url("img/wbo_arrow_right_o.png");
+}
+
 /* =Comments
 ----------------------------------------------- */
 /* line 4, css/_style_07_comments.scss */
 .comment-content a {
   word-wrap: break-word;
+}
+
+/* line 9, css/_style_07_comments.scss */
+.comments-area {
+  margin: 40px 0;
+}
+/* line 11, css/_style_07_comments.scss */
+.comments-area .comment-reply-title {
+  margin-bottom: 20px;
+  padding: 7px 7px 7px 7px;
+  background-color: #ccc;
+  border-radius: 4px;
 }
 
 /* =Widgets
@@ -967,7 +1004,7 @@ button.menu-for-toggle {
   padding-bottom: 5%;
 }
 
-/* line 25, css/_style_23_contents.scss */
+/* line 21, css/_style_23_contents.scss */
 .button-login {
   padding: 5px;
   margin-bottom: 0;
@@ -977,28 +1014,37 @@ button.menu-for-toggle {
 
 /*content in content
 -------------------------------------*/
-/* line 34, css/_style_23_contents.scss */
+/* line 30, css/_style_23_contents.scss */
 .content-area {
   float: left;
   width: 764px;
   box-sizing: border-box;
 }
+/* line 36, css/_style_23_contents.scss */
+.content-area .entry-meta .cat-links > a,
+.content-area .entry-meta .tags-links > a {
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 7px 1px 7px;
+  background-color: #aaa;
+  border-radius: 4px;
+}
 
 /*article
 -------------------------------------*/
-/* line 44, css/_style_23_contents.scss */
+/* line 46, css/_style_23_contents.scss */
 .home .content-area,
 .archive .content-area {
   width: 780px;
 }
-/* line 47, css/_style_23_contents.scss */
+/* line 49, css/_style_23_contents.scss */
 .home .post-area,
 .archive .post-area {
   float: left;
   width: 244px;
   margin-right: 16px;
 }
-/* line 52, css/_style_23_contents.scss */
+/* line 54, css/_style_23_contents.scss */
 .home .post,
 .archive .post {
   padding: 10px;
@@ -1007,7 +1053,7 @@ button.menu-for-toggle {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-/* line 58, css/_style_23_contents.scss */
+/* line 60, css/_style_23_contents.scss */
 .home .post:hover,
 .archive .post:hover {
   box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
@@ -1015,9 +1061,28 @@ button.menu-for-toggle {
   transition: all 0.2s linear;
 }
 
+/* line 70, css/_style_23_contents.scss */
+.single .content-area .entry-content p,
+.page .content-area .entry-content p {
+  line-height: 1.8;
+}
+/* line 73, css/_style_23_contents.scss */
+.single .content-area .entry-content p a img,
+.page .content-area .entry-content p a img {
+  border: 10px solid #fff;
+  max-width: 100%;
+}
+/* line 81, css/_style_23_contents.scss */
+.single .content-area footer,
+.page .content-area footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
 /*header
 -------------------------------------*/
-/* line 75, css/_style_23_contents.scss */
+/* line 93, css/_style_23_contents.scss */
 .single .entry-header,
 .page .entry-header {
   position: relative;
@@ -1025,7 +1090,7 @@ button.menu-for-toggle {
   margin: 0 auto 20px;
   padding: 10px;
 }
-/* line 81, css/_style_23_contents.scss */
+/* line 99, css/_style_23_contents.scss */
 .single .entry-header:after,
 .page .entry-header:after {
   background: none repeat scroll 0 0 #777777;
@@ -1045,26 +1110,26 @@ button.menu-for-toggle {
   height: 20px;
   z-index: -1;
 }
-/* line 99, css/_style_23_contents.scss */
+/* line 117, css/_style_23_contents.scss */
 .single .entry-header .entry-title,
 .page .entry-header .entry-title {
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
   font-size: 24px;
 }
-/* line 103, css/_style_23_contents.scss */
+/* line 121, css/_style_23_contents.scss */
 .single .entry-header .entry-meta,
 .page .entry-header .entry-meta {
   font-size: 12px;
 }
 
-/* line 110, css/_style_23_contents.scss */
+/* line 128, css/_style_23_contents.scss */
 .archive .page-header {
   position: relative;
   background: #FFF;
   margin: 0 16px 20px 0;
   padding: 10px;
 }
-/* line 116, css/_style_23_contents.scss */
+/* line 134, css/_style_23_contents.scss */
 .archive .page-header:after {
   background: none repeat scroll 0 0 #777777;
   bottom: 18px;
@@ -1083,22 +1148,10 @@ button.menu-for-toggle {
   height: 20px;
   z-index: -1;
 }
-/* line 134, css/_style_23_contents.scss */
+/* line 152, css/_style_23_contents.scss */
 .archive .page-header .page-title {
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
   font-size: 24px;
-}
-
-/*footer
--------------------------------------*/
-/* line 157, css/_style_23_contents.scss */
-.entry-meta .cat-links > a,
-.entry-meta .tags-links > a {
-  color: #fff;
-  font-size: 10px;
-  padding: 2px 7px 1px 7px;
-  background-color: #aaa;
-  border-radius: 4px;
 }
 
 /*footer-widget-area
