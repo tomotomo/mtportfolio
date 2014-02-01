@@ -1,6 +1,10 @@
 /*content
 -------------------------------------*/
 .site-content {
+	img.size-full, img.size-large, .wp-post-image, .post-thumbnail img {
+		height: auto;
+		max-width: 100%;
+	}
 }
 /*nav in content
 -------------------------------------*/
@@ -69,12 +73,6 @@
 		.entry-content{
 			p{
 				line-height: $pc-entry-content-p-lh;
-				a {
-					img{
-						border:10px solid #fff;
-						max-width:100%;
-					}
-				}
 			}
 		}
 
@@ -89,7 +87,7 @@
 /*header
 -------------------------------------*/
 .single,
-.page {
+.page .page {
 	.entry-header {
 		position: relative;
 		background:#FFF;
@@ -120,6 +118,38 @@
 		}
 		.entry-meta {
 			font-size: $pc-entry-meta-fs ;
+		}
+	}
+}
+
+.search {
+	.page-header {
+		position: relative;
+		background:#FFF;
+		margin:0 auto 20px; 
+		padding:10px;
+		&:after
+		{
+		    background: none repeat scroll 0 0 #777777;
+		    bottom: 18px;
+		    box-shadow: 0 15px 10px #777777;
+		    content: "";
+		    left: auto;
+		    max-width: 300px;
+		    position: absolute;
+		    right: 10px;
+		    transform: rotate(3deg);
+		    -webkit-transform: rotate(3deg);
+		    -moz-transform: rotate(3deg);
+		    -ms-transform: rotate(3deg);
+		    -o-transform: rotate(3deg);
+		    width: 50%;
+		    height: 20px;
+		    z-index: -1;
+		}
+		.page-title {
+			font-family: $font-sub;
+			font-size: $pc-entry-title-fs ;
 		}
 	}
 }

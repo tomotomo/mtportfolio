@@ -53,6 +53,8 @@
 		}
 	}
 
+	.paging-navigation {margin-right: 0;}
+
 	.wbo-menu-pages{
 		float:none;
 		display:none;
@@ -174,6 +176,29 @@
 		ul li a.sns-tumblr         {@include bg-img ($img-wbo-sns-tumblr-2x);background-size: 36px 36px;}
 		ul li a.sns-tumblr:hover   {@include bg-img-hover ($img-wbo-sns-tumblr-o-2x);background-size: 36px 36px;}
 	}
+	.paging-navigation,
+	.post-navigation{
+		.nav-previous {
+			a{
+				@include bg-img ($img-wbo-arrow_left-2x);
+				background-size: 36px 36px;
+				&:hover{
+					@include bg-img-hover ($img-wbo-arrow_left-o-2x);
+					background-size: 36px 36px;
+				}
+			}
+		}
+		.nav-next {
+			a{
+				@include bg-img ($img-wbo-arrow_right-2x,$pos1:right,$pos2:center);
+				background-size: 36px 36px;
+				&:hover{
+					@include bg-img-hover ($img-wbo-arrow_right-o-2x);
+					background-size: 36px 36px;
+				}
+			}
+		}
+	}
 	.page-top{
 		a {
 			@include bg-img ($img-wbo-arrow_up-2x);
@@ -181,15 +206,24 @@
 		}
 		a:hover  {@include bg-img-hover ($img-wbo-arrow_up-o-2x);}
 	}
+
 	.footer-widget-area {
-		h1{
-			@include bg-img ($img-wbo-arrow_up-2x);
-			&:hover{
-				@include bg-img-hover ($img-wbo-arrow_up-o-2x);
-			}
-			&.toggled{
-				@include bg-img ($img-wbo-arrow_down-2x);
-				&:hover{@include bg-img-hover ($img-wbo-arrow_down-o-2x);}
+		.widget{
+			h1{
+				@include bg-img ($img-wbo-arrow_up-2x);
+				background-size: 36px 36px;
+				&:hover{
+					@include bg-img-hover ($img-wbo-arrow_up-o-2x);
+					background-size: 36px 36px;
+				}
+				&.toggled{
+					@include bg-img ($img-wbo-arrow_down-2x);
+					background-size: 36px 36px;
+					&:hover{
+						@include bg-img-hover ($img-wbo-arrow_down-o-2x);
+						background-size: 36px 36px;
+					}
+				}
 			}
 		}
 		.footer-widget-sns{
@@ -200,7 +234,7 @@
 			ul li a.sns-pinterest      {@include bg-img ($img-wbo-sns-pinterest-2x);background-size: 36px 36px;}
 			ul li a.sns-pinterest:hover{@include bg-img-hover ($img-wbo-sns-pinterest-o-2x);background-size: 36px 36px;}
 			ul li a.sns-tumblr         {@include bg-img ($img-wbo-sns-tumblr-2x);background-size: 36px 36px;}
-			ul li a.sns-tumblr:hover   {@include bg-img-hover ($img-wbo-sns-tumblr-2x);background-size: 36px 36px;}
+			ul li a.sns-tumblr:hover   {@include bg-img-hover ($img-wbo-sns-tumblr-o-2x);background-size: 36px 36px;}
 		}
 	}
 	@media (max-width:$tb2-max-w){

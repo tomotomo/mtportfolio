@@ -14,7 +14,7 @@
 	text-align: right;
 	width: 50%;
 }
-
+.paging-navigation,
 .post-navigation{
 	.nav-previous {
 		a{
@@ -33,5 +33,19 @@
 				@include bg-img-hover ($img-wbo-arrow_right-o);
 			}
 		}
+	}
+}
+
+.paging-navigation {
+	font-family: $font-sub;
+	margin-right: 20px;
+	.nav-previous,
+	.nav-next{
+		margin-bottom: 20px;
+	}
+}
+.search {
+	.paging-navigation {
+		margin-right: 0px;
 	}
 }

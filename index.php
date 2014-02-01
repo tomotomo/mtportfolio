@@ -45,8 +45,6 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php mtportfolio_content_nav( 'nav-below' ); ?>
-
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
@@ -54,6 +52,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+
+		<?php mtportfolio_content_nav( 'nav-below' ); ?>
+
 	</div><!-- #primary -->
 
 <script type="text/javascript">
@@ -128,4 +129,5 @@ $(function(){
 });
 })(jQuery);
 </script>
+
 <?php get_footer(); ?>

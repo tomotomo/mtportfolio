@@ -717,6 +717,7 @@ object {
 }
 
 /* line 20, css/_style_06_navigation.scss */
+.paging-navigation .nav-previous a,
 .post-navigation .nav-previous a {
   display: block;
   background-image: url("img/wbo_arrow_left_f.png");
@@ -725,10 +726,12 @@ object {
   padding: 10px 10px 8px 40px;
 }
 /* line 23, css/_style_06_navigation.scss */
+.paging-navigation .nav-previous a:hover,
 .post-navigation .nav-previous a:hover {
   background-image: url("img/wbo_arrow_left_o.png");
 }
 /* line 29, css/_style_06_navigation.scss */
+.paging-navigation .nav-next a,
 .post-navigation .nav-next a {
   display: block;
   background-image: url("img/wbo_arrow_right_f.png");
@@ -737,8 +740,25 @@ object {
   padding: 10px 40px 8px 10px;
 }
 /* line 32, css/_style_06_navigation.scss */
+.paging-navigation .nav-next a:hover,
 .post-navigation .nav-next a:hover {
   background-image: url("img/wbo_arrow_right_o.png");
+}
+
+/* line 39, css/_style_06_navigation.scss */
+.paging-navigation {
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  margin-right: 20px;
+}
+/* line 43, css/_style_06_navigation.scss */
+.paging-navigation .nav-previous,
+.paging-navigation .nav-next {
+  margin-bottom: 20px;
+}
+
+/* line 48, css/_style_06_navigation.scss */
+.search .paging-navigation {
+  margin-right: 0px;
 }
 
 /* =Comments
@@ -983,28 +1003,34 @@ button.menu-for-toggle {
 
 /*content
 -------------------------------------*/
+/* line 4, css/_style_23_contents.scss */
+.site-content img.size-full, .site-content img.size-large, .site-content .wp-post-image, .site-content .post-thumbnail img {
+  height: auto;
+  max-width: 100%;
+}
+
 /*nav in content
 -------------------------------------*/
-/* line 7, css/_style_23_contents.scss */
+/* line 11, css/_style_23_contents.scss */
 .main-navigation-area {
   float: right;
   width: 244px;
 }
 
-/* line 11, css/_style_23_contents.scss */
+/* line 15, css/_style_23_contents.scss */
 .main-navigation {
   padding: 25px;
   background-color: #fff;
   box-sizing: border-box;
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 }
-/* line 16, css/_style_23_contents.scss */
+/* line 20, css/_style_23_contents.scss */
 .main-navigation ul.nav-menu {
   margin-bottom: 5%;
   padding-bottom: 5%;
 }
 
-/* line 21, css/_style_23_contents.scss */
+/* line 25, css/_style_23_contents.scss */
 .button-login {
   padding: 5px;
   margin-bottom: 0;
@@ -1014,13 +1040,13 @@ button.menu-for-toggle {
 
 /*content in content
 -------------------------------------*/
-/* line 30, css/_style_23_contents.scss */
+/* line 34, css/_style_23_contents.scss */
 .content-area {
   float: left;
   width: 764px;
   box-sizing: border-box;
 }
-/* line 36, css/_style_23_contents.scss */
+/* line 40, css/_style_23_contents.scss */
 .content-area .entry-meta .cat-links > a,
 .content-area .entry-meta .tags-links > a {
   color: #fff;
@@ -1032,19 +1058,19 @@ button.menu-for-toggle {
 
 /*article
 -------------------------------------*/
-/* line 46, css/_style_23_contents.scss */
+/* line 50, css/_style_23_contents.scss */
 .home .content-area,
 .archive .content-area {
   width: 780px;
 }
-/* line 49, css/_style_23_contents.scss */
+/* line 53, css/_style_23_contents.scss */
 .home .post-area,
 .archive .post-area {
   float: left;
   width: 244px;
   margin-right: 16px;
 }
-/* line 54, css/_style_23_contents.scss */
+/* line 58, css/_style_23_contents.scss */
 .home .post,
 .archive .post {
   padding: 10px;
@@ -1053,7 +1079,7 @@ button.menu-for-toggle {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-/* line 60, css/_style_23_contents.scss */
+/* line 64, css/_style_23_contents.scss */
 .home .post:hover,
 .archive .post:hover {
   box-shadow: 0px 3px 6px rgba(99, 99, 111, 0.6);
@@ -1061,18 +1087,12 @@ button.menu-for-toggle {
   transition: all 0.2s linear;
 }
 
-/* line 70, css/_style_23_contents.scss */
+/* line 74, css/_style_23_contents.scss */
 .single .content-area .entry-content p,
 .page .content-area .entry-content p {
   line-height: 1.8;
 }
-/* line 73, css/_style_23_contents.scss */
-.single .content-area .entry-content p a img,
-.page .content-area .entry-content p a img {
-  border: 10px solid #fff;
-  max-width: 100%;
-}
-/* line 81, css/_style_23_contents.scss */
+/* line 79, css/_style_23_contents.scss */
 .single .content-area footer,
 .page .content-area footer {
   margin-top: 20px;
@@ -1082,17 +1102,17 @@ button.menu-for-toggle {
 
 /*header
 -------------------------------------*/
-/* line 93, css/_style_23_contents.scss */
+/* line 91, css/_style_23_contents.scss */
 .single .entry-header,
-.page .entry-header {
+.page .page .entry-header {
   position: relative;
   background: #FFF;
   margin: 0 auto 20px;
   padding: 10px;
 }
-/* line 99, css/_style_23_contents.scss */
+/* line 97, css/_style_23_contents.scss */
 .single .entry-header:after,
-.page .entry-header:after {
+.page .page .entry-header:after {
   background: none repeat scroll 0 0 #777777;
   bottom: 18px;
   box-shadow: 0 15px 10px #777777;
@@ -1110,26 +1130,58 @@ button.menu-for-toggle {
   height: 20px;
   z-index: -1;
 }
-/* line 117, css/_style_23_contents.scss */
+/* line 115, css/_style_23_contents.scss */
 .single .entry-header .entry-title,
-.page .entry-header .entry-title {
+.page .page .entry-header .entry-title {
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
   font-size: 24px;
 }
-/* line 121, css/_style_23_contents.scss */
+/* line 119, css/_style_23_contents.scss */
 .single .entry-header .entry-meta,
-.page .entry-header .entry-meta {
+.page .page .entry-header .entry-meta {
   font-size: 12px;
 }
 
-/* line 128, css/_style_23_contents.scss */
+/* line 126, css/_style_23_contents.scss */
+.search .page-header {
+  position: relative;
+  background: #FFF;
+  margin: 0 auto 20px;
+  padding: 10px;
+}
+/* line 132, css/_style_23_contents.scss */
+.search .page-header:after {
+  background: none repeat scroll 0 0 #777777;
+  bottom: 18px;
+  box-shadow: 0 15px 10px #777777;
+  content: "";
+  left: auto;
+  max-width: 300px;
+  position: absolute;
+  right: 10px;
+  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  width: 50%;
+  height: 20px;
+  z-index: -1;
+}
+/* line 150, css/_style_23_contents.scss */
+.search .page-header .page-title {
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  font-size: 24px;
+}
+
+/* line 158, css/_style_23_contents.scss */
 .archive .page-header {
   position: relative;
   background: #FFF;
   margin: 0 16px 20px 0;
   padding: 10px;
 }
-/* line 134, css/_style_23_contents.scss */
+/* line 164, css/_style_23_contents.scss */
 .archive .page-header:after {
   background: none repeat scroll 0 0 #777777;
   bottom: 18px;
@@ -1148,7 +1200,7 @@ button.menu-for-toggle {
   height: 20px;
   z-index: -1;
 }
-/* line 152, css/_style_23_contents.scss */
+/* line 182, css/_style_23_contents.scss */
 .archive .page-header .page-title {
   font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
   font-size: 24px;
@@ -1414,12 +1466,17 @@ button.menu-for-toggle {
   }
 
   /* line 56, css/_style_25_responsive.scss */
+  .paging-navigation {
+    margin-right: 0;
+  }
+
+  /* line 58, css/_style_25_responsive.scss */
   .wbo-menu-pages {
     float: none;
     display: none;
   }
 
-  /* line 60, css/_style_25_responsive.scss */
+  /* line 62, css/_style_25_responsive.scss */
   .page-top {
     position: fixed;
     bottom: 5px;
@@ -1427,60 +1484,60 @@ button.menu-for-toggle {
     z-index: 999998;
   }
 
-  /* line 62, css/_style_25_responsive.scss */
+  /* line 64, css/_style_25_responsive.scss */
   .footer-widget-area {
     padding: 15px 0 0;
   }
-  /* line 64, css/_style_25_responsive.scss */
+  /* line 66, css/_style_25_responsive.scss */
   .footer-widget-area .widget {
     padding: 0 0 15px;
   }
 }
 @media (max-width: 783px) and (min-width: 525px) {
-  /* line 71, css/_style_25_responsive.scss */
+  /* line 73, css/_style_25_responsive.scss */
   .site {
     width: 520px;
   }
 
-  /* line 74, css/_style_25_responsive.scss */
+  /* line 76, css/_style_25_responsive.scss */
   .content-area {
     width: 100%;
   }
 
-  /* line 79, css/_style_25_responsive.scss */
+  /* line 81, css/_style_25_responsive.scss */
   .home .content-area,
   .archive .content-area {
     width: 100%;
   }
 
-  /* line 84, css/_style_25_responsive.scss */
+  /* line 86, css/_style_25_responsive.scss */
   .footer-widget-area .widget {
     width: 50%;
   }
-  /* line 87, css/_style_25_responsive.scss */
+  /* line 89, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-page {
     clear: both;
   }
 }
 @media (max-width: 524px) {
-  /* line 94, css/_style_25_responsive.scss */
+  /* line 96, css/_style_25_responsive.scss */
   .site {
     width: auto;
     margin: 0 10px;
   }
 
-  /* line 99, css/_style_25_responsive.scss */
+  /* line 101, css/_style_25_responsive.scss */
   .site-header .site-search {
     margin-left: 0;
     width: 100%;
     float: none;
   }
-  /* line 103, css/_style_25_responsive.scss */
+  /* line 105, css/_style_25_responsive.scss */
   .site-header .site-search .search-field {
     width: 90%;
   }
 
-  /* line 108, css/_style_25_responsive.scss */
+  /* line 110, css/_style_25_responsive.scss */
   .wbo-menu-sns {
     float: none;
     width: 100%;
@@ -1489,36 +1546,36 @@ button.menu-for-toggle {
     margin: 10px 0 0;
     padding: 0;
   }
-  /* line 113, css/_style_25_responsive.scss */
+  /* line 115, css/_style_25_responsive.scss */
   .wbo-menu-sns ul {
     margin: 0;
     padding: 0;
   }
-  /* line 114, css/_style_25_responsive.scss */
+  /* line 116, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li {
     list-style-type: none;
     float: left;
     padding-right: 10px;
   }
 
-  /* line 120, css/_style_25_responsive.scss */
+  /* line 122, css/_style_25_responsive.scss */
   .toggled-on {
     display: block;
   }
 
-  /* line 123, css/_style_25_responsive.scss */
+  /* line 125, css/_style_25_responsive.scss */
   .content-area {
     float: none;
     width: 100%;
   }
 
-  /* line 129, css/_style_25_responsive.scss */
+  /* line 131, css/_style_25_responsive.scss */
   .home .content-area,
   .archive .content-area {
     float: none;
     width: 100%;
   }
-  /* line 133, css/_style_25_responsive.scss */
+  /* line 135, css/_style_25_responsive.scss */
   .home .post-area,
   .archive .post-area {
     width: 100%;
@@ -1526,20 +1583,20 @@ button.menu-for-toggle {
     margin-right: 0;
   }
 
-  /* line 140, css/_style_25_responsive.scss */
+  /* line 142, css/_style_25_responsive.scss */
   .footer-widget-area .widget {
     width: 100%;
     float: none;
   }
 }
 @media (-o-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  /* line 152, css/_style_25_responsive.scss */
+  /* line 154, css/_style_25_responsive.scss */
   .site-header .site-search .search-field {
     background-image: url("img/wbo_search_f-2x.png");
     background-size: 26px 26px;
   }
 
-  /* line 159, css/_style_25_responsive.scss */
+  /* line 161, css/_style_25_responsive.scss */
   .wbo-menu-pages ul li a {
     display: block;
     background-image: url("img/wbo_arrow_down_f-2x.png");
@@ -1547,12 +1604,12 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 163, css/_style_25_responsive.scss */
+  /* line 165, css/_style_25_responsive.scss */
   .wbo-menu-pages ul li a:hover {
     background-image: url("img/wbo_arrow_down_o-2x.png");
   }
 
-  /* line 168, css/_style_25_responsive.scss */
+  /* line 170, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li a.sns-twitter {
     display: block;
     background-image: url("img/wbo_twitter_f-2x.png");
@@ -1560,12 +1617,12 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 169, css/_style_25_responsive.scss */
+  /* line 171, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li a.sns-twitter:hover {
     background-image: url("img/wbo_twitter_o-2x.png");
     background-size: 36px 36px;
   }
-  /* line 170, css/_style_25_responsive.scss */
+  /* line 172, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li a.sns-facebook {
     display: block;
     background-image: url("img/wbo_facebook_f-2x.png");
@@ -1573,12 +1630,12 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 171, css/_style_25_responsive.scss */
+  /* line 173, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li a.sns-facebook:hover {
     background-image: url("img/wbo_facebook_o-2x.png");
     background-size: 36px 36px;
   }
-  /* line 172, css/_style_25_responsive.scss */
+  /* line 174, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li a.sns-pinterest {
     display: block;
     background-image: url("img/wbo_pinterest_f-2x.png");
@@ -1586,12 +1643,12 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 173, css/_style_25_responsive.scss */
+  /* line 175, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li a.sns-pinterest:hover {
     background-image: url("img/wbo_pinterest_o-2x.png");
     background-size: 36px 36px;
   }
-  /* line 174, css/_style_25_responsive.scss */
+  /* line 176, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li a.sns-tumblr {
     display: block;
     background-image: url("img/wbo_tumblr_f-2x.png");
@@ -1599,13 +1656,44 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 175, css/_style_25_responsive.scss */
+  /* line 177, css/_style_25_responsive.scss */
   .wbo-menu-sns ul li a.sns-tumblr:hover {
     background-image: url("img/wbo_tumblr_o-2x.png");
     background-size: 36px 36px;
   }
 
-  /* line 178, css/_style_25_responsive.scss */
+  /* line 182, css/_style_25_responsive.scss */
+  .paging-navigation .nav-previous a,
+  .post-navigation .nav-previous a {
+    display: block;
+    background-image: url("img/wbo_arrow_left_f-2x.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 36px 36px;
+  }
+  /* line 185, css/_style_25_responsive.scss */
+  .paging-navigation .nav-previous a:hover,
+  .post-navigation .nav-previous a:hover {
+    background-image: url("img/wbo_arrow_left_o-2x.png");
+    background-size: 36px 36px;
+  }
+  /* line 192, css/_style_25_responsive.scss */
+  .paging-navigation .nav-next a,
+  .post-navigation .nav-next a {
+    display: block;
+    background-image: url("img/wbo_arrow_right_f-2x.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 36px 36px;
+  }
+  /* line 195, css/_style_25_responsive.scss */
+  .paging-navigation .nav-next a:hover,
+  .post-navigation .nav-next a:hover {
+    background-image: url("img/wbo_arrow_right_o-2x.png");
+    background-size: 36px 36px;
+  }
+
+  /* line 203, css/_style_25_responsive.scss */
   .page-top a {
     display: block;
     background-image: url("img/wbo_arrow_up_f-2x.png");
@@ -1613,34 +1701,38 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 182, css/_style_25_responsive.scss */
+  /* line 207, css/_style_25_responsive.scss */
   .page-top a:hover {
     background-image: url("img/wbo_arrow_up_o-2x.png");
   }
 
-  /* line 185, css/_style_25_responsive.scss */
-  .footer-widget-area h1 {
+  /* line 212, css/_style_25_responsive.scss */
+  .footer-widget-area .widget h1 {
     display: block;
     background-image: url("img/wbo_arrow_up_f-2x.png");
     background-repeat: no-repeat;
     background-position: left center;
+    background-size: 36px 36px;
   }
-  /* line 187, css/_style_25_responsive.scss */
-  .footer-widget-area h1:hover {
+  /* line 215, css/_style_25_responsive.scss */
+  .footer-widget-area .widget h1:hover {
     background-image: url("img/wbo_arrow_up_o-2x.png");
+    background-size: 36px 36px;
   }
-  /* line 190, css/_style_25_responsive.scss */
-  .footer-widget-area h1.toggled {
+  /* line 219, css/_style_25_responsive.scss */
+  .footer-widget-area .widget h1.toggled {
     display: block;
     background-image: url("img/wbo_arrow_down_f-2x.png");
     background-repeat: no-repeat;
     background-position: left center;
+    background-size: 36px 36px;
   }
-  /* line 192, css/_style_25_responsive.scss */
-  .footer-widget-area h1.toggled:hover {
+  /* line 222, css/_style_25_responsive.scss */
+  .footer-widget-area .widget h1.toggled:hover {
     background-image: url("img/wbo_arrow_down_o-2x.png");
+    background-size: 36px 36px;
   }
-  /* line 196, css/_style_25_responsive.scss */
+  /* line 230, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-sns ul li a.sns-twitter {
     display: block;
     background-image: url("img/wbo_twitter_f-2x.png");
@@ -1648,12 +1740,12 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 197, css/_style_25_responsive.scss */
+  /* line 231, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-sns ul li a.sns-twitter:hover {
     background-image: url("img/wbo_twitter_o-2x.png");
     background-size: 36px 36px;
   }
-  /* line 198, css/_style_25_responsive.scss */
+  /* line 232, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-sns ul li a.sns-facebook {
     display: block;
     background-image: url("img/wbo_facebook_f-2x.png");
@@ -1661,12 +1753,12 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 199, css/_style_25_responsive.scss */
+  /* line 233, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-sns ul li a.sns-facebook:hover {
     background-image: url("img/wbo_facebook_o-2x.png");
     background-size: 36px 36px;
   }
-  /* line 200, css/_style_25_responsive.scss */
+  /* line 234, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-sns ul li a.sns-pinterest {
     display: block;
     background-image: url("img/wbo_pinterest_f-2x.png");
@@ -1674,12 +1766,12 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 201, css/_style_25_responsive.scss */
+  /* line 235, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-sns ul li a.sns-pinterest:hover {
     background-image: url("img/wbo_pinterest_o-2x.png");
     background-size: 36px 36px;
   }
-  /* line 202, css/_style_25_responsive.scss */
+  /* line 236, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-sns ul li a.sns-tumblr {
     display: block;
     background-image: url("img/wbo_tumblr_f-2x.png");
@@ -1687,14 +1779,14 @@ button.menu-for-toggle {
     background-position: left center;
     background-size: 36px 36px;
   }
-  /* line 203, css/_style_25_responsive.scss */
+  /* line 237, css/_style_25_responsive.scss */
   .footer-widget-area .footer-widget-sns ul li a.sns-tumblr:hover {
-    background-image: url("img/wbo_tumblr_f-2x.png");
+    background-image: url("img/wbo_tumblr_o-2x.png");
     background-size: 36px 36px;
   }
 }
 @media (-o-min-device-pixel-ratio: 2) and (max-width: 783px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 783px), (min-resolution: 2dppx) and (max-width: 783px) {
-  /* line 207, css/_style_25_responsive.scss */
+  /* line 241, css/_style_25_responsive.scss */
   button.menu-for-toggle {
     display: block;
     background-image: url("img/wbo_menu_icon_f-2x.png");
@@ -1703,7 +1795,7 @@ button.menu-for-toggle {
     background-size: 33px 33px;
   }
 
-  /* line 210, css/_style_25_responsive.scss */
+  /* line 244, css/_style_25_responsive.scss */
   button.menu-for-toggle:hover {
     background-image: url("img/wbo_menu_icon_o-2x.png");
     background-size: 33px 33px;
