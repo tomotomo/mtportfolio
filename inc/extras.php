@@ -256,9 +256,9 @@ add_action( 'switch_theme', 'mtportfolio_switch_theme' );
 function mtportfolio_list_tag_links() {
 	
 	$tags = get_tags( array('orderby' => 'count', 'order' => 'DESC') );
-	
+	echo '<ul>'. "\n";
 	foreach ( (array) $tags as $tag ) {
-		echo '<a href="'. get_tag_link ($tag->term_id). '">'. $tag->name. '</a>'. "\n";
+		echo '<li><a href="'. get_tag_link ($tag->term_id). '">'. $tag->name. '</a></li>'. "\n";
 	}
-	
+	echo '</ul>'. "\n";
 }

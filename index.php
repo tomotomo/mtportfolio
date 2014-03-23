@@ -45,8 +45,6 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php mtportfolio_content_nav( 'nav-below' ); ?>
-
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
@@ -54,14 +52,17 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+
+		<?php mtportfolio_content_nav( 'nav-below' ); ?>
+
 	</div><!-- #primary -->
 
 <script type="text/javascript">
 (function($){
 $(function(){
-	
-	// ISSUE #8
-	var spW = 480;
+	// TODO CSS media query の値を利用。条件が変わったので書き直しました
+	var spW = 504;
+	var tpW = 764;
 	var pcW = 1024;
 
 	var masonry_run = 'none';
@@ -99,6 +100,8 @@ $(function(){
 			mode = 'pc';
 		} else if (htmlWidth <= spW) {
 			mode = 'sp';
+		} else if (htmlWidth <= tpW) {
+			mode = 'tb2';
 		} else {
 			mode = 'tb';
 		}
@@ -126,4 +129,5 @@ $(function(){
 });
 })(jQuery);
 </script>
+
 <?php get_footer(); ?>

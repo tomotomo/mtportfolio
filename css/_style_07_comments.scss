@@ -1,0 +1,14 @@
+/* =Comments
+----------------------------------------------- */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
+.comments-area{
+	margin: 40px 0;
+	.comment-reply-title{
+		@include comment-title;
+	}
+}

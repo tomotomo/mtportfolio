@@ -1,0 +1,249 @@
+/*responsive
+-------------------------------------*/
+@media (max-width:$tb1-max-w) and (min-width:$tb2-max-w + 1) {
+	.site {
+		width: $tb-w;
+	}
+	.content-area {
+		width: $tb1-content-area-w;
+	}
+	.home,
+	.archive {
+		.content-area {
+			width: $tb1-content-area-w-IN-home;
+		}
+	}
+}
+@media (max-width:$tb2-max-w){
+	button.menu-for-toggle{
+		@include btn-toggle;
+		@include bg-img ($img-wbo-button-menu-f);	
+	}
+	button.menu-for-toggle:hover{
+		@include bg-img-hover ($img-wbo-button-menu-o);		
+	}
+	.main-navigation-area {
+		@include toggle-non;
+	}
+	.toggled-on{
+		display:block;
+	}
+	.main-navigation {
+		padding: $tb2-main-navigation-p;
+		margin-bottom: $tb2-main-navigation-mb;
+		ul.nav-menu{
+			margin-bottom:0;
+			padding-bottom:0;
+			li{
+				padding: 0;
+				@include bb-gr-1;
+			}
+		}
+		.button-login {
+			padding: 0;
+			border:none;
+			text-align: left;
+		}
+		a{
+			padding: $tb2-nav-menu-li-a-pt $tb2-nav-menu-li-a-plr $tb2-nav-menu-li-a-pb;
+		}
+		a:hover{
+			background-color: $body-bg;
+			text-decoration: none;
+		}
+	}
+
+	.paging-navigation {margin-right: 0;}
+
+	.wbo-menu-pages{
+		float:none;
+		display:none;
+	}
+	.page-top{@include page-top-fixed-posbr($posb:5px,$posr:5px);}
+
+	.footer-widget-area {
+		padding: $pc-footer-widget-area-pt/2 0 0;
+		.widget{
+			padding: 0 0 $pc-footer-widget-area-pb/2;
+		}
+	}
+}
+
+@media (max-width:$tb2-max-w) and (min-width:$mb-max-w + 1) {
+	.site {
+		width: $mb-w+$pc-index-post-mr;
+	}
+	.content-area {
+		width: $tb2-content-area-w;
+	}
+	.home,
+	.archive {
+		.content-area {
+			width: $tb2-content-area-w;
+		}
+	}
+	.footer-widget-area {
+		.widget{
+			width: $tb2-widget-w-IN-footer-widget-area;
+		}
+		.footer-widget-page{
+			clear:both;
+		}
+	}
+}
+
+@media (max-width:$mb-max-w) {
+	.site{
+		width: auto;
+		margin: 0 $site-mlr;
+	}
+	.site-header {
+		.site-search {
+			margin-left: 0;
+			width:$mb-site-search-w;
+			float:none;
+			.search-field {
+				width:$mb-search-field-w;
+			}
+		}
+	}
+	.wbo-menu-sns {
+		@include toggle-non;
+		height:$pc-wbo-menu-sns-li-a-h;
+		margin:$mb-wbo-menu-sns-mt 0 0;
+		padding:0;
+		ul{margin:0;padding:0;}
+		ul li {
+			list-style-type: none;
+			float: left;
+			padding-right: $mb-wbo-menu-sns-li-pr;
+		}
+	}
+	.toggled-on{
+		display:block;
+	}
+	.content-area {
+		float: none;
+		width: $mb-content-area-w;
+	}
+	.home,
+	.archive {
+		.content-area {
+			float: none;
+			width: $mb-content-area-w;
+		}
+		.post-area {
+			width: $mb-post-area-w-IN-home;	
+			float: none;
+			margin-right: $mb-post-area-mr-IN-home;
+		}
+	}
+	.footer-widget-area {
+		.widget{
+			width: $mb-widget-w-IN-footer-widget-area;
+			float: none;
+		}
+	}
+}
+
+@media 	(-o-min-device-pixel-ratio: 2),
+		(-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 2dppx) {
+	.site-header {
+		.site-search {
+			.search-field {
+				background-image: url($img-wbo-sns-search-f-2x);
+				background-size: 26px 26px;
+			}
+		}
+	}
+	.wbo-menu-pages {
+		ul li a{
+			@include bg-img ($img-wbo-arrow_down-2x);
+			background-size: 36px 36px;
+		}
+		ul li a:hover{
+			@include bg-img-hover ($img-wbo-arrow_down-o-2x);
+		}
+	}
+	.wbo-menu-sns {
+		ul li a.sns-twitter        {@include bg-img ($img-wbo-sns-twitter-2x);background-size: 36px 36px;}
+		ul li a.sns-twitter:hover  {@include bg-img-hover ($img-wbo-sns-twitter-o-2x);background-size: 36px 36px;}
+		ul li a.sns-facebook       {@include bg-img ($img-wbo-sns-facebook-2x);background-size: 36px 36px;}
+		ul li a.sns-facebook:hover {@include bg-img-hover ($img-wbo-sns-facebook-o-2x);background-size: 36px 36px;}
+		ul li a.sns-pinterest      {@include bg-img ($img-wbo-sns-pinterest-2x);background-size: 36px 36px;}
+		ul li a.sns-pinterest:hover{@include bg-img-hover ($img-wbo-sns-pinterest-o-2x);background-size: 36px 36px;}
+		ul li a.sns-tumblr         {@include bg-img ($img-wbo-sns-tumblr-2x);background-size: 36px 36px;}
+		ul li a.sns-tumblr:hover   {@include bg-img-hover ($img-wbo-sns-tumblr-o-2x);background-size: 36px 36px;}
+	}
+	.paging-navigation,
+	.post-navigation{
+		.nav-previous {
+			a{
+				@include bg-img ($img-wbo-arrow_left-2x);
+				background-size: 36px 36px;
+				&:hover{
+					@include bg-img-hover ($img-wbo-arrow_left-o-2x);
+					background-size: 36px 36px;
+				}
+			}
+		}
+		.nav-next {
+			a{
+				@include bg-img ($img-wbo-arrow_right-2x,$pos1:right,$pos2:center);
+				background-size: 36px 36px;
+				&:hover{
+					@include bg-img-hover ($img-wbo-arrow_right-o-2x);
+					background-size: 36px 36px;
+				}
+			}
+		}
+	}
+	.page-top{
+		a {
+			@include bg-img ($img-wbo-arrow_up-2x);
+			background-size: 36px 36px;
+		}
+		a:hover  {@include bg-img-hover ($img-wbo-arrow_up-o-2x);}
+	}
+
+	.footer-widget-area {
+		.widget{
+			h1{
+				@include bg-img ($img-wbo-arrow_up-2x);
+				background-size: 36px 36px;
+				&:hover{
+					@include bg-img-hover ($img-wbo-arrow_up-o-2x);
+					background-size: 36px 36px;
+				}
+				&.toggled{
+					@include bg-img ($img-wbo-arrow_down-2x);
+					background-size: 36px 36px;
+					&:hover{
+						@include bg-img-hover ($img-wbo-arrow_down-o-2x);
+						background-size: 36px 36px;
+					}
+				}
+			}
+		}
+		.footer-widget-sns{
+			ul li a.sns-twitter        {@include bg-img ($img-wbo-sns-twitter-2x);background-size: 36px 36px;}
+			ul li a.sns-twitter:hover  {@include bg-img-hover ($img-wbo-sns-twitter-o-2x);background-size: 36px 36px;}
+			ul li a.sns-facebook       {@include bg-img ($img-wbo-sns-facebook-2x);background-size: 36px 36px;}
+			ul li a.sns-facebook:hover {@include bg-img-hover ($img-wbo-sns-facebook-o-2x);background-size: 36px 36px;}
+			ul li a.sns-pinterest      {@include bg-img ($img-wbo-sns-pinterest-2x);background-size: 36px 36px;}
+			ul li a.sns-pinterest:hover{@include bg-img-hover ($img-wbo-sns-pinterest-o-2x);background-size: 36px 36px;}
+			ul li a.sns-tumblr         {@include bg-img ($img-wbo-sns-tumblr-2x);background-size: 36px 36px;}
+			ul li a.sns-tumblr:hover   {@include bg-img-hover ($img-wbo-sns-tumblr-o-2x);background-size: 36px 36px;}
+		}
+	}
+	@media (max-width:$tb2-max-w){
+		button.menu-for-toggle{
+			@include bg-img ($img-wbo-button-menu-f-2x);background-size: 33px 33px;	
+		}
+		button.menu-for-toggle:hover{
+			@include bg-img-hover ($img-wbo-button-menu-o-2x);background-size: 33px 33px;	
+		}
+	}
+
+}

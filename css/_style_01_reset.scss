@@ -21,7 +21,6 @@ Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and Blueprint http://www.blueprintcss.org/
 */
-$input-padding:3px;
 
 /* =Reset
 -------------------------------------------------------------- */
@@ -51,7 +50,8 @@ html {
 	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 body {
-	background: #fff;
+	background: $body-bg;//#fff;
+	font-family:$font-main;
 }
 article,
 aside,
@@ -313,18 +313,20 @@ textarea {
 	width: 98%;
 }
 
-/* Links to add*/
-// a {
-// 	color: royalblue;
-// }
-// a:visited {
-// 	color: purple;
-// }
-// a:hover,
-// a:focus,
-// a:active {
-// 	color: midnightblue;
-// }
+/* Links */
+a {
+	color: $link-txt-clr; //color: royalblue;
+	text-decoration: none;
+}
+a:visited {
+	color: $link-txt-clr; //color: purple;
+}
+a:hover,
+a:focus,
+a:active {
+	color: $link-txt-clr; //color: midnightblue;
+	text-decoration: underline;
+}
 
 /* Alignment */
 .alignleft {
@@ -394,211 +396,4 @@ textarea {
 .site-content:after,
 .site-footer:after {
 	clear: both;
-}
-
-
-/* =Menu
------------------------------------------------ */
-
-.main-navigation {
-	/* clear: both; kozaru*/
-	display: block;
-}
-.main-navigation ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-.main-navigation li {
-	/*float: left;
-	position: relative;*/
-}
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	display: none;
-	float: left;
-	left: 0;
-	position: absolute;
-	top: 1.5em;
-	z-index: 99999;
-}
-.main-navigation ul ul ul {
-	left: 100%;
-	top: 0;
-}
-.main-navigation ul ul a {
-	width: 200px;
-}
-.main-navigation ul ul li {
-}
-.main-navigation li:hover > a {
-}
-.main-navigation ul ul :hover > a {
-}
-.main-navigation ul ul a:hover {
-}
-.main-navigation ul li:hover > ul {
-	display: block;
-}
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
-}
-
-/* Small menu */
-.menu-toggle {
-	cursor: pointer;
-	display: none;
-}
-
-/* =Content
------------------------------------------------ */
-
-.sticky {
-}
-.hentry {
-	margin: 0 0 1.5em;
-}
-.byline,
-.updated {
-	display: none;
-}
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
-
-
-/* =Asides
------------------------------------------------ */
-
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-	display: none;
-}
-
-
-/* =Media
------------------------------------------------ */
-
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-.wp-caption {
-	border: 1px solid #ccc;
-	margin-bottom: 1.5em;
-	max-width: 100%;
-}
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 1.2% auto 0;
-	max-width: 98%;
-}
-.wp-caption-text {
-	text-align: center;
-}
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
-.site-main .gallery {
-	margin-bottom: 1.5em;
-}
-.gallery-caption {
-}
-.site-main .gallery a img {
-	border: none;
-	height: auto;
-	max-width: 90%;
-}
-.site-main .gallery dd {
-	margin: 0;
-}
-.site-main .gallery-columns-4 .gallery-item {
-}
-.site-main .gallery-columns-4 .gallery-item img {
-}
-
-/* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
-	max-width: 100%;
-}
-
-
-/* =Navigation
------------------------------------------------ */
-
-.site-main [class*="navigation"] {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-[class*="navigation"] .nav-previous {
-	float: left;
-	width: 50%;
-}
-[class*="navigation"] .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
-
-/* =Comments
------------------------------------------------ */
-
-.comment-content a {
-	word-wrap: break-word;
-}
-.bypostauthor {
-}
-
-
-/* =Widgets
------------------------------------------------ */
-/* widget to add*/
-// .widget {
-// 	margin: 0 0 1.5em;
-// }
-
-/* Make sure select elements fit in widgets */
-.widget select {
-	max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
-}
-
-
-/* =Infinite Scroll
------------------------------------------------ */
-
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer {
-	display: block;
 }
