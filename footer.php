@@ -26,8 +26,7 @@
 			<ul><?php wp_list_pages('title_li='); ?></ul>
 		</aside>
 		<aside class="widget footer-widget-sns">
-			<h1>SNS Links</h1>
-			<?php mtportfolio_list_sns( true ); ?>
+			
 		</aside>
 	</div><!-- .footer-widget-area -->
 
