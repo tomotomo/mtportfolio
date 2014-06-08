@@ -17,9 +17,12 @@
 	@include bg-clr-wh;
 	@include tomo-add-1;
 	font-family: $font-sub;
-	ul.nav-menu{
+ul.nav-menu{
 		margin-bottom:$pc-nav-menu-mb-IN-main-navigation;
 		padding-bottom:$pc-nav-menu-pb-IN-main-navigation;
+		>li.page_item_has_children{
+			margin-top: 5px;
+		}
 	}
 }
 .button-login {
